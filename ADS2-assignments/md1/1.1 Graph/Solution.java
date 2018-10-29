@@ -23,9 +23,9 @@ class GraphMat {
         matrix[vertexTwo][vertexOne] = 1;
     }
     public void print() {
+        String str = "";
+        str += vertices + " vertices, " + edges + " edges" + "\n";
         if (edges > 0) {
-            String str = "";
-            str += vertices + " vertices, " + edges + " edges" + "\n";
             for (int i = 0; i < matrix.length; i++) {
                 for (int j = 0; j < matrix[0].length; j++) {
                     str += matrix[i][j] + " ";
@@ -34,7 +34,8 @@ class GraphMat {
             }
             System.out.println(str);
         } else {
-            System.out.println("No edges");
+             str += "No edges";
+            System.out.println(str);
         }
     }
 }
@@ -80,9 +81,9 @@ class GraphList {
 
     // }
     public String toString() {
-        if (edges > 0) {
             StringBuilder s = new StringBuilder();
             s.append(vertices + " vertices, " + edges + " edges" + "\n");
+        if (edges > 0) {
             for (int i = 0; i < vertices; i++) {
                 s.append(tokens[i] + ": ");
                 for (int j : adj[i]) {
@@ -92,7 +93,8 @@ class GraphList {
             }
             return s.toString();
         } else {
-            return "No edges";
+            s.append("No edges");
+            return s.toString();
         }
     }
 }
