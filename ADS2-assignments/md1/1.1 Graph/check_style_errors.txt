@@ -25,6 +25,5 @@ Audit done.
 Checkstyle ends with 22 errors.
 Starting audit...
 [ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md1\1.1 Graph\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md1\1.1 Graph\Solution.java:245: Class Solution should be declared as final. [FinalClass]
 Audit done.
-Checkstyle ends with 2 errors.
+Checkstyle ends with 1 errors.

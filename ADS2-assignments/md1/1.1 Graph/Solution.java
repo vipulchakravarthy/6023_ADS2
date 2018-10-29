@@ -242,7 +242,7 @@ class GraphList {
 /**
  *the class for solution.
  */
-public class Solution {
+final class Solution {
     /**
      *an empty constructor.
      */
@@ -269,3 +269,4 @@ public class Solution {
         }
     }
 }
+
