@@ -21,11 +21,27 @@ import java.util.NoSuchElementException;
  *  <i>Algorithms, 4th Edition</i> by Robert Sedgewick and Kevin Wayne.
  */
 public class Bag<Item> implements Iterable<Item> {
-    private int N;         // number of elements in bag
-    private Node first;    // beginning of bag
-    // helper linked list class
+    /**
+     *number of elements in bag.
+     */
+    private int N;
+    /**
+     *beginning of bag.
+     */
+    private Node first;
+    /**
+     *helper linked list class
+    */
     private class Node {
+        /**
+         *the variable to store.
+         *item value
+         */
         private Item item;
+        /**
+         *the element to reference the.
+         *next item.
+         */
         private Node next;
     }
     /**
@@ -51,8 +67,10 @@ public class Bag<Item> implements Iterable<Item> {
     }
     /**
       * Add the item to the bag.
+      *time complexity is O(1)
+      * @param item to be added to bag.
       */
-    public void add(Item item) {
+    public void add(final Item item) {
         Node oldfirst = first;
         first = new Node();
         first.item = item;
@@ -60,21 +78,40 @@ public class Bag<Item> implements Iterable<Item> {
         N++;
     }
     /**
-      * Return an iterator that iterates over the items in the bag.
+      * Return an iterator that iterates over the.
+      *items in the bag.
       * @return iterator.
       */
     public Iterator<Item> iterator()  {
         return new ListIterator();
     }
-    // an iterator, doesn't implement remove() since it's optional
+    /*
+    *an iterator, doesn't implement remove().
+     * since it's optional.
+    */
     private class ListIterator implements Iterator<Item> {
+        /**
+         *the temporory node.
+         */
         private Node current = first;
+        /**
+         *the method is whether there is.
+         *next element or not.
+         * @return     True if has next, False otherwise.
+         */
         public boolean hasNext()  {
             return current != null;
         }
+        /**
+         *the remove operation.
+         */
         public void remove() {
             throw new UnsupportedOperationException();
          }
+         /**
+          *the next method returns an item.
+          * @return item in bag.
+          */
         public Item next() {
             if (!hasNext()) {
                 throw new NoSuchElementException();
