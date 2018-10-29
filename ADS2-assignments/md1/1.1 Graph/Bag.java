@@ -13,9 +13,11 @@ import java.util.NoSuchElementException;
  *  items in arbitrary order.
  *  <p>
  *  The <em>add</em>, <em>isEmpty</em>, and <em>size</em>  operation
- *  take constant time. Iteration takes time proportional to the number of items.
+ *  take constant time. Iteration takes time proportional to the number
+ *   of items.
  *  <p>
- *  For additional documentation, see <a href="http://algs4.cs.princeton.edu/13stacks">Section 1.3</a> of
+ *  For additional documentation, see <a href=
+ *  "http://algs4.cs.princeton.edu/13stacks">Section 1.3</a> of
  *  <i>Algorithms, 4th Edition</i> by Robert Sedgewick and Kevin Wayne.
  */
 public class Bag<Item> implements Iterable<Item> {
@@ -35,12 +37,14 @@ public class Bag<Item> implements Iterable<Item> {
     }
     /**
       * Is the BAG empty?
+      * @return true if it is empty.
       */
     public boolean isEmpty() {
         return first == null;
     }
     /**
       * Return the number of items in the bag.
+      * @return size of bag.
       */
     public int size() {
         return N;
@@ -57,6 +61,7 @@ public class Bag<Item> implements Iterable<Item> {
     }
     /**
       * Return an iterator that iterates over the items in the bag.
+      * @return iterator.
       */
     public Iterator<Item> iterator()  {
         return new ListIterator();
@@ -64,18 +69,19 @@ public class Bag<Item> implements Iterable<Item> {
     // an iterator, doesn't implement remove() since it's optional
     private class ListIterator implements Iterator<Item> {
         private Node current = first;
-
         public boolean hasNext()  {
             return current != null;
         }
-        public void remove()      { throw new UnsupportedOperationException();  }
-
+        public void remove() {
+            throw new UnsupportedOperationException();
+         }
         public Item next() {
-            if (!hasNext()) throw new NoSuchElementException();
+            if (!hasNext()) {
+                throw new NoSuchElementException();
+            }
             Item item = current.item;
             current = current.next;
             return item;
         }
     }
-
 }
