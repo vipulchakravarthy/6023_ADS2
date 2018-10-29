@@ -12,7 +12,6 @@ class Graph {
     private int edges;
     private Bag<Integer>[] adj;
     private String[] tokens;
-    private int edge;
     Graph(){
     }
     Graph(Scanner scan) {
@@ -21,9 +20,9 @@ class Graph {
         for (int i = 0; i < vertices; i++) {
             adj[i] = new Bag<Integer>();
         }
-        edge = Integer.parseInt(scan.nextLine());
+        int edges = Integer.parseInt(scan.nextLine());
         tokens = scan.nextLine().split(",");
-        for(int i = 0; i < edge; i++){
+        for(int i = 0; i < edges; i++){
             String[] inputs = scan.nextLine().split(" ");
             addEdge(Integer.parseInt(inputs[0]), Integer.parseInt(inputs[1]));
         }
@@ -47,7 +46,7 @@ class Graph {
     // }
     public String toString() {
         StringBuilder s = new StringBuilder();
-        s.append(vertices + " vertices, " + edge + " edges" + "\n");
+        s.append(vertices + " vertices, " + edges + " edges" + "\n");
         for (int i = 0; i < vertices; i++) {
             s.append(tokens[i] + ": ");
             for (int j : adj[i]) {
