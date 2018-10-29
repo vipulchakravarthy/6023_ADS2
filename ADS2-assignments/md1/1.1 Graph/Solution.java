@@ -6,13 +6,14 @@ class GraphMat {
     private int vertices;
     private int edges;
     GraphMat() {
+        edges = 0;
     }
     GraphMat(Scanner scan) {
         this.vertices = Integer.parseInt(scan.nextLine());
         matrix = new int[vertices][vertices];
-        edges = Integer.parseInt(scan.nextLine());
+        int edge = Integer.parseInt(scan.nextLine());
         tokens = scan.nextLine().split(",");
-        for (int i = 0; i < edges; i++) {
+        for (int i = 0; i < edge; i++) {
             String[] inputs = scan.nextLine().split(" ");
             addE(Integer.parseInt(inputs[0]), Integer.parseInt(inputs[1]));
         }
@@ -23,6 +24,7 @@ class GraphMat {
         if(!hasEdge(vertexOne, vertexTwo)) {
         matrix[vertexOne][vertexTwo] = 1;
         matrix[vertexTwo][vertexOne] = 1;
+        edges++;
         }
     }
     }
