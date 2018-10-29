@@ -92,7 +92,7 @@ class GraphList {
         return adj[vertex];
     }
     public boolean hasEdge(int vertexOne, int vertexTwo) {
-        for(int each: adj[vertexOne]) {
+        for(int each: adj(vertexOne)) {
             if(each == vertexTwo) {
                 return true;
             }
