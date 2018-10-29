@@ -46,7 +46,7 @@ class Graph {
     // }
     public String toString() {
         StringBuilder s = new StringBuilder();
-        s.append(vertices + " vertices, " + edges + " edges  " + "\n");
+        s.append(vertices + " vertices, " + edges + " edges" + "\n");
         for (int i = 0; i < vertices; i++) {
             s.append(tokens[i] + ": ");
             for (int j : adj[i]) {
