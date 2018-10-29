@@ -174,16 +174,15 @@ class GraphList {
      * because we use has next method.
      */
     public void addEdge(int vertexOne, int vertexTwo) {
-        if (vertexOne != vertexTwo) {
-            if (!hasEdge(vertexOne, vertexTwo)) {
-                adj[vertexOne].add(vertexTwo);
-                adj[vertexTwo].add(vertexOne);
-                edges++;
-            }
-        } else {
+        if (vertexOne == vertexTwo) {
             return;
         }
-    }
+        if (!hasEdge(vertexOne, vertexTwo)) {
+                edges++;
+        }
+        adj[vertexOne].add(vertexTwo);
+        adj[vertexTwo].add(vertexOne);
+        }
     /**
      *the method is to maintian a iteratable for.
      *bag
