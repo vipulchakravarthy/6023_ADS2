@@ -79,9 +79,11 @@ class GraphList {
     }
     public void addEdge(int vertexOne, int vertexTwo) {
         if (vertexOne != vertexTwo) {
+            if(!hasEdge(vertexOne, vertexTwo)) {
             adj[vertexOne].add(vertexTwo);
             adj[vertexTwo].add(vertexOne);
             edges++;
+            }
         } else {
             return;
         }
@@ -90,7 +92,12 @@ class GraphList {
         return adj[vertex];
     }
     public boolean hasEdge(int vertexOne, int vertexTwo) {
-        return true;
+        for(int each: adj[vertexOne]) {
+            if(each == vertexTwo) {
+                return true;
+            }
+        }
+        return false;
     }
     public String toString() {
             StringBuilder s = new StringBuilder();
