@@ -89,7 +89,7 @@ public class Bag<Item> implements Iterable<Item> {
     /**
     *an iterator, doesn't implement remove().
      * since it's optional.
-     *@param <Item>
+     *
     */
     private class ListIterator implements Iterator<Item> {
         /**

@@ -1,8 +1,7 @@
 Starting audit...
 [ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md1\1.1 Graph\Bag.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md1\1.1 Graph\Bag.java:92:7: Unused @param tag for '<Item>'. [JavadocType]
 Audit done.
-Checkstyle ends with 2 errors.
+Checkstyle ends with 1 errors.
 Starting audit...
 [ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md1\1.1 Graph\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 Audit done.
