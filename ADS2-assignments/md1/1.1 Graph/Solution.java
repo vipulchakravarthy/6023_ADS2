@@ -19,8 +19,18 @@ class GraphMat {
     }
 
     public void addE(int vertexOne, int vertexTwo) {
+    if(vertexOne != vertexTwo) {
+        if(!hasEdge(vertexOne, vertexTwo)) {
         matrix[vertexOne][vertexTwo] = 1;
         matrix[vertexTwo][vertexOne] = 1;
+        }
+    }
+    }
+    public boolean hasEdge(int vertexOne, int vertexTwo) {
+        if(matrix[vertexOne][vertexTwo] == 1) {
+            return true;
+        }
+        return false;
     }
     public void print() {
         String str = "";
@@ -77,9 +87,9 @@ class GraphList {
     public Iterable<Integer> adj(int vertex) {
         return adj[vertex];
     }
-    // public boolean hasEdge(int vertexOne, int vertexTwo) {
-
-    // }
+    public boolean hasEdge(int vertexOne, int vertexTwo) {
+        return true;
+    }
     public String toString() {
             StringBuilder s = new StringBuilder();
             s.append(vertices + " vertices, " + edges + " edges" + "\n");
