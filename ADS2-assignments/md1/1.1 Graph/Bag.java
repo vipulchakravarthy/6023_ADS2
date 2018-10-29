@@ -19,18 +19,19 @@ import java.util.NoSuchElementException;
  *  For additional documentation, see <a href=
  *  "http://algs4.cs.princeton.edu/13stacks">Section 1.3</a> of
  *  <i>Algorithms, 4th Edition</i> by Robert Sedgewick and Kevin Wayne.
+ *  @param item
  */
 public class Bag<Item> implements Iterable<Item> {
     /**
      *number of elements in bag.
      */
-    private int N;
+    private int n;
     /**
      *beginning of bag.
      */
     private Node first;
     /**
-     *helper linked list class
+     *helper linked list class.
     */
     private class Node {
         /**
@@ -49,7 +50,7 @@ public class Bag<Item> implements Iterable<Item> {
       */
     public Bag() {
         first = null;
-        N = 0;
+        n = 0;
     }
     /**
       * Is the BAG empty?
@@ -63,7 +64,7 @@ public class Bag<Item> implements Iterable<Item> {
       * @return size of bag.
       */
     public int size() {
-        return N;
+        return n;
     }
     /**
       * Add the item to the bag.
@@ -75,7 +76,7 @@ public class Bag<Item> implements Iterable<Item> {
         first = new Node();
         first.item = item;
         first.next = oldfirst;
-        N++;
+        n++;
     }
     /**
       * Return an iterator that iterates over the.
@@ -85,9 +86,10 @@ public class Bag<Item> implements Iterable<Item> {
     public Iterator<Item> iterator()  {
         return new ListIterator();
     }
-    /*
+    /**
     *an iterator, doesn't implement remove().
      * since it's optional.
+     *@param item
     */
     private class ListIterator implements Iterator<Item> {
         /**
