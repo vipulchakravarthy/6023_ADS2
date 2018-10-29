@@ -232,8 +232,7 @@ Expected Output:
 No edges
 
 Your Output: 
-1 vertices, 0 edges
-Hyderabad:
+No edges
 ----------------------------------------
 
 ########## Testcase 5: Failed ##########
@@ -252,7 +251,7 @@ Expected Output:
 No edges
 
 Your Output: 
-0 vertices, 0 edges
+No edges
 ----------------------------------------
 
 ########## Testcase 7: Failed ##########
@@ -261,6 +260,6 @@ Expected Output:
 No edges
 
 Your Output: 
-0 vertices, 0 edges
+No edges
 ----------------------------------------
 
