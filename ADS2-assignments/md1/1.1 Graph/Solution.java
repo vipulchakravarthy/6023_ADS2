@@ -246,7 +246,7 @@ public class Solution {
     /**
      *an empty constructor.
      */
-    Solution() {
+    private Solution() {
     }
     /**
      *the main to read the input.
@@ -269,4 +269,5 @@ public class Solution {
         }
     }
 }
+
 
