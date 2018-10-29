@@ -1,5 +1,4 @@
 import java.util.Scanner;
-import java.util.Arrays;
 /**
  *the class is to maintain the.
  *graph representation of matrix.
@@ -54,7 +53,8 @@ class GraphMat {
      * @param      vertexTwo  The vertex two
      * because we use has next method.
      */
-    public void addE(int vertexOne, int vertexTwo) {
+    public void addE(final int vertexOne,
+     final int vertexTwo) {
         if (vertexOne != vertexTwo) {
             if (!hasEdge(vertexOne, vertexTwo)) {
                 matrix[vertexOne][vertexTwo] = 1;
@@ -72,7 +72,8 @@ class GraphMat {
      *
      * @return     True if has edge, False otherwise.
      */
-    public boolean hasEdge(int vertexOne, int vertexTwo) {
+    public boolean hasEdge(final int vertexOne,
+        final int vertexTwo) {
         if (matrix[vertexOne][vertexTwo] == 1) {
             return true;
         }
@@ -173,7 +174,8 @@ class GraphList {
      * E denotes the number of edges we have in graph.
      * because we use has next method.
      */
-    public void addEdge(int vertexOne, int vertexTwo) {
+    public void addEdge(final int vertexOne,
+        final int vertexTwo) {
         if (vertexOne == vertexTwo) {
             return;
         }
@@ -191,7 +193,7 @@ class GraphList {
      *
      * @return  iterator.
      */
-    public Iterable<Integer> adj(int vertex) {
+    public Iterable<Integer> adj(final int vertex) {
         return adj[vertex];
     }
     /**
@@ -204,7 +206,8 @@ class GraphList {
      *
      * @return     True if has edge, False otherwise.
      */
-    public boolean hasEdge(int vertexOne, int vertexTwo) {
+    public boolean hasEdge(final int vertexOne,
+        final int vertexTwo) {
         for (int each : adj(vertexOne))  {
             if (each == vertexTwo) {
                 return true;
@@ -216,22 +219,23 @@ class GraphList {
      *the method is to print the string format.
      *of graph.
      *the time complexity will be O(N^2)
+     *@return string format.
      */
     public String toString() {
-        StringBuilder s = new StringBuilder();
-        s.append(vertices + " vertices, " + edges + " edges" + "\n");
+        StringBuilder str = new StringBuilder();
+        str.append(vertices + " vertices, " + edges + " edges" + "\n");
         if (edges > 0) {
             for (int i = 0; i < vertices; i++) {
-                s.append(tokens[i] + ": ");
+                str.append(tokens[i] + ": ");
                 for (int j : adj[i]) {
-                    s.append(tokens[j] + " ");
+                    str.append(tokens[j] + " ");
                 }
-                s.append("\n");
+                str.append("\n");
             }
-            return s.toString();
+            return str.toString();
         } else {
-            s.append("No edges");
-            return s.toString();
+            str.append("No edges");
+            return str.toString();
         }
     }
 }

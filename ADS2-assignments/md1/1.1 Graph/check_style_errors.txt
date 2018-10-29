@@ -25,17 +25,6 @@ Audit done.
 Checkstyle ends with 22 errors.
 Starting audit...
 [ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md1\1.1 Graph\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md1\1.1 Graph\Solution.java:2:8: Unused import - java.util.Arrays. [UnusedImports]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md1\1.1 Graph\Solution.java:57:22: Parameter vertexOne should be final. [FinalParameters]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md1\1.1 Graph\Solution.java:57:37: Parameter vertexTwo should be final. [FinalParameters]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md1\1.1 Graph\Solution.java:75:28: Parameter vertexOne should be final. [FinalParameters]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md1\1.1 Graph\Solution.java:75:43: Parameter vertexTwo should be final. [FinalParameters]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md1\1.1 Graph\Solution.java:176:25: Parameter vertexOne should be final. [FinalParameters]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md1\1.1 Graph\Solution.java:176:40: Parameter vertexTwo should be final. [FinalParameters]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md1\1.1 Graph\Solution.java:194:34: Parameter vertex should be final. [FinalParameters]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md1\1.1 Graph\Solution.java:207:28: Parameter vertexOne should be final. [FinalParameters]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md1\1.1 Graph\Solution.java:207:43: Parameter vertexTwo should be final. [FinalParameters]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md1\1.1 Graph\Solution.java:220: Expected @return tag. [JavadocMethod]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md1\1.1 Graph\Solution.java:241:1: Utility classes should not have a public or default constructor. [HideUtilityClassConstructor]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md1\1.1 Graph\Solution.java:245:1: Utility classes should not have a public or default constructor. [HideUtilityClassConstructor]
 Audit done.
-Checkstyle ends with 13 errors.
+Checkstyle ends with 2 errors.
