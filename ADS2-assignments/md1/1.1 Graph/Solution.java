@@ -178,11 +178,11 @@ class GraphList {
             return;
         }
         if (!hasEdge(vertexOne, vertexTwo)) {
-                edges++;
+            edges++;
         }
         adj[vertexOne].add(vertexTwo);
         adj[vertexTwo].add(vertexOne);
-        }
+    }
     /**
      *the method is to maintian a iteratable for.
      *bag
