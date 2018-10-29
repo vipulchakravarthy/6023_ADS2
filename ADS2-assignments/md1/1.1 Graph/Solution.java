@@ -3,12 +3,14 @@ import java.util.Arrays;
 class GraphMat{
     private String[] tokens;
     private int[][] matrix;
+    private int vertices;
+    private int edges;
     GraphMat(){
     }
     GraphMat(Scanner scan){
-        int vertices = Integer.parseInt(scan.nextLine());
+        this.vertices = Integer.parseInt(scan.nextLine());
         matrix = new int[vertices][vertices];
-        int edges = Integer.parseInt(scan.nextLine());
+        edges = Integer.parseInt(scan.nextLine());
         tokens = scan.nextLine().split(",");
         for(int i = 0; i < edges; i++){
             String[] inputs = scan.nextLine().split(" ");
@@ -21,6 +23,15 @@ class GraphMat{
         matrix[vertexTwo][vertexOne] = 1;
     }
     public void print(){
+        String str = "";
+        str += vertices + " vertices, " + edges + " edges" + "\n";
+        for(int i = 0; i < matrix.length; i++){
+            for(int j = 0; j < matrix[0].length; j++) {
+                str += matrix[i][j] + " ";
+            }
+            str += "\n";
+        }
+        System.out.println(str);
     }
 }
 class GraphList {
