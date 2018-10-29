@@ -19,7 +19,7 @@ import java.util.NoSuchElementException;
  *  For additional documentation, see <a href=
  *  "http://algs4.cs.princeton.edu/13stacks">Section 1.3</a> of
  *  <i>Algorithms, 4th Edition</i> by Robert Sedgewick and Kevin Wayne.
- *  @param <item>
+ *  @param <Item>
  */
 public class Bag<Item> implements Iterable<Item> {
     /**
@@ -89,7 +89,7 @@ public class Bag<Item> implements Iterable<Item> {
     /**
     *an iterator, doesn't implement remove().
      * since it's optional.
-     *@param <item>
+     *@param <Item>
     */
     private class ListIterator implements Iterator<Item> {
         /**
