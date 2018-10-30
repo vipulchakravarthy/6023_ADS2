@@ -1,10 +1,33 @@
 import java.util.Scanner;
+/**
+ *the class to check whether.
+ *it percolates or not.
+ */
 class Percolation {
+	/**
+	 *the variable is to store vertices.
+	 */
 	private int vertices;
+	/**
+	 *the constructor to initialize the vertices.
+	 *
+	 * @param      vertex  The vertex count
+	 */
 	Percolation(final int vertex) {
 		vertices = vertex;
 	}
-	public boolean percolates(final boolean[][] grid, final Graph graph) {
+	/**
+	 *the method is to check whether the.
+	 *the grid percolates or not.
+	 *time complexity is O(N^2)
+	 *N is the vertices.
+	 * @param      grid   The grid
+	 * @param      graph  The graph
+	 *
+	 * @return whether is percolates or not.
+	 */
+	public boolean percolates(final boolean[][] grid,
+	 final Graph graph) {
 		for (int i = 0 ; i < vertices ; i++) {
 			for (int j = 0 ; j < vertices; j++) {
 				if (grid[i][j]) {
@@ -30,15 +53,35 @@ class Percolation {
 				}
 			}
 		}
-		DepthFirstPaths object = new DepthFirstPaths(graph, vertices * vertices);
-		return object.hasPathTo(vertices * vertices + 1);
+	DepthFirstPaths object = new DepthFirstPaths(
+			graph, vertices * vertices);
+	return object.hasPathTo(vertices * vertices + 1);
 	}
-	public int  trans(int i , int j) {
-		return ((i * vertices) + j);
+	/**
+	 *the method to convert the 2-D array.
+	 *to one-D value
+	 * @param      row row value
+	 * @param      col column value
+	 *
+	 * @return translated value
+	 */
+	public int  trans(final int row, final int col) {
+		return ((row * vertices) + col);
 	}
 }
+/**
+ *the class is to maintain the user input.
+ */
 final class Solution {
+	/**
+	 *an empty constructor.
+	 */
 	private Solution() {}
+	/**
+	 *the main method to read the user input.
+	 *
+	 * @param      args  The arguments
+	 */
 	public static void main(final String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int vertices = sc.nextInt();

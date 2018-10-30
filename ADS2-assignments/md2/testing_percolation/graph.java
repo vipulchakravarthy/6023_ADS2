@@ -1,44 +1,84 @@
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 public class Graph {
-    private static final String NEWLINE = System.getProperty("line.separator");
-
+    /**
+     *the variable to maintain vertex.
+     */
     private final int V;
+    /**
+     *the variable to maintain edges.
+     */
     private int E;
+    /**
+     *the variable to adjacency matrix.
+     */
     private boolean[][] adj;
-
-    // empty graph with V vertices
-    public Graph(int V) {
+    /**
+     *the constructor to initialize.
+     *
+     * @param      V  vertices
+     */
+    public Graph(final int V) {
         if (V < 0) throw new IllegalArgumentException("Too few vertices");
         this.V = V;
         this.E = 0;
         this.adj = new boolean[V][V];
     }
-
-    // number of vertices and edges
-    public int V() { return V; }
-    public int E() { return E; }
-
-
-    // add undirected edge v-w
+    /**
+     *
+     *the method to return vertices.
+     * @return vertices.
+     */
+    public int V() {
+        return V;
+    }
+    /**
+     *the method is to return edges.
+     *
+     * @return  edges.
+     */
+    public int E() {
+     return E;
+ }
+ /**
+  * adds an edge
+  *
+  * @param      v  vertexOne
+  * @param      w  vertexTwo
+  */
     public void addEdge(int v, int w) {
         if (!adj[v][w]) E++;
         adj[v][w] = true;
         adj[w][v] = true;
     }
+    /**
+     *the method returns whether there is.
+     *a connection between two vertices.
+     * @param      v     { parameter_description }
+     * @param      w     { parameter_description }
+     *
+     * @return connection is there are not.
+     */
 
-    // does the graph contain the edge v-w?
     public boolean contains(int v, int w) {
         return adj[v][w];
     }
 
-    // return list of neighbors of v
+    /**
+     * return list of neighbors of v
+     *
+     * @param      v  vertex
+     *
+     * @return  iterator
+     */
     public Iterable<Integer> adj(int v) {
         return new AdjIterator(v);
     }
-
-    // support iteration over graph vertices
-    private class AdjIterator implements Iterator<Integer>, Iterable<Integer> {
+    /**
+     *support iteration over graph vertices
+     */
+    private class AdjIterator implements Iterator<Integer>,
+     Iterable<Integer> {
         private int v;
         private int w = 0;
 
@@ -71,7 +111,11 @@ public class Graph {
     }
 
 
-    // string representation of Graph - takes quadratic time
+    /**
+     *string representation of Graph - takes quadratic time
+     *
+     * @return     String representation of the object.
+     */
     public String toString() {
         StringBuilder s = new StringBuilder();
         s.append(V + " " + E + NEWLINE);
