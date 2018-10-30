@@ -95,7 +95,7 @@ public class Graph {
         /**
          *the constructor to initialize.
          *
-         * @param      v vertex
+         * @param      vx vertex
          */
         AdjIterator(final int vx) {
             this.v = vx;
