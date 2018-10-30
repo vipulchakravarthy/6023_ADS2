@@ -1,4 +1,3 @@
-import java.util.*;
 public class DepthFirstPaths {
     private boolean[] marked;    // marked[v] = is there an s-v path?
     private int[] edgeTo;        // edgeTo[v] = last edge on s-v path
@@ -10,7 +9,7 @@ public class DepthFirstPaths {
      * @param s the source vertex
      * @throws IllegalArgumentException unless {@code 0 <= s < V}
      */
-    public DepthFirstPaths(graph G, int s) {
+    public DepthFirstPaths(Graph G, int s) {
         this.s = s;
         edgeTo = new int[G.V()];
         marked = new boolean[G.V()];
@@ -19,7 +18,7 @@ public class DepthFirstPaths {
     }
 
     // depth first search from v
-    private void dfs(graph G, int v) {
+    private void dfs(Graph G, int v) {
         marked[v] = true;
         for (int w : G.adj(v)) {
             if (!marked[w]) {
@@ -46,11 +45,4 @@ public class DepthFirstPaths {
         if (v < 0 || v >= V)
             throw new IllegalArgumentException("vertex " + v + " is not between 0 and " + (V-1));
     }
-
-    /**
-     * Unit tests the {@code DepthFirstPaths} data type.
-     *
-     * @param args the command-line arguments
-     */
-
 }

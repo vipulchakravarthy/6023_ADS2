@@ -1,8 +1,6 @@
 import java.util.Iterator;
 import java.util.NoSuchElementException;
-
-
-public class graph {
+public class Graph {
     private static final String NEWLINE = System.getProperty("line.separator");
 
     private final int V;
@@ -10,7 +8,7 @@ public class graph {
     private boolean[][] adj;
 
     // empty graph with V vertices
-    public graph(int V) {
+    public Graph(int V) {
         if (V < 0) throw new IllegalArgumentException("Too few vertices");
         this.V = V;
         this.E = 0;
