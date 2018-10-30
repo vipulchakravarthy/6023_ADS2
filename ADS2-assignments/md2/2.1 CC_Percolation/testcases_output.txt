@@ -1,0 +1,288 @@
+########## Testcase 0: Failed ##########
+Expected Output: 
+false
+
+Your Output: 
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 0
+	at Graph.adj(Solution.java:54)
+	at ConnectedComp.dfs(Solution.java:25)
+	at ConnectedComp.<init>(Solution.java:11)
+	at Solution.main(Solution.java:72)
+----------------------------------------
+
+########## Testcase 1: Failed ##########
+Expected Output: 
+false
+
+Your Output: 
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 0
+	at Graph.adj(Solution.java:54)
+	at ConnectedComp.dfs(Solution.java:25)
+	at ConnectedComp.<init>(Solution.java:11)
+	at Solution.main(Solution.java:72)
+----------------------------------------
+
+########## Testcase 2: Failed ##########
+Expected Output: 
+true
+
+Your Output: 
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 0
+	at Graph.adj(Solution.java:54)
+	at ConnectedComp.dfs(Solution.java:25)
+	at ConnectedComp.<init>(Solution.java:11)
+	at Solution.main(Solution.java:72)
+----------------------------------------
+
+########## Testcase 3: Failed ##########
+Expected Output: 
+false
+
+Your Output: 
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 0
+	at Graph.adj(Solution.java:54)
+	at ConnectedComp.dfs(Solution.java:25)
+	at ConnectedComp.<init>(Solution.java:11)
+	at Solution.main(Solution.java:72)
+----------------------------------------
+
+########## Testcase 4: Failed ##########
+Expected Output: 
+true
+
+Your Output: 
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 0
+	at Graph.adj(Solution.java:54)
+	at ConnectedComp.dfs(Solution.java:25)
+	at ConnectedComp.<init>(Solution.java:11)
+	at Solution.main(Solution.java:72)
+----------------------------------------
+
+########## Testcase 5: Failed ##########
+Expected Output: 
+false
+
+Your Output: 
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 0
+	at Graph.adj(Solution.java:54)
+	at ConnectedComp.dfs(Solution.java:25)
+	at ConnectedComp.<init>(Solution.java:11)
+	at Solution.main(Solution.java:72)
+----------------------------------------
+
+########## Testcase 6: Failed ##########
+Expected Output: 
+true
+
+Your Output: 
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 0
+	at Graph.adj(Solution.java:54)
+	at ConnectedComp.dfs(Solution.java:25)
+	at ConnectedComp.<init>(Solution.java:11)
+	at Solution.main(Solution.java:72)
+----------------------------------------
+
+########## Testcase 7: Failed ##########
+Expected Output: 
+true
+
+Your Output: 
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 0
+	at Graph.adj(Solution.java:54)
+	at ConnectedComp.dfs(Solution.java:25)
+	at ConnectedComp.<init>(Solution.java:11)
+	at Solution.main(Solution.java:72)
+----------------------------------------
+
+########## Testcase 8: Failed ##########
+Expected Output: 
+true
+
+Your Output: 
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 0
+	at Graph.adj(Solution.java:54)
+	at ConnectedComp.dfs(Solution.java:25)
+	at ConnectedComp.<init>(Solution.java:11)
+	at Solution.main(Solution.java:72)
+----------------------------------------
+
+########## Testcase 9: Failed ##########
+Expected Output: 
+true
+
+Your Output: 
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 0
+	at Graph.adj(Solution.java:54)
+	at ConnectedComp.dfs(Solution.java:25)
+	at ConnectedComp.<init>(Solution.java:11)
+	at Solution.main(Solution.java:72)
+----------------------------------------
+
+########## Testcase 10: Failed ##########
+Expected Output: 
+true
+
+Your Output: 
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 0
+	at Graph.adj(Solution.java:54)
+	at ConnectedComp.dfs(Solution.java:25)
+	at ConnectedComp.<init>(Solution.java:11)
+	at Solution.main(Solution.java:72)
+----------------------------------------
+
+########## Testcase 11: Failed ##########
+Expected Output: 
+true
+
+Your Output: 
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 0
+	at Graph.adj(Solution.java:54)
+	at ConnectedComp.dfs(Solution.java:25)
+	at ConnectedComp.<init>(Solution.java:11)
+	at Solution.main(Solution.java:72)
+----------------------------------------
+
+########## Testcase 12: Failed ##########
+Expected Output: 
+true
+
+Your Output: 
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 0
+	at Graph.adj(Solution.java:54)
+	at ConnectedComp.dfs(Solution.java:25)
+	at ConnectedComp.<init>(Solution.java:11)
+	at Solution.main(Solution.java:72)
+----------------------------------------
+
+########## Testcase 13: Failed ##########
+Expected Output: 
+false
+
+Your Output: 
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 0
+	at Graph.adj(Solution.java:54)
+	at ConnectedComp.dfs(Solution.java:25)
+	at ConnectedComp.<init>(Solution.java:11)
+	at Solution.main(Solution.java:72)
+----------------------------------------
+
+########## Testcase 14: Failed ##########
+Expected Output: 
+true
+
+Your Output: 
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 0
+	at Graph.adj(Solution.java:54)
+	at ConnectedComp.dfs(Solution.java:25)
+	at ConnectedComp.<init>(Solution.java:11)
+	at Solution.main(Solution.java:72)
+----------------------------------------
+
+########## Testcase 15: Failed ##########
+Expected Output: 
+false
+
+Your Output: 
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 0
+	at Graph.adj(Solution.java:54)
+	at ConnectedComp.dfs(Solution.java:25)
+	at ConnectedComp.<init>(Solution.java:11)
+	at Solution.main(Solution.java:72)
+----------------------------------------
+
+########## Testcase 16: Failed ##########
+Expected Output: 
+true
+
+Your Output: 
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 0
+	at Graph.adj(Solution.java:54)
+	at ConnectedComp.dfs(Solution.java:25)
+	at ConnectedComp.<init>(Solution.java:11)
+	at Solution.main(Solution.java:72)
+----------------------------------------
+
+########## Testcase 17: Failed ##########
+Expected Output: 
+true
+
+Your Output: 
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 0
+	at Graph.adj(Solution.java:54)
+	at ConnectedComp.dfs(Solution.java:25)
+	at ConnectedComp.<init>(Solution.java:11)
+	at Solution.main(Solution.java:72)
+----------------------------------------
+
+########## Testcase 18: Failed ##########
+Expected Output: 
+true
+
+Your Output: 
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 0
+	at Graph.adj(Solution.java:54)
+	at ConnectedComp.dfs(Solution.java:25)
+	at ConnectedComp.<init>(Solution.java:11)
+	at Solution.main(Solution.java:72)
+----------------------------------------
+
+########## Testcase 19: Failed ##########
+Expected Output: 
+true
+
+Your Output: 
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 0
+	at Graph.adj(Solution.java:54)
+	at ConnectedComp.dfs(Solution.java:25)
+	at ConnectedComp.<init>(Solution.java:11)
+	at Solution.main(Solution.java:72)
+----------------------------------------
+
+########## Testcase 20: Failed ##########
+Expected Output: 
+true
+
+Your Output: 
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 0
+	at Graph.adj(Solution.java:54)
+	at ConnectedComp.dfs(Solution.java:25)
+	at ConnectedComp.<init>(Solution.java:11)
+	at Solution.main(Solution.java:72)
+----------------------------------------
+
+########## Testcase 21: Failed ##########
+Expected Output: 
+true
+
+Your Output: 
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 0
+	at Graph.adj(Solution.java:54)
+	at ConnectedComp.dfs(Solution.java:25)
+	at ConnectedComp.<init>(Solution.java:11)
+	at Solution.main(Solution.java:72)
+----------------------------------------
+
+########## Testcase 22: Failed ##########
+Expected Output: 
+true
+
+Your Output: 
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 0
+	at Graph.adj(Solution.java:54)
+	at ConnectedComp.dfs(Solution.java:25)
+	at ConnectedComp.<init>(Solution.java:11)
+	at Solution.main(Solution.java:72)
+----------------------------------------
+
+########## Testcase 23: Failed ##########
+Expected Output: 
+true
+
+Your Output: 
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 0
+	at Graph.adj(Solution.java:54)
+	at ConnectedComp.dfs(Solution.java:25)
+	at ConnectedComp.<init>(Solution.java:11)
+	at Solution.main(Solution.java:72)
+----------------------------------------
+
