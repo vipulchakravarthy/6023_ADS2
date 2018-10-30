@@ -47,16 +47,7 @@ Starting audit...
 Audit done.
 Checkstyle ends with 28 errors.
 Starting audit...
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md2\testing_percolation\Solution.java:7:1: File contains tab characters (this is the first instance). [FileTabCharacter]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md2\testing_percolation\Solution.java:31:31: ';' is preceded with whitespace. [NoWhitespaceBefore]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md2\testing_percolation\Solution.java:31:46: ';' is preceded with whitespace. [NoWhitespaceBefore]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md2\testing_percolation\Solution.java:32:39: ';' is preceded with whitespace. [NoWhitespaceBefore]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md2\testing_percolation\Solution.java:41: Line is longer than 80 characters (found 81). [LineLength]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md2\testing_percolation\Solution.java:47: Line is longer than 80 characters (found 82). [LineLength]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md2\testing_percolation\Solution.java:52: Line is longer than 80 characters (found 84). [LineLength]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md2\testing_percolation\Solution.java:54: Line is longer than 80 characters (found 81). [LineLength]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md2\testing_percolation\Solution.java:55: Line is longer than 80 characters (found 84). [LineLength]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md2\testing_percolation\Solution.java:83:29: '{' is not followed by whitespace. [WhitespaceAround]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md2\testing_percolation\Solution.java:83:29: '}' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md2\testing_percolation\Solution.java:83:25: '{' is not followed by whitespace. [WhitespaceAround]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md2\testing_percolation\Solution.java:83:25: '}' is not preceded with whitespace. [WhitespaceAround]
 Audit done.
-Checkstyle ends with 11 errors.
+Checkstyle ends with 2 errors.
