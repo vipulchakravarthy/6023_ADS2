@@ -19,7 +19,7 @@ public class Graph {
     /**
      *the constructor to initialize.
      *
-     * @param      vertices  vertices
+     * @param      vertex  vertices
      */
     public Graph(final int vertex) {
         this.vertices = vertex;
@@ -69,7 +69,7 @@ public class Graph {
         return adj[v][w];
     }
     /**
-     * return list of neighbors of v
+     * return list of neighbors of v.
      *
      * @param      v  vertex
      * time complexity is O(N)
@@ -97,8 +97,8 @@ public class Graph {
          *
          * @param      v vertex
          */
-        AdjIterator(final int v) {
-            this.v = v;
+        AdjIterator(final int vx) {
+            this.v = vx;
         }
         /**
          *an iterator method.
@@ -115,7 +115,9 @@ public class Graph {
  */
         public boolean hasNext() {
             while (w < vertices) {
-                if (adj[v][w]) return true;
+                if (adj[v][w]) {
+                    return true;
+                }
                 w++;
             }
             return false;

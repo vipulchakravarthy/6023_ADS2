@@ -1,17 +1,9 @@
 Starting audit...
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md2\percolation\DepthFirstPaths.java:1: Missing a Javadoc comment. [JavadocType]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md2\percolation\DepthFirstPaths.java:17: First sentence should end with a period. [JavadocStyle]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md2\percolation\DepthFirstPaths.java:21:8: Unused @param tag for 's'. [JavadocMethod]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md2\percolation\DepthFirstPaths.java:24:15: Expected @param tag for 'st'. [JavadocMethod]
 Audit done.
-Checkstyle ends with 4 errors.
 Starting audit...
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md2\percolation\Graph.java:22:8: Unused @param tag for 'vertices'. [JavadocMethod]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md2\percolation\Graph.java:24:28: Expected @param tag for 'vertex'. [JavadocMethod]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md2\percolation\Graph.java:71: First sentence should end with a period. [JavadocStyle]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md2\percolation\Graph.java:100:31: 'v' hides a field. [HiddenField]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md2\percolation\Graph.java:118: 'if' construct must use '{}'s. [NeedBraces]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md2\percolation\Graph.java:98:12: Unused @param tag for 'v'. [JavadocMethod]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md2\percolation\Graph.java:100:31: Expected @param tag for 'vx'. [JavadocMethod]
 Audit done.
-Checkstyle ends with 5 errors.
+Checkstyle ends with 2 errors.
 Starting audit...
 Audit done.

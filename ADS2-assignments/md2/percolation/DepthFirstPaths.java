@@ -1,3 +1,6 @@
+/**
+ *class for depth first paths.
+ */
 public class DepthFirstPaths {
     /**
      *the array to mark the visited.
@@ -9,16 +12,15 @@ public class DepthFirstPaths {
      *relation path.
      */
     private int[] edgeTo;
-         // edgeTo[v] = last edge on s-v path
     /**
      *the variable to maintain source vertex.
      */
-    private final int s;         // source vertex
+    private final int s;
     /**
-     * Computes a path between s and
+     * Computes a path between s and.
      * every other vertex in graph
      * @param graph the graph
-     * @param s the source vertex
+     * @param st the source vertex
      */
     public DepthFirstPaths(final Graph graph,
     final int st) {
