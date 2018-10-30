@@ -1,25 +1,17 @@
-########## Testcase 0: Failed ##########
+########## Testcase 0: Passed ##########
 Expected Output: 
 false
 
 Your Output: 
-Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 0
-	at Graph.adj(Solution.java:54)
-	at ConnectedComp.dfs(Solution.java:25)
-	at ConnectedComp.<init>(Solution.java:11)
-	at Solution.main(Solution.java:72)
+false
 ----------------------------------------
 
-########## Testcase 1: Failed ##########
+########## Testcase 1: Passed ##########
 Expected Output: 
 false
 
 Your Output: 
-Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 0
-	at Graph.adj(Solution.java:54)
-	at ConnectedComp.dfs(Solution.java:25)
-	at ConnectedComp.<init>(Solution.java:11)
-	at Solution.main(Solution.java:72)
+false
 ----------------------------------------
 
 ########## Testcase 2: Failed ##########
@@ -27,11 +19,10 @@ Expected Output:
 true
 
 Your Output: 
-Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 0
-	at Graph.adj(Solution.java:54)
-	at ConnectedComp.dfs(Solution.java:25)
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 1
+	at ConnectedComp.dfs(Solution.java:26)
 	at ConnectedComp.<init>(Solution.java:11)
-	at Solution.main(Solution.java:72)
+	at Solution.main(Solution.java:70)
 ----------------------------------------
 
 ########## Testcase 3: Failed ##########
@@ -39,23 +30,15 @@ Expected Output:
 false
 
 Your Output: 
-Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 0
-	at Graph.adj(Solution.java:54)
-	at ConnectedComp.dfs(Solution.java:25)
-	at ConnectedComp.<init>(Solution.java:11)
-	at Solution.main(Solution.java:72)
+true
 ----------------------------------------
 
-########## Testcase 4: Failed ##########
+########## Testcase 4: Passed ##########
 Expected Output: 
 true
 
 Your Output: 
-Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 0
-	at Graph.adj(Solution.java:54)
-	at ConnectedComp.dfs(Solution.java:25)
-	at ConnectedComp.<init>(Solution.java:11)
-	at Solution.main(Solution.java:72)
+true
 ----------------------------------------
 
 ########## Testcase 5: Failed ##########
@@ -63,11 +46,7 @@ Expected Output:
 false
 
 Your Output: 
-Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 0
-	at Graph.adj(Solution.java:54)
-	at ConnectedComp.dfs(Solution.java:25)
-	at ConnectedComp.<init>(Solution.java:11)
-	at Solution.main(Solution.java:72)
+true
 ----------------------------------------
 
 ########## Testcase 6: Failed ##########
@@ -75,11 +54,7 @@ Expected Output:
 true
 
 Your Output: 
-Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 0
-	at Graph.adj(Solution.java:54)
-	at ConnectedComp.dfs(Solution.java:25)
-	at ConnectedComp.<init>(Solution.java:11)
-	at Solution.main(Solution.java:72)
+false
 ----------------------------------------
 
 ########## Testcase 7: Failed ##########
@@ -87,11 +62,7 @@ Expected Output:
 true
 
 Your Output: 
-Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 0
-	at Graph.adj(Solution.java:54)
-	at ConnectedComp.dfs(Solution.java:25)
-	at ConnectedComp.<init>(Solution.java:11)
-	at Solution.main(Solution.java:72)
+false
 ----------------------------------------
 
 ########## Testcase 8: Failed ##########
@@ -99,11 +70,7 @@ Expected Output:
 true
 
 Your Output: 
-Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 0
-	at Graph.adj(Solution.java:54)
-	at ConnectedComp.dfs(Solution.java:25)
-	at ConnectedComp.<init>(Solution.java:11)
-	at Solution.main(Solution.java:72)
+false
 ----------------------------------------
 
 ########## Testcase 9: Failed ##########
@@ -111,11 +78,7 @@ Expected Output:
 true
 
 Your Output: 
-Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 0
-	at Graph.adj(Solution.java:54)
-	at ConnectedComp.dfs(Solution.java:25)
-	at ConnectedComp.<init>(Solution.java:11)
-	at Solution.main(Solution.java:72)
+false
 ----------------------------------------
 
 ########## Testcase 10: Failed ##########
@@ -123,11 +86,7 @@ Expected Output:
 true
 
 Your Output: 
-Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 0
-	at Graph.adj(Solution.java:54)
-	at ConnectedComp.dfs(Solution.java:25)
-	at ConnectedComp.<init>(Solution.java:11)
-	at Solution.main(Solution.java:72)
+false
 ----------------------------------------
 
 ########## Testcase 11: Failed ##########
@@ -135,11 +94,7 @@ Expected Output:
 true
 
 Your Output: 
-Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 0
-	at Graph.adj(Solution.java:54)
-	at ConnectedComp.dfs(Solution.java:25)
-	at ConnectedComp.<init>(Solution.java:11)
-	at Solution.main(Solution.java:72)
+false
 ----------------------------------------
 
 ########## Testcase 12: Failed ##########
@@ -147,23 +102,15 @@ Expected Output:
 true
 
 Your Output: 
-Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 0
-	at Graph.adj(Solution.java:54)
-	at ConnectedComp.dfs(Solution.java:25)
-	at ConnectedComp.<init>(Solution.java:11)
-	at Solution.main(Solution.java:72)
+false
 ----------------------------------------
 
-########## Testcase 13: Failed ##########
+########## Testcase 13: Passed ##########
 Expected Output: 
 false
 
 Your Output: 
-Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 0
-	at Graph.adj(Solution.java:54)
-	at ConnectedComp.dfs(Solution.java:25)
-	at ConnectedComp.<init>(Solution.java:11)
-	at Solution.main(Solution.java:72)
+false
 ----------------------------------------
 
 ########## Testcase 14: Failed ##########
@@ -171,23 +118,15 @@ Expected Output:
 true
 
 Your Output: 
-Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 0
-	at Graph.adj(Solution.java:54)
-	at ConnectedComp.dfs(Solution.java:25)
-	at ConnectedComp.<init>(Solution.java:11)
-	at Solution.main(Solution.java:72)
+false
 ----------------------------------------
 
-########## Testcase 15: Failed ##########
+########## Testcase 15: Passed ##########
 Expected Output: 
 false
 
 Your Output: 
-Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 0
-	at Graph.adj(Solution.java:54)
-	at ConnectedComp.dfs(Solution.java:25)
-	at ConnectedComp.<init>(Solution.java:11)
-	at Solution.main(Solution.java:72)
+false
 ----------------------------------------
 
 ########## Testcase 16: Failed ##########
@@ -195,11 +134,7 @@ Expected Output:
 true
 
 Your Output: 
-Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 0
-	at Graph.adj(Solution.java:54)
-	at ConnectedComp.dfs(Solution.java:25)
-	at ConnectedComp.<init>(Solution.java:11)
-	at Solution.main(Solution.java:72)
+false
 ----------------------------------------
 
 ########## Testcase 17: Failed ##########
@@ -207,11 +142,7 @@ Expected Output:
 true
 
 Your Output: 
-Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 0
-	at Graph.adj(Solution.java:54)
-	at ConnectedComp.dfs(Solution.java:25)
-	at ConnectedComp.<init>(Solution.java:11)
-	at Solution.main(Solution.java:72)
+false
 ----------------------------------------
 
 ########## Testcase 18: Failed ##########
@@ -219,11 +150,7 @@ Expected Output:
 true
 
 Your Output: 
-Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 0
-	at Graph.adj(Solution.java:54)
-	at ConnectedComp.dfs(Solution.java:25)
-	at ConnectedComp.<init>(Solution.java:11)
-	at Solution.main(Solution.java:72)
+false
 ----------------------------------------
 
 ########## Testcase 19: Failed ##########
@@ -231,11 +158,7 @@ Expected Output:
 true
 
 Your Output: 
-Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 0
-	at Graph.adj(Solution.java:54)
-	at ConnectedComp.dfs(Solution.java:25)
-	at ConnectedComp.<init>(Solution.java:11)
-	at Solution.main(Solution.java:72)
+false
 ----------------------------------------
 
 ########## Testcase 20: Failed ##########
@@ -243,11 +166,7 @@ Expected Output:
 true
 
 Your Output: 
-Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 0
-	at Graph.adj(Solution.java:54)
-	at ConnectedComp.dfs(Solution.java:25)
-	at ConnectedComp.<init>(Solution.java:11)
-	at Solution.main(Solution.java:72)
+false
 ----------------------------------------
 
 ########## Testcase 21: Failed ##########
@@ -255,11 +174,7 @@ Expected Output:
 true
 
 Your Output: 
-Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 0
-	at Graph.adj(Solution.java:54)
-	at ConnectedComp.dfs(Solution.java:25)
-	at ConnectedComp.<init>(Solution.java:11)
-	at Solution.main(Solution.java:72)
+false
 ----------------------------------------
 
 ########## Testcase 22: Failed ##########
@@ -267,11 +182,7 @@ Expected Output:
 true
 
 Your Output: 
-Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 0
-	at Graph.adj(Solution.java:54)
-	at ConnectedComp.dfs(Solution.java:25)
-	at ConnectedComp.<init>(Solution.java:11)
-	at Solution.main(Solution.java:72)
+false
 ----------------------------------------
 
 ########## Testcase 23: Failed ##########
@@ -279,10 +190,6 @@ Expected Output:
 true
 
 Your Output: 
-Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 0
-	at Graph.adj(Solution.java:54)
-	at ConnectedComp.dfs(Solution.java:25)
-	at ConnectedComp.<init>(Solution.java:11)
-	at Solution.main(Solution.java:72)
+false
 ----------------------------------------
 

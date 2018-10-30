@@ -36,22 +36,20 @@ class ConnectedComp{
 	}
 }
 class Graph {
-	private boolean[][] grid;
+	private int[][] grid;
 	private int vertices;
-    private Bag<Integer>[] adj;
 	Graph(final int size) {
-		grid = new boolean[size][size];
-		adj = (Bag<Integer>[]) new Bag[vertices];
+		grid = new int[size][size];
 		vertices = size;
 	}
 	public int vertices(){
 		return vertices;
 	}
 	public void open(final int row, final int col){
-		grid[row][col] = true;
+		grid[row][col] = 1;
 	}
-    public Iterable<Integer> adj(final int vertex) {
-        return adj[vertex];
+    public int[] adj(final int vertex) {
+        return grid[vertex];
     }
 }
 final class Solution {
