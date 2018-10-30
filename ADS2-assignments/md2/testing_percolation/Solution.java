@@ -80,7 +80,9 @@ final class Solution {
     /**
      *an empty constructor.
      */
-    private Solution() {}
+    private Solution() {
+
+    }
     /**
      *the main method to read the user input.
      *

@@ -47,7 +47,4 @@ Starting audit...
 Audit done.
 Checkstyle ends with 28 errors.
 Starting audit...
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md2\testing_percolation\Solution.java:83:25: '{' is not followed by whitespace. [WhitespaceAround]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md2\testing_percolation\Solution.java:83:25: '}' is not preceded with whitespace. [WhitespaceAround]
 Audit done.
-Checkstyle ends with 2 errors.
