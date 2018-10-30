@@ -37,7 +37,7 @@ class Solution{
 			}
 		}catch(Exception e){
 		}finally{
-			checkPerc(grid, gr);
+			System.out.println(checkPerc(grid, gr));
 		}
 
 
