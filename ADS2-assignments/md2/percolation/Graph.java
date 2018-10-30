@@ -7,11 +7,11 @@ public class Graph {
     /**
      *the variable to maintain vertex.
      */
-    private final int V;
+    private final int vertices;
     /**
      *the variable to maintain edges.
      */
-    private int E;
+    private int edges;
     /**
      *the variable to adjacency matrix.
      */
@@ -19,38 +19,40 @@ public class Graph {
     /**
      *the constructor to initialize.
      *
-     * @param      V  vertices
+     * @param      vertices  vertices
      */
-    public Graph(final int V) {
-        this.V = V;
-        this.E = 0;
-        this.adj = new boolean[V][V];
+    public Graph(final int vertex) {
+        this.vertices = vertex;
+        this.edges = 0;
+        this.adj = new boolean[vertices][vertices];
     }
     /**
      *
      *the method to return vertices.
      * @return vertices.
      */
-    public int V() {
-        return V;
+    public int vertices() {
+        return vertices;
     }
     /**
      *the method is to return edges.
      *
      * @return  edges.
      */
-    public int E() {
-     return E;
+    public int edges() {
+     return edges;
  }
  /**
-  * adds an edge
+  * adds an edge.
   *
   * @param      v  vertexOne
   * @param      w  vertexTwo
   */
     public void addEdge(final int v,
     final int w) {
-        if (!adj[v][w]) E++;
+        if (!adj[v][w]) {
+            edges++;
+        }
         adj[v][w] = true;
         adj[w][v] = true;
     }
@@ -74,17 +76,17 @@ public class Graph {
      * N is the vertices.
      * @return  iterator
      */
-    public Iterable<Integer> adj(int v) {
+    public Iterable<Integer> adj(final int v) {
         return new AdjIterator(v);
     }
     /**
-     *support iteration over graph vertices
+     *support iteration over graph vertices.
      */
     private class AdjIterator implements Iterator<Integer>,
      Iterable<Integer> {
-     	/**
-     	 *the variable to make vertex count.
-     	 */
+        /**
+         *the variable to make vertex count.
+         */
         private int v;
         /**
          *the variable to store another vertex.
@@ -95,8 +97,7 @@ public class Graph {
          *
          * @param      v vertex
          */
-
-        AdjIterator(int v) {
+        AdjIterator(final int v) {
             this.v = v;
         }
         /**
@@ -113,7 +114,7 @@ public class Graph {
  * @return     True if has next, False otherwise.
  */
         public boolean hasNext() {
-            while (w < V) {
+            while (w < vertices) {
                 if (adj[v][w]) return true;
                 w++;
             }
@@ -142,8 +143,8 @@ public class Graph {
      */
     public String toString() {
         StringBuilder s = new StringBuilder();
-        s.append(V + " " + E + "\n");
-        for (int v = 0; v < V; v++) {
+        s.append(vertices + " " + edges + "\n");
+        for (int v = 0; v < vertices; v++) {
             s.append(v + ": ");
             for (int w : adj(v)) {
                 s.append(w + " ");

@@ -17,15 +17,16 @@ public class DepthFirstPaths {
     /**
      * Computes a path between s and
      * every other vertex in graph
-     * @param G the graph
+     * @param graph the graph
      * @param s the source vertex
      */
-    public DepthFirstPaths(Graph G, int s) {
-        this.s = s;
-        edgeTo = new int[G.V()];
-        marked = new boolean[G.V()];
+    public DepthFirstPaths(final Graph graph,
+    final int st) {
+        this.s = st;
+        edgeTo = new int[graph.vertices()];
+        marked = new boolean[graph.vertices()];
         validateVertex(s);
-        dfs(G, s);
+        dfs(graph, s);
     }
 
     /**
@@ -33,38 +34,40 @@ public class DepthFirstPaths {
      *first search.
      *time complexity is O(E)
      *E is the edges.
-     * @param      G     { parameter_description }
+     * @param      graph     { parameter_description }
      * @param      v     { parameter_description }
      */
-    private void dfs(Graph G, int v) {
+    private void dfs(final Graph graph, final int v) {
         marked[v] = true;
-        for (int w : G.adj(v)) {
+        for (int w : graph.adj(v)) {
             if (!marked[w]) {
                 edgeTo[w] = v;
-                dfs(G, w);
+                dfs(graph, w);
             }
         }
     }
 
     /**
-     * Is there a path between the source
+     * Is there a path between the source.
      * vertex { s} and vertex {v}?
      * @param v the vertex
      * @return true if there is a path,
      * false} otherwise
      */
-    public boolean hasPathTo(int v) {
+    public boolean hasPathTo(final int v) {
         validateVertex(v);
         return marked[v];
     }
 
     /**
      *throw an IllegalArgumentException unless.
+     *@param v is the vertex
      */
-    private void validateVertex(int v) {
-        int V = marked.length;
-        if (v < 0 || v >= V)
+    private void validateVertex(final int v) {
+        int len = marked.length;
+        if (v < 0 || v >= len) {
             throw new IllegalArgumentException(
-                "vertex " + v + " is not between 0 and " + (V - 1));
+                "vertex " + v + " is not between 0 and " + (len - 1));
+        }
     }
 }
