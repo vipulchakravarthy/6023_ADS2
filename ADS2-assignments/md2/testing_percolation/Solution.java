@@ -27,35 +27,39 @@ class Percolation {
 	 * @return whether is percolates or not.
 	 */
 	public boolean percolates(final boolean[][] grid,
-	 final Graph graph) {
+	                          final Graph graph) {
 		for (int i = 0 ; i < vertices ; i++) {
 			for (int j = 0 ; j < vertices; j++) {
 				if (grid[i][j]) {
 					int tmp = trans(i, j);
 					if (i == 0) {
-						graph.addEdge(tmp , vertices * vertices);
+						graph.addEdge(tmp,
+							vertices * vertices);
 					}
 					if (i == vertices - 1) {
-						graph.addEdge(tmp , vertices * vertices + 1);
+						graph.addEdge(tmp,
+							vertices * vertices + 1);
 					}
 					if (i - 1 >= 0 && grid[i - 1][j]) {
-						graph.addEdge(tmp , trans(i - 1, j));
+						graph.addEdge(tmp,
+							trans(i - 1, j));
 					}
 					if (i + 1 < vertices  && grid[i + 1][j]) {
-						graph.addEdge(tmp , trans(i + 1, j));
+						graph.addEdge(tmp,
+							trans(i + 1, j));
 					}
 					if (j - 1 >= 0 && grid[i][j - 1]) {
-						graph.addEdge(tmp , trans(i, j - 1));
+						graph.addEdge(tmp, trans(i, j - 1));
 					}
 					if (j + 1 < vertices && grid[i][j + 1]) {
-						graph.addEdge(tmp , trans(i, j + 1));
+						graph.addEdge(tmp, trans(i, j + 1));
 					}
 				}
 			}
 		}
-	DepthFirstPaths object = new DepthFirstPaths(
-			graph, vertices * vertices);
-	return object.hasPathTo(vertices * vertices + 1);
+		DepthFirstPaths object = new DepthFirstPaths(
+		    graph, vertices * vertices);
+		return object.hasPathTo(vertices * vertices + 1);
 	}
 	/**
 	 *the method to convert the 2-D array.
