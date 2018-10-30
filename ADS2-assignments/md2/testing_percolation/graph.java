@@ -118,13 +118,13 @@ public class Graph {
      */
     public String toString() {
         StringBuilder s = new StringBuilder();
-        s.append(V + " " + E + NEWLINE);
+        s.append(V + " " + E + "\n");
         for (int v = 0; v < V; v++) {
             s.append(v + ": ");
             for (int w : adj(v)) {
                 s.append(w + " ");
             }
-            s.append(NEWLINE);
+            s.append("\n");
         }
         return s.toString();
     }
