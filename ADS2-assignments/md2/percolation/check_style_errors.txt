@@ -1,0 +1,37 @@
+Starting audit...
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md2\percolation\DepthFirstPaths.java:1: Missing a Javadoc comment. [JavadocType]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md2\percolation\DepthFirstPaths.java:17: First sentence should end with a period. [JavadocStyle]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md2\percolation\DepthFirstPaths.java:23:28: Parameter G should be final. [FinalParameters]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md2\percolation\DepthFirstPaths.java:23:34: Name 'G' must match pattern '^[a-z][a-zA-Z0-9]*$'. [ParameterName]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md2\percolation\DepthFirstPaths.java:23:37: Parameter s should be final. [FinalParameters]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md2\percolation\DepthFirstPaths.java:23:41: 's' hides a field. [HiddenField]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md2\percolation\DepthFirstPaths.java:39:22: Parameter G should be final. [FinalParameters]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md2\percolation\DepthFirstPaths.java:39:28: Name 'G' must match pattern '^[a-z][a-zA-Z0-9]*$'. [ParameterName]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md2\percolation\DepthFirstPaths.java:39:31: Parameter v should be final. [FinalParameters]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md2\percolation\DepthFirstPaths.java:56:30: Parameter v should be final. [FinalParameters]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md2\percolation\DepthFirstPaths.java:64:33: Parameter v should be final. [FinalParameters]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md2\percolation\DepthFirstPaths.java:64:37: Expected @param tag for 'v'. [JavadocMethod]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md2\percolation\DepthFirstPaths.java:65:13: Name 'V' must match pattern '^[a-z][a-zA-Z0-9]*$'. [LocalVariableName]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md2\percolation\DepthFirstPaths.java:66: 'if' construct must use '{}'s. [NeedBraces]
+Audit done.
+Checkstyle ends with 14 errors.
+Starting audit...
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md2\percolation\Graph.java:10:23: Name 'V' must match pattern '^[a-z][a-zA-Z0-9]*$'. [MemberName]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md2\percolation\Graph.java:14:17: Name 'E' must match pattern '^[a-z][a-zA-Z0-9]*$'. [MemberName]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md2\percolation\Graph.java:24:28: 'V' hides a field. [HiddenField]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md2\percolation\Graph.java:24:28: Name 'V' must match pattern '^[a-z][a-zA-Z0-9]*$'. [ParameterName]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md2\percolation\Graph.java:34:16: Name 'V' must match pattern '^[a-z][a-zA-Z0-9]*$'. [MethodName]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md2\percolation\Graph.java:42:16: Name 'E' must match pattern '^[a-z][a-zA-Z0-9]*$'. [MethodName]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md2\percolation\Graph.java:45: First sentence should end with a period. [JavadocStyle]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md2\percolation\Graph.java:53: 'if' construct must use '{}'s. [NeedBraces]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md2\percolation\Graph.java:69: First sentence should end with a period. [JavadocStyle]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md2\percolation\Graph.java:77:34: Parameter v should be final. [FinalParameters]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md2\percolation\Graph.java:80: First sentence should end with a period. [JavadocStyle]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md2\percolation\Graph.java:85:6: File contains tab characters (this is the first instance). [FileTabCharacter]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md2\percolation\Graph.java:99:21: Parameter v should be final. [FinalParameters]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md2\percolation\Graph.java:99:25: 'v' hides a field. [HiddenField]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md2\percolation\Graph.java:117: 'if' construct must use '{}'s. [NeedBraces]
+Audit done.
+Checkstyle ends with 15 errors.
+Starting audit...
+Audit done.
