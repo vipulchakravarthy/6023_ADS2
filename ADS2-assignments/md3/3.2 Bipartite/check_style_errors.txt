@@ -115,7 +115,7 @@ Starting audit...
 [ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md3\3.2 Bipartite\Solution.java:18:5: Missing a Javadoc comment. [JavadocMethod]
 [ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md3\3.2 Bipartite\Solution.java:18:22: Parameter graph should be final. [FinalParameters]
 [ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md3\3.2 Bipartite\Solution.java:18:35: Parameter vertex should be final. [FinalParameters]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md3\3.2 Bipartite\Solution.java:28:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md3\3.2 Bipartite\Solution.java:30:5: Missing a Javadoc comment. [JavadocMethod]
 Audit done.
 Checkstyle ends with 9 errors.
 Starting audit...

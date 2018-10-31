@@ -1,9 +1,9 @@
-########## Testcase 0: Passed ##########
+########## Testcase 0: Failed ##########
 Expected Output: 
 Graph is bipartite
 
 Your Output: 
-Graph is bipartite
+Graph is not a bipartite
 ----------------------------------------
 
 ########## Testcase 1: Failed ##########
@@ -14,20 +14,20 @@ Your Output:
 Graph is not a bipartite
 ----------------------------------------
 
-########## Testcase 2: Passed ##########
+########## Testcase 2: Failed ##########
 Expected Output: 
 Graph is bipartite
 
 Your Output: 
-Graph is bipartite
+Graph is not a bipartite
 ----------------------------------------
 
-########## Testcase 3: Failed ##########
+########## Testcase 3: Passed ##########
 Expected Output: 
 Graph is not a bipartite
 
 Your Output: 
-Graph is bipartite
+Graph is not a bipartite
 ----------------------------------------
 
 ########## Testcase 4: Failed ##########

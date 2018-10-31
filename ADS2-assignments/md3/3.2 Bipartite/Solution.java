@@ -22,6 +22,8 @@ class Bipartite {
             if (!marked[each]) {
                 color[each] = !color[vertex];
                 dfs(graph, each);
+            } else {
+                flag = false;
             }
         }
     }
