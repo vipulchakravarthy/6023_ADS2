@@ -39,7 +39,8 @@ class DirectedCycle {
     }
     /**
      *the method for performing dfs.
-     *
+     *time complexity is O(E)
+     *E is the edges
      * @param      graph   The graph
      * @param      vertex  The vertex
      */
@@ -114,9 +115,10 @@ class DiGraph {
      *two vertices.
      * @param      vertexOne  The vertex one
      * @param      vertexTwo  The vertex two
-     * the time complexity is O(E)
+     * the time complexity is O(E + V)
+     * V is the vertices
      * E denotes the number of edges we have in graph.
-     * because we use has next method.
+     *.
      */
     public void addEdge(final int vertexOne, final int vertexTwo) {
         adj[vertexOne].add(vertexTwo);
