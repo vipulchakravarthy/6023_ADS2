@@ -21,7 +21,7 @@
  			if(stack != null) {
  				return;
  			}
- 			else if(!marked[vertex]) {
+ 			else if(!marked[each]) {
  				edgeTo[each] = vertex;
  				dfs(graph, each);
  			}
