@@ -16,18 +16,14 @@ class Bipartite {
         }
     }
     private void dfs(Graph graph, int vertex) {
-    try{
+        flag = !flag;
         marked[vertex] = true;
         for (int each : graph.adj(vertex)) {
             if (!marked[each]) {
                 color[each] = !color[vertex];
                 dfs(graph, each);
-            } else if (color[each] == color[vertex]) {
-                flag = false;
             }
         }
-    } catch(Exception e) {
-    }
     }
     public boolean isBipartite() {
         return flag;

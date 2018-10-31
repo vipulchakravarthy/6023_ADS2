@@ -6,12 +6,12 @@ Your Output:
 Graph is bipartite
 ----------------------------------------
 
-########## Testcase 1: Passed ##########
+########## Testcase 1: Failed ##########
 Expected Output: 
 Graph is bipartite
 
 Your Output: 
-Graph is bipartite
+Graph is not a bipartite
 ----------------------------------------
 
 ########## Testcase 2: Passed ##########
@@ -22,12 +22,12 @@ Your Output:
 Graph is bipartite
 ----------------------------------------
 
-########## Testcase 3: Passed ##########
+########## Testcase 3: Failed ##########
 Expected Output: 
 Graph is not a bipartite
 
 Your Output: 
-Graph is not a bipartite
+Graph is bipartite
 ----------------------------------------
 
 ########## Testcase 4: Failed ##########
