@@ -3,8 +3,19 @@ import java.util.Scanner;
  *the class for bipartite.
  */
 class Bipartite {
+    /**
+     *the marked array to denote the.
+     * vertex is visited or not.
+     */
     private boolean[] marked;
+    /**
+     *the array to store color.
+     */
     private boolean[] color;
+    /**
+     *the variable to decide the.
+     *graph is bapartite
+     */
     private boolean flag = false;
     /**
      *edge to method to consider the.
@@ -15,7 +26,12 @@ class Bipartite {
      *stack for storing the path.
      */
     private Stack<Integer> stack;
-    Bipartite(Graph graph) {
+    /**
+     *constructor is to initialize.
+     *
+     * @param      graph  The graph
+     */
+    Bipartite(final Graph graph) {
         flag = true;
         marked = new boolean[graph.vertices()];
         color = new boolean[graph.vertices()];
@@ -26,7 +42,14 @@ class Bipartite {
             }
         }
     }
-    private void dfs(Graph graph, int vertex) {
+    /**
+     *the depth first search is performed.
+     *time complexity is O(E)
+     *E is the number of edges.
+     * @param      graph   The graph
+     * @param      vertex  The vertex
+     */
+    private void dfs(final Graph graph, final int vertex) {
         marked[vertex] = true;
         for (int each : graph.adj(vertex)) {
             if (stack != null) {
@@ -47,6 +70,11 @@ class Bipartite {
             }
         }
     }
+    /**
+     *the method is to check whether it is bipartite or.
+     *not
+     * @return     True if bipartite, False otherwise.
+     */
     public boolean isBipartite() {
         return flag;
     }
