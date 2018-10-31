@@ -5,10 +5,21 @@ import java.util.Scanner;
 class Bipartite {
     private boolean[] marked;
     private boolean[] color;
-    private boolean flag = true;
+    private boolean flag = false;
+    /**
+     *edge to method to consider the.
+     *vertices to which they are connected.
+     */
+    private int[] edgeTo;
+    /**
+     *stack for storing the path.
+     */
+    private Stack<Integer> stack;
     Bipartite(Graph graph) {
+        flag = true;
         marked = new boolean[graph.vertices()];
         color = new boolean[graph.vertices()];
+        edgeTo = new int[graph.vertices()];
         for (int i = 0; i < graph.vertices(); i++) {
             if (!marked[i]) {
                 dfs(graph, i);
@@ -16,14 +27,23 @@ class Bipartite {
         }
     }
     private void dfs(Graph graph, int vertex) {
-        flag = !flag;
         marked[vertex] = true;
         for (int each : graph.adj(vertex)) {
+            if (stack != null) {
+                return;
+            }
             if (!marked[each]) {
                 color[each] = !color[vertex];
+                edgeTo[each] = vertex;
                 dfs(graph, each);
-            } else {
+            } else if (color[each] == color[vertex]) {
                 flag = false;
+                stack = new Stack<Integer>();
+                stack.push(each);
+                for (int j = vertex; j != each; j = edgeTo[j]) {
+                    stack.push(j);
+                }
+                stack.push(each);
             }
         }
     }
