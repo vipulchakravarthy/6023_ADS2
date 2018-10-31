@@ -107,23 +107,20 @@ Starting audit...
 Audit done.
 Checkstyle ends with 42 errors.
 Starting audit...
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md3\3.2 Bipartite\Solution.java:2: Missing a Javadoc comment. [JavadocType]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md3\3.2 Bipartite\Solution.java:2:16: '{' is not preceded with whitespace. [WhitespaceAround]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md3\3.2 Bipartite\Solution.java:3:5: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md3\3.2 Bipartite\Solution.java:4:5: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md3\3.2 Bipartite\Solution.java:5:5: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md3\3.2 Bipartite\Solution.java:6:5: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md3\3.2 Bipartite\Solution.java:6:15: Parameter graph should be final. [FinalParameters]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md3\3.2 Bipartite\Solution.java:9:12: 'for' is not followed by whitespace. [WhitespaceAfter]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md3\3.2 Bipartite\Solution.java:10:15: 'if' is not followed by whitespace. [WhitespaceAfter]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md3\3.2 Bipartite\Solution.java:15:5: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md3\3.2 Bipartite\Solution.java:15:22: Parameter graph should be final. [FinalParameters]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md3\3.2 Bipartite\Solution.java:15:35: Parameter vertex should be final. [FinalParameters]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md3\3.2 Bipartite\Solution.java:18:15: 'if' is not followed by whitespace. [WhitespaceAfter]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md3\3.2 Bipartite\Solution.java:21:13: '}' at column 13 should be on the same line as the next part of a multi-block statement (one that directly contains multiple blocks: if/else-if/else, do/while or try/catch/finally). [RightCurly]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md3\3.2 Bipartite\Solution.java:27:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md3\3.2 Bipartite\Solution.java:6:5: Missing a Javadoc comment. [JavadocVariable]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md3\3.2 Bipartite\Solution.java:7:5: Missing a Javadoc comment. [JavadocVariable]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md3\3.2 Bipartite\Solution.java:8:5: Missing a Javadoc comment. [JavadocVariable]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md3\3.2 Bipartite\Solution.java:9:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md3\3.2 Bipartite\Solution.java:9:15: Parameter graph should be final. [FinalParameters]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md3\3.2 Bipartite\Solution.java:18:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md3\3.2 Bipartite\Solution.java:18:22: Parameter graph should be final. [FinalParameters]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md3\3.2 Bipartite\Solution.java:18:35: Parameter vertex should be final. [FinalParameters]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md3\3.2 Bipartite\Solution.java:19:8: 'try' is not followed by whitespace. [WhitespaceAround]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md3\3.2 Bipartite\Solution.java:19:8: '{' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md3\3.2 Bipartite\Solution.java:29:12: 'catch' is not followed by whitespace. [WhitespaceAround]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md3\3.2 Bipartite\Solution.java:32:5: Missing a Javadoc comment. [JavadocMethod]
 Audit done.
-Checkstyle ends with 15 errors.
+Checkstyle ends with 12 errors.
 Starting audit...
 [ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md3\3.2 Bipartite\Stack.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 [ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md3\3.2 Bipartite\Stack.java:13: Line has trailing spaces. [RegexpSingleline]

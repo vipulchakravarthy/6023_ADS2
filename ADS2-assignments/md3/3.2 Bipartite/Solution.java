@@ -1,28 +1,33 @@
 import java.util.Scanner;
-class Bipartite{
+/**
+ *the class for bipartite.
+ */
+class Bipartite {
     private boolean[] marked;
     private boolean[] color;
     private boolean flag = true;
     Bipartite(Graph graph) {
         marked = new boolean[graph.vertices()];
         color = new boolean[graph.vertices()];
-        for(int i = 0; i < graph.vertices(); i++) {
-            if(!marked[i]) {
+        for (int i = 0; i < graph.vertices(); i++) {
+            if (!marked[i]) {
                 dfs(graph, i);
             }
         }
     }
     private void dfs(Graph graph, int vertex) {
+    try{
         marked[vertex] = true;
         for (int each : graph.adj(vertex)) {
-            if(!marked[each]) {
+            if (!marked[each]) {
                 color[each] = !color[vertex];
                 dfs(graph, each);
-            }
-            else if (color[each] == color[vertex]) {
+            } else if (color[each] == color[vertex]) {
                 flag = false;
             }
         }
+    } catch(Exception e) {
+    }
     }
     public boolean isBipartite() {
         return flag;
