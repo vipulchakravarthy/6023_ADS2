@@ -110,9 +110,12 @@ class Solution {
 					ArrayList<Integer> vertexTwo = revmap.get(tokens[1]);
 					int[] array = sapobj.length(vertexOne, vertexTwo);
 					ArrayList<String> result = map.get(array[1]);
+					String tmp = result.get(0);
+					System.out.print("distance = " + array[0] + ", ancestor = ");
 					for(String each : result) {
-						System.out.println("distance = " + array[0] + ", ancestor = " + each);
+						System.out.print(each + " ");
 					}
+					System.out.println();
 				}
 			 	break;
 		}
