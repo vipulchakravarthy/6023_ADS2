@@ -99,8 +99,12 @@ class Solution {
 				}
 				break;
 			case "Queries":
-				// while(scan.hasNext()) {
-				// 	String[] tokens = scan.nextLine().split(" ");
+				while(scan.hasNext()) {
+					String[] tokens = scan.nextLine().split(" ");
+					if(tokens[0] == null) {
+						System.out.println("IllegalArgumentException");
+						return;
+					}
 				// 	BreadthFirstDirectedPaths bfsObj = new BreadthFirstDirectedPaths();
 				// 	ArrayList<Integer> distance = new ArrayList<Integer>();
 				// 	ArrayList<Integer> listOne = revmap.get(tokens[0]);
@@ -108,7 +112,7 @@ class Solution {
 				// 		bfsObj = new BreadthFirstDirectedPaths(graph, listOne.get(i));
 				// 	}
 
-				// }
+				}
 			 	break;
 		}
 		}

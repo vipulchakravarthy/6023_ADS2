@@ -170,14 +170,17 @@ Starting audit...
 [ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md4\Code Camp - WordNet\WordNet\Solution.java:87:43: 'if' is not followed by whitespace. [WhitespaceAfter]
 [ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md4\Code Camp - WordNet\WordNet\Solution.java:91:35: 'if' is not followed by whitespace. [WhitespaceAfter]
 [ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md4\Code Camp - WordNet\WordNet\Solution.java:95:35: 'if' is not followed by whitespace. [WhitespaceAfter]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md4\Code Camp - WordNet\WordNet\Solution.java:102:38: 'while' is not followed by whitespace. [WhitespaceAfter]
 [ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md4\Code Camp - WordNet\WordNet\Solution.java:103: Line is longer than 80 characters (found 85). [LineLength]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md4\Code Camp - WordNet\WordNet\Solution.java:104: Line is longer than 80 characters (found 107). [LineLength]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md4\Code Camp - WordNet\WordNet\Solution.java:104:43: 'if' is not followed by whitespace. [WhitespaceAfter]
 [ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md4\Code Camp - WordNet\WordNet\Solution.java:105: Line is longer than 80 characters (found 95). [LineLength]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md4\Code Camp - WordNet\WordNet\Solution.java:106: Line is longer than 80 characters (found 91). [LineLength]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md4\Code Camp - WordNet\WordNet\Solution.java:107: Line is longer than 80 characters (found 81). [LineLength]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md4\Code Camp - WordNet\WordNet\Solution.java:108: Line is longer than 80 characters (found 110). [LineLength]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md4\Code Camp - WordNet\WordNet\Solution.java:108: Line is longer than 80 characters (found 107). [LineLength]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md4\Code Camp - WordNet\WordNet\Solution.java:109: Line is longer than 80 characters (found 95). [LineLength]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md4\Code Camp - WordNet\WordNet\Solution.java:110: Line is longer than 80 characters (found 91). [LineLength]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md4\Code Camp - WordNet\WordNet\Solution.java:111: Line is longer than 80 characters (found 81). [LineLength]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md4\Code Camp - WordNet\WordNet\Solution.java:112: Line is longer than 80 characters (found 110). [LineLength]
 Audit done.
-Checkstyle ends with 55 errors.
+Checkstyle ends with 58 errors.
 Starting audit...
 [ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md4\Code Camp - WordNet\WordNet\Stack.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 [ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md4\Code Camp - WordNet\WordNet\Stack.java:13: Line has trailing spaces. [RegexpSingleline]
