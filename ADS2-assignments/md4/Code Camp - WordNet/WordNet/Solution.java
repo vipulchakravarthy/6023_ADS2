@@ -6,16 +6,16 @@ import java.util.ArrayList;
 import java.io.FileNotFoundException;
 class Solution {
 	static Digraph graph;
+	static HashMap<Integer, ArrayList<String>> map;
+	static HashMap<String ,ArrayList<Integer>> revmap;
 	Solution() {
 	}
 	public  static void fileSynsets(String file) {
 	try{
 		File folder = new File("Files");
 		File[] files = folder.listFiles();
-		HashMap<Integer, ArrayList<String>> map
-		= new HashMap<Integer, ArrayList<String>>();
-		HashMap<String ,ArrayList<Integer>> revmap
-		= new HashMap<String,ArrayList<Integer>>();
+		map = new HashMap<Integer, ArrayList<String>>();
+		revmap = new HashMap<String,ArrayList<Integer>>();
 		ArrayList<String> list;
 		for (File f : files) {
 			if(f.getName().equals(file)) {
@@ -43,7 +43,6 @@ class Solution {
 					t.add(i);
 					revmap.put(strng,t);
 				}
-
 			}
 		}
 		int vertices = map.size();
@@ -81,9 +80,24 @@ class Solution {
 		fileHypernm(fileTwo);
 		switch(type) {
 			case "Graph":
-				System.out.println(graph);
+				DirectedCycle cycleObj = new DirectedCycle(graph);
+				if(cycleObj.hasCycle()) {
+					System.out.println("Cycle detected");
+				} else {
+					System.out.println(graph);
+				}
 				break;
 			case "Queries":
+				// while(scan.hasNext()) {
+				// 	String[] tokens = scan.nextLine().split(" ");
+				// 	BreadthFirstDirectedPaths bfsObj = new BreadthFirstDirectedPaths();
+				// 	ArrayList<Integer> distance = new ArrayList<Integer>();
+				// 	ArrayList<Integer> listOne = revmap.get(tokens[0]);
+				// 	for(int i = 0; i < listOne.size(); i++) {
+				// 		bfsObj = new BreadthFirstDirectedPaths(graph, listOne.get(i));
+				// 	}
+
+				// }
 			 	break;
 		}
 		}
