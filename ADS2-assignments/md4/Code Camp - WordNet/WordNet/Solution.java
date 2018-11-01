@@ -112,8 +112,12 @@ class Solution {
 					ArrayList<String> result = map.get(array[1]);
 					String tmp = result.get(0);
 					System.out.print("distance = " + array[0] + ", ancestor = ");
-					for(String each : result) {
-						System.out.print(each + " ");
+					for(int k = 0 ; k < result.size();k++) {
+						if (k != result.size() - 1) {
+							System.out.print(result.get(k) + " ");
+						} else {
+						System.out.print(result.get(k));
+						}
 					}
 					System.out.println();
 				}

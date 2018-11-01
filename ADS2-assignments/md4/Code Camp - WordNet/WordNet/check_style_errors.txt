@@ -242,8 +242,11 @@ Starting audit...
 [ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md4\Code Camp - WordNet\WordNet\Solution.java:112: Line is longer than 80 characters (found 85). [LineLength]
 [ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md4\Code Camp - WordNet\WordNet\Solution.java:114: Line is longer than 80 characters (found 101). [LineLength]
 [ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md4\Code Camp - WordNet\WordNet\Solution.java:115:44: 'for' is not followed by whitespace. [WhitespaceAfter]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md4\Code Camp - WordNet\WordNet\Solution.java:115:54: ';' is preceded with whitespace. [NoWhitespaceBefore]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md4\Code Camp - WordNet\WordNet\Solution.java:115:75: ';' is not followed by whitespace. [WhitespaceAfter]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md4\Code Camp - WordNet\WordNet\Solution.java:117: Line is longer than 80 characters (found 94). [LineLength]
 Audit done.
-Checkstyle ends with 58 errors.
+Checkstyle ends with 61 errors.
 Starting audit...
 [ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md4\Code Camp - WordNet\WordNet\Stack.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 [ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md4\Code Camp - WordNet\WordNet\Stack.java:28: Line is longer than 80 characters (found 89). [LineLength]
