@@ -111,7 +111,7 @@ class Solution {
 					int[] array = sapobj.length(vertexOne, vertexTwo);
 					ArrayList<String> result = map.get(array[1]);
 					for(String each : result) {
-						System.out.println("distance: " + array[0] + " ancestor: " + each);
+						System.out.println("distance= " + array[0] + ", ancestor= " + each);
 					}
 				}
 			 	break;
