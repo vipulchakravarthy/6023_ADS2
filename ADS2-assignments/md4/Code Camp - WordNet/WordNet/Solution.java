@@ -7,7 +7,7 @@ import java.io.FileNotFoundException;
 class Solution {
 	static Digraph graph;
 	static HashMap<Integer, ArrayList<String>> map;
-	static HashMap<String ,ArrayList<Integer>> revmap;
+	static HashMap<String , ArrayList<Integer>> revmap;
 	Solution() {
 	}
 	public  static void fileSynsets(String file) {
@@ -105,13 +105,14 @@ class Solution {
 						System.out.println("IllegalArgumentException");
 						return;
 					}
-				// 	BreadthFirstDirectedPaths bfsObj = new BreadthFirstDirectedPaths();
-				// 	ArrayList<Integer> distance = new ArrayList<Integer>();
-				// 	ArrayList<Integer> listOne = revmap.get(tokens[0]);
-				// 	for(int i = 0; i < listOne.size(); i++) {
-				// 		bfsObj = new BreadthFirstDirectedPaths(graph, listOne.get(i));
-				// 	}
-
+					SAP sapobj = new SAP(graph);
+					ArrayList<Integer> vertexOne = revmap.get(tokens[0]);
+					ArrayList<Integer> vertexTwo = revmap.get(tokens[1]);
+					int[] array = sapobj.length(vertexOne, vertexTwo);
+					ArrayList<String> result = map.get(array[1]);
+					for(String each : result) {
+						System.out.println("distance: " + array[0] + " ancestor: " + each);
+					}
 				}
 			 	break;
 		}

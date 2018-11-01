@@ -42,7 +42,8 @@ distance = 7, ancestor = entity
 distance = 10, ancestor = entity
 
 Your Output: 
-
+distance: 7 ancestor: entity
+distance: 10 ancestor: entity
 ----------------------------------------
 
 ########## Testcase 2: Failed ##########
@@ -55,7 +56,18 @@ distance = 7, ancestor = lipid lipide lipoid
 distance = 1, ancestor = animal_oil
 
 Your Output: 
-
+distance: 7 ancestor: macromolecule
+distance: 7 ancestor: supermolecule
+distance: 7 ancestor: macromolecule
+distance: 7 ancestor: supermolecule
+distance: 9 ancestor: macromolecule
+distance: 9 ancestor: supermolecule
+distance: 8 ancestor: macromolecule
+distance: 8 ancestor: supermolecule
+distance: 7 ancestor: lipid
+distance: 7 ancestor: lipide
+distance: 7 ancestor: lipoid
+distance: 1 ancestor: animal_oil
 ----------------------------------------
 
 ########## Testcase 3: Failed ##########
@@ -65,7 +77,9 @@ distance = 13, ancestor = thing
 distance = 2, ancestor = wax
 
 Your Output: 
-
+distance: 3 ancestor: wax
+distance: 13 ancestor: thing
+distance: 2 ancestor: wax
 ----------------------------------------
 
 ########## Testcase 4: Failed ##########
@@ -77,7 +91,11 @@ distance = 0, ancestor = e
 distance = 0, ancestor = f
 
 Your Output: 
-
+distance: 0 ancestor: b
+distance: 0 ancestor: c
+distance: 0 ancestor: d
+distance: 0 ancestor: e
+distance: 0 ancestor: f
 ----------------------------------------
 
 ########## Testcase 5: Failed ##########
@@ -94,7 +112,16 @@ distance = 2, ancestor = j
 distance = 1, ancestor = k
 
 Your Output: 
-
+distance: 1 ancestor: b
+distance: 2 ancestor: c
+distance: 4 ancestor: c
+distance: 3 ancestor: c
+distance: 4 ancestor: c
+distance: 4 ancestor: c
+distance: 3 ancestor: c
+distance: 3 ancestor: i
+distance: 2 ancestor: j
+distance: 1 ancestor: k
 ----------------------------------------
 
 ########## Testcase 6: Failed ##########
@@ -108,7 +135,13 @@ distance = 3, ancestor = h
 distance = 1, ancestor = h
 
 Your Output: 
-
+distance: 1 ancestor: b
+distance: 2 ancestor: c
+distance: 2 ancestor: h
+distance: 5 ancestor: h
+distance: 4 ancestor: h
+distance: 3 ancestor: h
+distance: 1 ancestor: h
 ----------------------------------------
 
 ########## Testcase 7: Failed ##########
@@ -125,7 +158,16 @@ distance = 3, ancestor = f
 distance = 4, ancestor = f
 
 Your Output: 
-
+distance: 1 ancestor: b
+distance: 1 ancestor: c
+distance: 1 ancestor: d
+distance: 1 ancestor: e
+distance: 2 ancestor: f
+distance: 3 ancestor: f
+distance: 3 ancestor: f
+distance: 3 ancestor: f
+distance: 3 ancestor: f
+distance: 4 ancestor: f
 ----------------------------------------
 
 ########## Testcase 8: Passed ##########
@@ -205,7 +247,53 @@ distance = 0, ancestor = era epoch
 distance = 8, ancestor = abstraction abstract_entity
 
 Your Output: 
-
+distance: 11 ancestor: whole
+distance: 11 ancestor: unit
+distance: 9 ancestor: organism
+distance: 9 ancestor: being
+distance: 14 ancestor: entity
+distance: 13 ancestor: object
+distance: 13 ancestor: physical_object
+distance: 2 ancestor: decade
+distance: 2 ancestor: decennary
+distance: 2 ancestor: decennium
+distance: 8 ancestor: substance
+distance: 9 ancestor: location
+distance: 2 ancestor: letter
+distance: 2 ancestor: letter_of_the_alphabet
+distance: 2 ancestor: alphabetic_character
+distance: 2 ancestor: letter
+distance: 2 ancestor: letter_of_the_alphabet
+distance: 2 ancestor: alphabetic_character
+distance: 12 ancestor: person
+distance: 12 ancestor: individual
+distance: 12 ancestor: someone
+distance: 12 ancestor: somebody
+distance: 12 ancestor: mortal
+distance: 12 ancestor: soul
+distance: 15 ancestor: abstraction
+distance: 15 ancestor: abstract_entity
+distance: 0 ancestor: 9/11
+distance: 0 ancestor: 9-11
+distance: 0 ancestor: September_11
+distance: 0 ancestor: Sept._11
+distance: 0 ancestor: Sep_11
+distance: 2 ancestor: digit
+distance: 2 ancestor: figure
+distance: 13 ancestor: abstraction
+distance: 13 ancestor: abstract_entity
+distance: 12 ancestor: abstraction
+distance: 12 ancestor: abstract_entity
+distance: 0 ancestor: era
+distance: 0 ancestor: epoch
+Exception in thread "main" java.lang.IndexOutOfBoundsException: Index 2 out-of-bounds for length 2
+	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:64)
+	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:70)
+	at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:248)
+	at java.base/java.util.Objects.checkIndex(Objects.java:372)
+	at java.base/java.util.ArrayList.get(ArrayList.java:440)
+	at SAP.length(SAP.java:21)
+	at Solution.main(Solution.java:111)
 ----------------------------------------
 
 ########## Testcase 14: Passed ##########
