@@ -61,13 +61,14 @@ class Solution {
 				Scanner input = new Scanner(f);
 				while(input.hasNext()) {
 					String[] line = input.nextLine().split(",");
-					graph.addEdge(Integer.parseInt(line[0]),
-						Integer.parseInt(line[1]));
+					String token = line[0];
+					for(int i = 1; i < line.length; i++) {
+						graph.addEdge(Integer.parseInt(token), Integer.parseInt(line[i]));
     			}
     		}
     	}
-
-    } catch(FileNotFoundException e) {
+    }
+	}catch(FileNotFoundException e) {
             System.out.println("No file");
     }
 	}
