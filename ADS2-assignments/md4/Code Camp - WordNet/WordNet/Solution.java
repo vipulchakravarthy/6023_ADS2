@@ -76,11 +76,22 @@ class Solution {
 		String fileOne = scan.nextLine();
 		String fileTwo = scan.nextLine();
 		String type = scan.nextLine();
+		int count = 0;
 		fileSynsets(fileOne);
 		fileHypernm(fileTwo);
 		switch(type) {
 			case "Graph":
 				DirectedCycle cycleObj = new DirectedCycle(graph);
+				for(int i = 0; i < graph.V(); i++) {
+					int outdegree = graph.outdegree(i);
+					if(outdegree == 0 || outdegree == (graph.V() - 1)) {
+						count++;
+					}
+				}
+				if(count > 1) {
+					System.out.println("Multiple roots");
+					return;
+				}
 				if(cycleObj.hasCycle()) {
 					System.out.println("Cycle detected");
 				} else {
