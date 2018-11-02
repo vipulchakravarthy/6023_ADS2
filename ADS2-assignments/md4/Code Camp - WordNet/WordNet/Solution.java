@@ -84,7 +84,7 @@ class Solution {
 				DirectedCycle cycleObj = new DirectedCycle(graph);
 				for(int i = 0; i < graph.V(); i++) {
 					int outdegree = graph.outdegree(i);
-					if(outdegree == (graph.V() - 1)) {
+					if(outdegree == 0) {
 						count++;
 					}
 				}
