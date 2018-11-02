@@ -229,7 +229,6 @@ Starting audit...
 [ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md4\Code Camp - WordNet\WordNet\Solution.java:82:23: 'switch' is not followed by whitespace. [WhitespaceAround]
 [ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md4\Code Camp - WordNet\WordNet\Solution.java:84: Line is longer than 80 characters (found 82). [LineLength]
 [ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md4\Code Camp - WordNet\WordNet\Solution.java:85:36: 'for' is not followed by whitespace. [WhitespaceAfter]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md4\Code Camp - WordNet\WordNet\Solution.java:87: Line is longer than 80 characters (found 92). [LineLength]
 [ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md4\Code Camp - WordNet\WordNet\Solution.java:87:43: 'if' is not followed by whitespace. [WhitespaceAfter]
 [ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md4\Code Camp - WordNet\WordNet\Solution.java:91:35: 'if' is not followed by whitespace. [WhitespaceAfter]
 [ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md4\Code Camp - WordNet\WordNet\Solution.java:95:35: 'if' is not followed by whitespace. [WhitespaceAfter]
@@ -247,7 +246,7 @@ Starting audit...
 [ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md4\Code Camp - WordNet\WordNet\Solution.java:115:75: ';' is not followed by whitespace. [WhitespaceAfter]
 [ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md4\Code Camp - WordNet\WordNet\Solution.java:117: Line is longer than 80 characters (found 94). [LineLength]
 Audit done.
-Checkstyle ends with 61 errors.
+Checkstyle ends with 60 errors.
 Starting audit...
 [ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md4\Code Camp - WordNet\WordNet\Stack.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 [ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md4\Code Camp - WordNet\WordNet\Stack.java:28: Line is longer than 80 characters (found 89). [LineLength]
