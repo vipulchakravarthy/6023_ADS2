@@ -17,8 +17,9 @@ public class SAP {
         int min = graph.V();
         int tempOne = 0;
         for(int i = 0; i < listOne.size(); i++) {
+            for(int k = 0; k < listTwo.size(); k++) {
             BreadthFirstDirectedPaths bfsOne = new BreadthFirstDirectedPaths(graph, listOne.get(i));
-            BreadthFirstDirectedPaths bfsTwo = new BreadthFirstDirectedPaths(graph, listTwo.get(i));
+            BreadthFirstDirectedPaths bfsTwo = new BreadthFirstDirectedPaths(graph, listTwo.get(k));
             for(int j = 0; j < graph.V(); j++) {
                 if(bfsOne.hasPathTo(j) && bfsTwo.hasPathTo(j)) {
                     int sum = bfsOne.distTo[j] + bfsTwo.distTo[j];
@@ -29,8 +30,9 @@ public class SAP {
                 }
             }
         }
-        int[] result = {min, tempOne};
-        return result;
+    }
+    int[] result = {min, tempOne};
+    return result;
         }
 
     // // a common ancestor that participates in shortest ancestral path; -1 if no such path
