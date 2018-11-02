@@ -188,20 +188,32 @@ Your Output:
 7:
 ----------------------------------------
 
-########## Testcase 9: Passed ##########
+########## Testcase 9: Failed ##########
 Expected Output: 
 Multiple roots
 
 Your Output: 
-Multiple roots
+6 vertices, 5 edges 
+0: 
+1: 2 0 
+2: 3 
+3: 4 
+4: 5 
+5:
 ----------------------------------------
 
-########## Testcase 10: Passed ##########
+########## Testcase 10: Failed ##########
 Expected Output: 
 Multiple roots
 
 Your Output: 
-Multiple roots
+6 vertices, 4 edges 
+0: 1 
+1: 2 
+2: 3 
+3: 
+4: 5 
+5:
 ----------------------------------------
 
 ########## Testcase 11: Passed ##########
