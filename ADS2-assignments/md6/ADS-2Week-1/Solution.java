@@ -61,7 +61,9 @@ class PageRank {
 		}
 	}
 	public void print() {
-	System.out.println(map);
+		for(int i = 0; i < map.size(); i++) {
+			System.out.println(i + " - " + map.get(i));
+		}
 	}
 
 }

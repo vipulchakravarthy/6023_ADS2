@@ -252,16 +252,17 @@ Starting audit...
 [ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md6\ADS-2Week-1\Solution.java:53: Line is longer than 80 characters (found 86). [LineLength]
 [ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md6\ADS-2Week-1\Solution.java:56: Line is longer than 80 characters (found 87). [LineLength]
 [ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md6\ADS-2Week-1\Solution.java:63:9: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md6\ADS-2Week-1\Solution.java:69: Missing a Javadoc comment. [JavadocType]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md6\ADS-2Week-1\Solution.java:69:1: Utility classes should not have a public or default constructor. [HideUtilityClassConstructor]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md6\ADS-2Week-1\Solution.java:70:9: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md6\ADS-2Week-1\Solution.java:70:19: '{' is not preceded with whitespace. [WhitespaceAround]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md6\ADS-2Week-1\Solution.java:73:9: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md6\ADS-2Week-1\Solution.java:74: Line is longer than 80 characters (found 81). [LineLength]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md6\ADS-2Week-1\Solution.java:81: Line is longer than 80 characters (found 87). [LineLength]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md6\ADS-2Week-1\Solution.java:93: Line is longer than 80 characters (found 85). [LineLength]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md6\ADS-2Week-1\Solution.java:64:20: 'for' is not followed by whitespace. [WhitespaceAfter]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md6\ADS-2Week-1\Solution.java:71: Missing a Javadoc comment. [JavadocType]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md6\ADS-2Week-1\Solution.java:71:1: Utility classes should not have a public or default constructor. [HideUtilityClassConstructor]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md6\ADS-2Week-1\Solution.java:72:9: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md6\ADS-2Week-1\Solution.java:72:19: '{' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md6\ADS-2Week-1\Solution.java:75:9: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md6\ADS-2Week-1\Solution.java:76: Line is longer than 80 characters (found 81). [LineLength]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md6\ADS-2Week-1\Solution.java:83: Line is longer than 80 characters (found 87). [LineLength]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md6\ADS-2Week-1\Solution.java:95: Line is longer than 80 characters (found 85). [LineLength]
 Audit done.
-Checkstyle ends with 33 errors.
+Checkstyle ends with 34 errors.
 Starting audit...
 [ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md6\ADS-2Week-1\Stack.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 [ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md6\ADS-2Week-1\Stack.java:13: Line has trailing spaces. [RegexpSingleline]
