@@ -46,6 +46,7 @@ class PageRank {
 				}
 			}
 		}
+		double[] tempArray = new double[graph.vertices()];
 		for (int j = 0; j < 1000; j++) {
 			for (int i = 0; i < vertices; i++) {
 				if (graph.indegree[i] != 0) {
@@ -55,8 +56,11 @@ class PageRank {
 						double value = map.get(each);
 						sum += (value / (double) graph.outdegree(each));
 					}
-					map.put(i, sum);
+					tempArray[i] = sum;
 				}
+			}
+			for(int i = 0; i < vertices; i++) {
+				map.put(i,tempArray[i]);
 			}
 		}
 	}
