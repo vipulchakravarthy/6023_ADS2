@@ -47,6 +47,7 @@ class PageRank {
 			}
 		}
 		double[] tempArray = new double[graph.vertices()];
+		double[] tempTwo = new double[vertices];
 		for (int j = 0; j < 1000; j++) {
 			for (int i = 0; i < vertices; i++) {
 				if (graph.indegree[i] != 0) {
@@ -55,6 +56,9 @@ class PageRank {
 					for (int each : linksList) {
 						double value = map.get(each);
 						sum += (value / (double) graph.outdegree(each));
+					}
+					if(tempArray[i] == sum) {
+						return;
 					}
 					tempArray[i] = sum;
 				}
@@ -94,6 +98,7 @@ public class Solution {
 		// to read the adjacency list from std input
 		// and build the graph
 		// Create page rank object and pass the graph object to the constructor
+
 		PageRank prObj = new PageRank(graph);
 		prObj.calculatePR();
 		prObj.print();
