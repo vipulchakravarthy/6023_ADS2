@@ -46,7 +46,7 @@ class PageRank {
 				}
 			}
 		}
-		for (int j = 0; j < 1000; j++) {
+		for (int j = 0; j < 900; j++) {
 			for (int i = 0; i < vertices; i++) {
 				if (graph.indegree[i] != 0) {
 					sum = 0.0;
