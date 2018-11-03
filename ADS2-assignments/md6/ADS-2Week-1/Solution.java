@@ -52,7 +52,7 @@ class PageRank {
                 }
             }
         }
-        System.out.println(inLinks);
+        // System.out.println(inLinks);
         for (int j = 0; j < 1000; j++) {
             for (int i = 0; i < vertices; i++) {
                 sum = 0.0000;
