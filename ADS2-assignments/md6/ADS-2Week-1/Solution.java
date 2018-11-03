@@ -94,7 +94,6 @@ public class Solution {
 		// to read the adjacency list from std input
 		// and build the graph
 		// Create page rank object and pass the graph object to the constructor
-
 		PageRank prObj = new PageRank(graph);
 		prObj.calculatePR();
 		prObj.print();

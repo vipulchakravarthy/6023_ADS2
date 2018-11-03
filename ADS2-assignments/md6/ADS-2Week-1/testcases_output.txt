@@ -20,7 +20,7 @@ Your Output:
 
 Exception in thread "main" java.lang.NullPointerException
 	at PageRank.calculatePR(Solution.java:55)
-	at Solution.main(Solution.java:99)
+	at Solution.main(Solution.java:98)
 ----------------------------------------
 
 ########## Testcase 1: Failed ##########
