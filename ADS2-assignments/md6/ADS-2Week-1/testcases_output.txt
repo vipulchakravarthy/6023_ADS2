@@ -19,8 +19,8 @@ Your Output:
 3: 2 
 
 Exception in thread "main" java.lang.NullPointerException
-	at PageRank.calculatePR(Solution.java:55)
-	at Solution.main(Solution.java:98)
+	at PageRank.calculatePR(Solution.java:56)
+	at Solution.main(Solution.java:99)
 ----------------------------------------
 
 ########## Testcase 1: Failed ##########
