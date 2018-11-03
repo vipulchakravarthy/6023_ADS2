@@ -1,6 +1,7 @@
 import java.util.Scanner;
 import java.util.HashMap;
 import java.util.ArrayList;
+import java.util.Arrays;
 /**
  *the graph is send to page rank class.
  *first of all I am building a hashMap which is having.
@@ -14,9 +15,13 @@ class PageRank {
     private int vertices;
     HashMap<Integer, Double> map;
     HashMap<Integer, ArrayList<Integer>> inLinks;
+    double[] tempArray;
     DiGraph graph;
+    double[] result;
     PageRank(DiGraph g) {
         graph = g;
+        result = new double[graph.vertices()];
+        tempArray = new double[graph.vertices()];
         vertices = graph.vertices();
         map = new HashMap<Integer, Double>();
         inLinks = new HashMap<Integer, ArrayList<Integer>>();
@@ -27,11 +32,12 @@ class PageRank {
         double temp = (double) vertices;
         double initialPR = (1 / temp);
         for (int i = 0; i < vertices; i++) {
-            if (graph.indegree[i] == 0) {
-                map.put(i, 0.0);
-            } else {
-                map.put(i, initialPR);
-            }
+            // if (graph.indegree[i] == 0) {
+            //   map.put(i, 0.0);
+            //     continue;
+            // } else {
+            //     map.put(i, initialPR);
+                result[i] = initialPR;
         }
         for (int i = 0; i < vertices; i++) {
             for (int w : graph.adj[i]) {
@@ -46,38 +52,32 @@ class PageRank {
                 }
             }
         }
-        // System.out.println(inLinks);
-        double[] tempArray = new double[graph.vertices()];
-        double[] tempTwo = new double[vertices];
-        int count = 0;
+        System.out.println(inLinks);
         for (int j = 0; j < 1000; j++) {
             for (int i = 0; i < vertices; i++) {
                 sum = 0.0000;
                 ArrayList<Integer> linksList = inLinks.get(i);
                 if(linksList != null) {
                     for (int each : linksList) {
-                        double value = map.get(each);
-                        sum += ((double) value / (double) graph.outdegree(each));
+                        // double value = map.get(each);
+                        sum += ((double) result[each] / (double) graph.outdegree(each));
                     }
                     tempArray[i] = sum;
                 }
             }
-            for (int i = 0; i < vertices; i++) {
-                map.put(i, tempArray[i]);
-            }
-            for(int i = 0; i < vertices;i++) {
-                if(tempArray[i] == map.get(i)) {
-                    count++;
-                }
-            }
-            if(count == vertices) {
+            if(Arrays.equals(tempArray, result)) {
                 break;
+            } else{
+                result = tempArray.clone();
             }
+            // for (int i = 0; i < vertices; i++) {
+            //     map.put(i, tempArray[i]);
+            // }
         }
     }
     public void print() {
-        for (int i = 0; i < map.size(); i++) {
-            System.out.println(i + " - " + map.get(i));
+        for (int i = 0; i < vertices; i++) {
+            System.out.println(i + " - " + tempArray[i]);
         }
     }
 
