@@ -25,7 +25,7 @@ class PageRank {
 		Double sum = 0.0;
 		ArrayList<Integer> list;
 		double temp = (double) vertices;
-		Double initialPR = (1 / temp);
+		double initialPR = (1 / temp);
 		for (int i = 0; i < vertices; i++) {
 			if (graph.indegree[i] == 0) {
 				map.put(i, 0.0);
@@ -52,8 +52,8 @@ class PageRank {
 					sum = 0.0;
 					ArrayList<Integer> linksList = inLinks.get(i);
 					for (int each : linksList) {
-						Double value = map.get(each);
-						sum += (value / graph.outdegree(each));
+						double value = map.get(each);
+						sum += (value / (double) graph.outdegree(each));
 					}
 					map.put(i, sum);
 				}
