@@ -252,11 +252,12 @@ Starting audit...
 [ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md6\ADS-2Week-1\Solution.java:80:20: 'for' is not followed by whitespace. [WhitespaceAfter]
 [ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md6\ADS-2Week-1\Solution.java:81:28: 'for' is not followed by whitespace. [WhitespaceAfter]
 [ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md6\ADS-2Week-1\Solution.java:82:35: 'if' is not followed by whitespace. [WhitespaceAfter]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md6\ADS-2Week-1\Solution.java:83: Line is longer than 80 characters (found 83). [LineLength]
 [ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md6\ADS-2Week-1\Solution.java:83:44: 'for' is not followed by whitespace. [WhitespaceAfter]
 [ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md6\ADS-2Week-1\Solution.java:92: Line is longer than 80 characters (found 87). [LineLength]
 [ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md6\ADS-2Week-1\Solution.java:104: Line is longer than 80 characters (found 85). [LineLength]
 Audit done.
-Checkstyle ends with 28 errors.
+Checkstyle ends with 29 errors.
 Starting audit...
 [ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md6\ADS-2Week-1\Stack.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 [ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md6\ADS-2Week-1\Stack.java:13: Line has trailing spaces. [RegexpSingleline]

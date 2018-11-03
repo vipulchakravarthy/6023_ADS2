@@ -80,7 +80,7 @@ public class Solution {
 		for(int i = 0; i < graph.vertices(); i++) {
 			for(int w : graph.adj[i]) {
 				if(graph.outdegree(w) == 0) {
-					for(int k = w; k >= 0; k--) {
+					for(int k = 0; k < graph.vertices(); k++) {
 						graph.addEdge(w, k);
 					}
 				}
