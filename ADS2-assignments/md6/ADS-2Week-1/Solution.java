@@ -1,6 +1,15 @@
 import java.util.Scanner;
 import java.util.HashMap;
 import java.util.ArrayList;
+/**
+ *the graph is send to page rank class.
+ *first of all I am building a hashMap which is having.
+ *all the vertices inlinks.
+ *form that iam going to find out the rank of each vertex
+ *for every iteration.
+ *initially the pagerank value will be 1/ vertices.
+ *it is iteration is done for 1000 times.
+ */
 class PageRank {
 	private int vertices;
 	HashMap<Integer, Double> map;
@@ -40,6 +49,7 @@ class PageRank {
 		for(int j = 0; j < 1000; j++) {
 			for(int i = 0; i < vertices; i++) {
 				if(graph.indegree[i] != 0) {
+					sum = 0.0;
 					ArrayList<Integer> linksList = inLinks.get(i);
 					for (int each: linksList) {
 						Double value = map.get(each);
