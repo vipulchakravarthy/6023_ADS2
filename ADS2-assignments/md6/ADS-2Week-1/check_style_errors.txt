@@ -240,7 +240,7 @@ Starting audit...
 [ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md6\ADS-2Week-1\Solution.java:18:18: Parameter g should be final. [FinalParameters]
 [ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md6\ADS-2Week-1\Solution.java:24:9: Missing a Javadoc comment. [JavadocMethod]
 [ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md6\ADS-2Week-1\Solution.java:40: Line is longer than 80 characters (found 85). [LineLength]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md6\ADS-2Week-1\Solution.java:49:37: '300' is a magic number. [MagicNumber]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md6\ADS-2Week-1\Solution.java:49:37: '100' is a magic number. [MagicNumber]
 [ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md6\ADS-2Week-1\Solution.java:53: Line is longer than 80 characters (found 86). [LineLength]
 [ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md6\ADS-2Week-1\Solution.java:56: Line is longer than 80 characters (found 96). [LineLength]
 [ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md6\ADS-2Week-1\Solution.java:63:9: Missing a Javadoc comment. [JavadocMethod]
