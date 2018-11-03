@@ -17,6 +17,16 @@ class DiGraph {
      */
     public Bag<Integer>[] adj;
     public int[] indegree;
+    DiGraph(int V) {
+        // if (V < 0) throw new IllegalArgumentException("Number of vertices in a Digraph must be nonnegative");
+        this.vertices = V;
+        this.edges = 0;
+        indegree = new int[vertices];
+        adj = (Bag<Integer>[]) new Bag[vertices];
+        for (int v = 0; v < vertices; v++) {
+            adj[v] = new Bag<Integer>();
+        }
+    }
     /**
      *the constructor is to initialize the input given.
      *for the graph.
@@ -102,5 +112,14 @@ class DiGraph {
             s.append("\n");
         }
         return s.toString();
+    }
+    public DiGraph reverse() {
+        DiGraph reverse = new DiGraph(vertices);
+        for (int v = 0; v < vertices; v++) {
+            for (int w : adj(v)) {
+                reverse.addEdge(w, v);
+            }
+        }
+        return reverse;
     }
 }
