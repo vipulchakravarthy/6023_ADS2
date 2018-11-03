@@ -86,7 +86,6 @@ public class Solution {
 				}
 			}
 		}
-		System.out.println(graph);
 		// iterate count of vertices times
 		// to read the adjacency list from std input
 		// and build the graph
