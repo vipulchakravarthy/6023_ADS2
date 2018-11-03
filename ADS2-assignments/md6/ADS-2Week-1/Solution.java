@@ -46,7 +46,7 @@ class PageRank {
                 }
             }
         }
-        System.out.println(inLinks);
+        // System.out.println(inLinks);
         double[] tempArray = new double[graph.vertices()];
         double[] tempTwo = new double[vertices];
         int count = 0;
