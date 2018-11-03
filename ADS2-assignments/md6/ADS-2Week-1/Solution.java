@@ -11,107 +11,117 @@ import java.util.ArrayList;
  *it is iteration is done for 1000 times.
  */
 class PageRank {
-	private int vertices;
-	HashMap<Integer, Double> map;
-	HashMap<Integer, ArrayList<Integer>> inLinks;
-	DiGraph graph;
-	PageRank(DiGraph g) {
-		graph = g;
-		vertices = graph.vertices();
-		map = new HashMap<Integer, Double>();
-		inLinks = new HashMap<Integer, ArrayList<Integer>>();
-	}
-	public void calculatePR() {
-		Double sum = 0.0;
-		ArrayList<Integer> list;
-		double temp = (double) vertices;
-		double initialPR = (1 / temp);
-		for (int i = 0; i < vertices; i++) {
-			if (graph.indegree[i] == 0) {
-				map.put(i, 0.0);
-			} else {
-				map.put(i, initialPR);
-			}
-		}
-		for (int i = 0; i < vertices; i++) {
-			for (int w : graph.adj[i]) {
-				list = new ArrayList<Integer>();
-				if (inLinks.containsKey(w)) {
-					ArrayList<Integer> tempList = inLinks.get(w);
-					tempList.add(i);
-					inLinks.put(w, tempList);
-				} else {
-					list.add(i);
-					inLinks.put(w, list);
-				}
-			}
-		}
-		double[] tempArray = new double[graph.vertices()];
-		double[] tempTwo = new double[vertices];
-		for (int j = 0; j < 1000; j++) {
-			for (int i = 0; i < vertices; i++) {
-				sum = 0.0000;
-				ArrayList<Integer> linksList = inLinks.get(i);
-				if(linksList != null) {
-					for (int each : linksList) {
-						double value = map.get(each);
-						sum += ((double) value / (double) graph.outdegree(each));
-					}
-					tempArray[i] = sum;
-				}
-			}
-			for (int i = 0; i < vertices; i++) {
-				map.put(i, tempArray[i]);
-			}
-		}
-	}
-	public void print() {
-		for (int i = 0; i < map.size(); i++) {
-			System.out.println(i + " - " + map.get(i));
-		}
-	}
+    private int vertices;
+    HashMap<Integer, Double> map;
+    HashMap<Integer, ArrayList<Integer>> inLinks;
+    DiGraph graph;
+    PageRank(DiGraph g) {
+        graph = g;
+        vertices = graph.vertices();
+        map = new HashMap<Integer, Double>();
+        inLinks = new HashMap<Integer, ArrayList<Integer>>();
+    }
+    public void calculatePR() {
+        Double sum = 0.0;
+        ArrayList<Integer> list;
+        double temp = (double) vertices;
+        double initialPR = (1 / temp);
+        for (int i = 0; i < vertices; i++) {
+            if (graph.indegree[i] == 0) {
+                map.put(i, 0.0);
+            } else {
+                map.put(i, initialPR);
+            }
+        }
+        for (int i = 0; i < vertices; i++) {
+            for (int w : graph.adj[i]) {
+                list = new ArrayList<Integer>();
+                if (inLinks.containsKey(w)) {
+                    ArrayList<Integer> tempList = inLinks.get(w);
+                    tempList.add(i);
+                    inLinks.put(w, tempList);
+                } else {
+                    list.add(i);
+                    inLinks.put(w, list);
+                }
+            }
+        }
+        System.out.println(inLinks);
+        double[] tempArray = new double[graph.vertices()];
+        double[] tempTwo = new double[vertices];
+        int count = 0;
+        for (int j = 0; j < 1000; j++) {
+            for (int i = 0; i < vertices; i++) {
+                sum = 0.0000;
+                ArrayList<Integer> linksList = inLinks.get(i);
+                if(linksList != null) {
+                    for (int each : linksList) {
+                        double value = map.get(each);
+                        sum += ((double) value / (double) graph.outdegree(each));
+                    }
+                    tempArray[i] = sum;
+                }
+            }
+            for (int i = 0; i < vertices; i++) {
+                map.put(i, tempArray[i]);
+            }
+            for(int i = 0; i < vertices;i++) {
+                if(tempArray[i] == map.get(i)) {
+                    count++;
+                }
+            }
+            if(count == vertices) {
+                break;
+            }
+        }
+    }
+    public void print() {
+        for (int i = 0; i < map.size(); i++) {
+            System.out.println(i + " - " + map.get(i));
+        }
+    }
 
 }
 
 public class Solution {
-	Solution() {
+    Solution() {
 
-	}
-	public static void main(final String[] args) {
-		// read the first line of the input to get the number of vertices
-		Scanner scan = new Scanner(System.in);
-		DiGraph graph = new DiGraph(scan);
-		System.out.println(graph);
-		for (int i = 0; i < graph.vertices(); i++) {
-			if (graph.outdegree(i) == 0) {
-				for (int k = 0; k < graph.vertices(); k++) {
-					if (k != i) {
-						graph.addEdge(i, k);
-					}
-				}
-			}
-		}
-		// iterate count of vertices times
-		// to read the adjacency list from std input
-		// and build the graph
-		// Create page rank object and pass the graph object to the constructor
-		PageRank prObj = new PageRank(graph);
-		prObj.calculatePR();
-		prObj.print();
-		// print the page rank object
+    }
+    public static void main(final String[] args) {
+        // read the first line of the input to get the number of vertices
+        Scanner scan = new Scanner(System.in);
+        DiGraph graph = new DiGraph(scan);
+        System.out.println(graph);
+        for (int i = 0; i < graph.vertices(); i++) {
+            if (graph.outdegree(i) == 0) {
+                for (int k = 0; k < graph.vertices(); k++) {
+                    if (k != i) {
+                        graph.addEdge(i, k);
+                    }
+                }
+            }
+        }
+        // iterate count of vertices times
+        // to read the adjacency list from std input
+        // and build the graph
+        // Create page rank object and pass the graph object to the constructor
+        PageRank prObj = new PageRank(graph);
+        prObj.calculatePR();
+        prObj.print();
+        // print the page rank object
 
-		// This part is only for the final test case
+        // This part is only for the final test case
 
-		// File path to the web content
-		// String file = "WebContent.txt";
+        // File path to the web content
+        // String file = "WebContent.txt";
 
-		// instantiate web search object
-		// and pass the page rank object and the file path to the constructor
+        // instantiate web search object
+        // and pass the page rank object and the file path to the constructor
 
-		// read the search queries from std in
-		// remove the q= prefix and extract the search word
-		// pass the word to iAmFeelingLucky method of web search
-		// print the return value of iAmFeelingLucky
+        // read the search queries from std in
+        // remove the q= prefix and extract the search word
+        // pass the word to iAmFeelingLucky method of web search
+        // print the return value of iAmFeelingLucky
 
-	}
+    }
 }
