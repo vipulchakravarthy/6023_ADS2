@@ -26,42 +26,42 @@ class PageRank {
 		ArrayList<Integer> list;
 		double temp = (double) vertices;
 		Double initialPR = (1 / temp);
-		for(int i = 0; i < vertices; i++) {
-			if(graph.indegree[i] == 0) {
+		for (int i = 0; i < vertices; i++) {
+			if (graph.indegree[i] == 0) {
 				map.put(i, 0.0);
 			} else {
 				map.put(i, initialPR);
 			}
 		}
-		for(int i = 0; i < vertices; i++) {
-				for(int w:graph.adj[i]) {
-					list = new ArrayList<Integer>();
-					if(inLinks.containsKey(w)) {
-						ArrayList<Integer> tempList = inLinks.get(w);
-						tempList.add(i);
-						inLinks.put(w, tempList);
-					} else {
-						list.add(i);
-						inLinks.put(w, list);
-					}
+		for (int i = 0; i < vertices; i++) {
+			for (int w : graph.adj[i]) {
+				list = new ArrayList<Integer>();
+				if (inLinks.containsKey(w)) {
+					ArrayList<Integer> tempList = inLinks.get(w);
+					tempList.add(i);
+					inLinks.put(w, tempList);
+				} else {
+					list.add(i);
+					inLinks.put(w, list);
 				}
+			}
 		}
-		for(int j = 0; j < 1000; j++) {
-			for(int i = 0; i < vertices; i++) {
-				if(graph.indegree[i] != 0) {
+		for (int j = 0; j < 1000; j++) {
+			for (int i = 0; i < vertices; i++) {
+				if (graph.indegree[i] != 0) {
 					sum = 0.0;
 					ArrayList<Integer> linksList = inLinks.get(i);
-					for (int each: linksList) {
+					for (int each : linksList) {
 						Double value = map.get(each);
 						sum += (value / graph.outdegree(each));
-            		}
-            		map.put(i, sum);
-            	}
+					}
+					map.put(i, sum);
+				}
 			}
 		}
 	}
 	public void print() {
-		for(int i = 0; i < map.size(); i++) {
+		for (int i = 0; i < map.size(); i++) {
 			System.out.println(i + " - " + map.get(i));
 		}
 	}
@@ -69,13 +69,23 @@ class PageRank {
 }
 
 public class Solution {
-	Solution(){
+	Solution() {
 
 	}
 	public static void main(final String[] args) {
 		// read the first line of the input to get the number of vertices
 		Scanner scan = new Scanner(System.in);
 		DiGraph graph = new DiGraph(scan);
+		System.out.println(graph);
+		for(int i = 0; i < graph.vertices(); i++) {
+			for(int w : graph.adj[i]) {
+				if(graph.outdegree(w) == 0) {
+					for(int k = w; k >= 0; k--) {
+						graph.addEdge(w, k);
+					}
+				}
+			}
+		}
 		System.out.println(graph);
 		// iterate count of vertices times
 		// to read the adjacency list from std input
