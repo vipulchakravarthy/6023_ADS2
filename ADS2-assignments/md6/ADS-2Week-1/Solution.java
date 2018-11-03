@@ -57,9 +57,6 @@ class PageRank {
 						double value = map.get(each);
 						sum += (value / (double) graph.outdegree(each));
 					}
-					if(tempArray[i] == sum) {
-						return;
-					}
 					tempArray[i] = sum;
 				}
 			}
