@@ -50,18 +50,17 @@ class PageRank {
 		double[] tempTwo = new double[vertices];
 		for (int j = 0; j < 1000; j++) {
 			for (int i = 0; i < vertices; i++) {
-				if (graph.indegree[i] != 0) {
-					sum = 0.0;
-					ArrayList<Integer> linksList = inLinks.get(i);
-					for (int each : linksList) {
-						double value = map.get(each);
-						sum += (value / (double) graph.outdegree(each));
-					}
-					tempArray[i] = sum;
+				sum = 0.0000;
+				ArrayList<Integer> linksList = inLinks.get(i);
+				for (int each : linksList) {
+					double value = map.get(each);
+					sum += ((double) value / (double) graph.outdegree(each));
 				}
+				tempArray[i] = sum;
+
 			}
-			for(int i = 0; i < vertices; i++) {
-				map.put(i,tempArray[i]);
+			for (int i = 0; i < vertices; i++) {
+				map.put(i, tempArray[i]);
 			}
 		}
 	}
@@ -82,11 +81,11 @@ public class Solution {
 		Scanner scan = new Scanner(System.in);
 		DiGraph graph = new DiGraph(scan);
 		System.out.println(graph);
-		for(int i = 0; i < graph.vertices(); i++) {
-			for(int w : graph.adj[i]) {
-				if(graph.outdegree(w) == 0) {
-					for(int k = 0; k < graph.vertices(); k++) {
-						graph.addEdge(w, k);
+		for (int i = 0; i < graph.vertices(); i++) {
+			if (graph.outdegree(i) == 0) {
+				for (int k = 0; k < graph.vertices(); k++) {
+					if (k != i) {
+						graph.addEdge(i, k);
 					}
 				}
 			}
