@@ -18,9 +18,10 @@ Your Output:
 2: 0 
 3: 2 
 
-Exception in thread "main" java.lang.NullPointerException
-	at PageRank.calculatePR(Solution.java:56)
-	at Solution.main(Solution.java:99)
+0 - 0.30000000000000004
+1 - 0.15000000000000002
+2 - 0.30000000000000004
+3 - 0.0
 ----------------------------------------
 
 ########## Testcase 1: Failed ##########

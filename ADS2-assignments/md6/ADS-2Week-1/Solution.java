@@ -50,15 +50,15 @@ class PageRank {
 		double[] tempTwo = new double[vertices];
 		for (int j = 0; j < 1000; j++) {
 			for (int i = 0; i < vertices; i++) {
-				if(graph.outdegree(i) != 0) {
 				sum = 0.0000;
 				ArrayList<Integer> linksList = inLinks.get(i);
-				for (int each : linksList) {
-					double value = map.get(each);
-					sum += ((double) value / (double) graph.outdegree(each));
+				if(linksList != null) {
+					for (int each : linksList) {
+						double value = map.get(each);
+						sum += ((double) value / (double) graph.outdegree(each));
+					}
+					tempArray[i] = sum;
 				}
-				tempArray[i] = sum;
-			}
 			}
 			for (int i = 0; i < vertices; i++) {
 				map.put(i, tempArray[i]);
