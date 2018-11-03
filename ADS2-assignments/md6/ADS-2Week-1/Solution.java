@@ -25,6 +25,7 @@ class PageRank {
 	}
 	public void calculatePR() {
 		Double sum = 0.0;
+        int count = 0;
 		ArrayList<Integer> list;
 		double temp = (double) vertices;
 		double initialPR = (1 / temp);
@@ -49,18 +50,15 @@ class PageRank {
 		// 	}
 		// }
 		double[] tempArray = new double[graph.vertices()];
-		double[] tempTwo = new double[vertices];
 		for (int j = 0; j < 1000; j++) {
 			for (int i = 0; i < vertices; i++) {
 				sum = 0.0000;
-				// ArrayList<Integer> linksList = inLinks.get(i);
-				// if(linksList != null) {
 					for (int each : revGraph.adj(i)) {
 						double value = map.get(each);
 						sum += ((double) value / (double) graph.outdegree(each));
 					}
 					tempArray[i] = sum;
-				}
+			}
 			 for (int i = 0; i < vertices; i++) {
 				map.put(i, tempArray[i]);
 			}
