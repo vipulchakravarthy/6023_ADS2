@@ -76,7 +76,7 @@ class PageRank {
         //      }
         //  }
         // }
-        final int thousand = 1000;
+        final int thousand = 999;
         double[] tempArray = new double[graph.vertices()];
         for (int j = 0; j < thousand; j++) {
             for (int i = 0; i < vertices; i++) {
