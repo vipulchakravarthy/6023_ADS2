@@ -78,7 +78,7 @@ class PageRank {
         // }
         final int thousand = 1000;
         double[] tempArray = new double[graph.vertices()];
-        for (int j = 1; j < thousand; j++) {
+        for (int j = 0; j < thousand; j++) {
             for (int i = 0; i < vertices; i++) {
                 sum = 0.0;
                 for (int each : revGraph.adj(i)) {
