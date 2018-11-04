@@ -21,7 +21,7 @@ final class Solution {
      *another hashmap to store the word and.
      *corresponding vertices.
      */
-    private static HashMap<String , ArrayList<Integer>> revmap;
+    private static HashMap<String, ArrayList<Integer>> revmap;
     /**
      *an empty constructor.
      */
@@ -92,7 +92,7 @@ final class Solution {
                         String token = line[0];
                         for (int i = 1; i < line.length; i++) {
                             graph.addEdge(Integer.parseInt(
-                                              token), Integer.parseInt(line[i]));
+                            token), Integer.parseInt(line[i]));
                         }
                     }
                 }
@@ -150,7 +150,7 @@ final class Solution {
                 ArrayList<String> result = map.get(array[1]);
                 String tmp = result.get(0);
                 System.out.print("distance = " + array[0] + ", ancestor = ");
-                for (int k = 0 ; k < result.size(); k++) {
+                for (int k = 0; k < result.size(); k++) {
                     if (k != result.size() - 1) {
                         System.out.print(result.get(k) + " ");
                     } else {
