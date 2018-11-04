@@ -1,3 +1,4 @@
+
 import java.util.Scanner;
 import java.util.HashMap;
 import java.util.ArrayList;
@@ -52,7 +53,7 @@ class PageRank {
 		double[] tempArray = new double[graph.vertices()];
 		for (int j = 0; j < 1000; j++) {
 			for (int i = 0; i < vertices; i++) {
-				sum = 0.0000;
+				sum = 0.0;
 					for (int each : revGraph.adj(i)) {
 						double value = map.get(each);
 						sum += ((double) value / (double) graph.outdegree(each));
