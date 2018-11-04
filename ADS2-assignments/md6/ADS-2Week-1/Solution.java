@@ -38,7 +38,7 @@ class PageRank {
      *
      * @param      g graph object
      */
-    PageRank(DiGraph g) {
+    PageRank(final DiGraph g) {
         graph = g;
         vertices = graph.vertices();
         map = new HashMap<Integer, Double>();
@@ -76,8 +76,9 @@ class PageRank {
         //      }
         //  }
         // }
+        final int thousand = 1000;
         double[] tempArray = new double[graph.vertices()];
-        for (int j = 0; j < 1000; j++) {
+        for (int j = 0; j < thousand; j++) {
             for (int i = 0; i < vertices; i++) {
                 sum = 0.0;
                 for (int each : revGraph.adj(i)) {

@@ -88,11 +88,7 @@ Starting audit...
 Audit done.
 Checkstyle ends with 34 errors.
 Starting audit...
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md6\ADS-2Week-1\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md6\ADS-2Week-1\Solution.java:41:14: Parameter g should be final. [FinalParameters]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md6\ADS-2Week-1\Solution.java:80:29: '1000' is a magic number. [MagicNumber]
 Audit done.
-Checkstyle ends with 3 errors.
 Starting audit...
 [ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md6\ADS-2Week-1\Stack.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 [ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md6\ADS-2Week-1\Stack.java:13: Line has trailing spaces. [RegexpSingleline]
