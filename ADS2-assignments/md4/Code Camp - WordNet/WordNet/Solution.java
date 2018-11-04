@@ -30,7 +30,7 @@ final class Solution {
     /**
      *the method is for reading the file and.
      *to put all the values in hashmap.
-     * @param      file  The file
+     * @param     file  The file
      */
     public  static void fileSynsets(final String file) {
         try {
