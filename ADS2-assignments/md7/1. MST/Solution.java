@@ -26,7 +26,7 @@ class Edge implements Comparable<Edge> {
      * @param      cost  weight of edge
      */
     Edge(final int v, final int w,
-    final double cost) {
+         final double cost) {
         this.vertexOne = v;
         this.vertexTwo = w;
         this.weight = cost;
@@ -55,7 +55,7 @@ class Edge implements Comparable<Edge> {
      * @return another vertex
      */
     public int other(final int v) {
-        if(v == vertexOne) {
+        if (v == vertexOne) {
             return vertexTwo;
         } else {
             return vertexOne;
@@ -71,10 +71,10 @@ class Edge implements Comparable<Edge> {
      * returns 1.
      * equal returns zero.
      */
-    public int compareTo(Edge that) {
+    public int compareTo(final Edge that) {
         if (this.weight < that.weight) {
             return -1;
-        } else if(this.weight > that.weight) {
+        } else if (this.weight > that.weight) {
             return 1;
         } else {
             return 0;
@@ -141,14 +141,14 @@ class EdgeWeightedGraph {
      * @return bag of all the edges.
      */
     public Iterable<Edge> edges() {
-    Bag<Edge> list = new Bag<Edge>();
-    for (int i = 0; i < vertices(); i++) {
-        // int selfLoops = 0;
-        for (Edge e : adj(i)) {
+        Bag<Edge> list = new Bag<Edge>();
+        for (int i = 0; i < vertices(); i++) {
+            // int selfLoops = 0;
+            for (Edge e : adj(i)) {
                 list.add(e);
+            }
         }
-    }
-    return list;
+        return list;
     }
 }
 /**
@@ -168,16 +168,16 @@ class MinST {
      *
      * @param      g  graph object.
      */
-    MinST(EdgeWeightedGraph g) {
+    MinST(final EdgeWeightedGraph g) {
         graph = g;
         mst = new Queue<Edge>();
         MinPQ<Edge> pq = new MinPQ<Edge>();
-        for (Edge edge: graph.edges()) {
-                pq.insert(edge);
+        for (Edge edge : graph.edges()) {
+            pq.insert(edge);
         }
         UF ufObj = new UF(graph.vertices());
-        while(!pq.isEmpty()
-            && mst.size() < graph.vertices() - 1) {
+        while (!pq.isEmpty()
+                && mst.size() < graph.vertices() - 1) {
             Edge edge = pq.delMin();
             int vertexOne = edge.either();
             int vertexTwo = edge.other(vertexOne);
@@ -203,7 +203,7 @@ class MinST {
      */
     public double total() {
         double sum = 0.0;
-        for(Edge e: edges()) {
+        for (Edge e : edges()) {
             sum += e.weight();
         }
         return sum;
@@ -212,12 +212,11 @@ class MinST {
 /**
  *class for main method.
  */
-class Solution{
+final class Solution {
     /**
      *an empty constructor.
      */
-    Solution(){
-
+    private Solution() {
     }
     /**
      *the main method to read the input.
@@ -230,12 +229,12 @@ class Solution{
         int edges = Integer.parseInt(scan.nextLine());
         Edge edgeObj;
         EdgeWeightedGraph graph
-        = new EdgeWeightedGraph(vertices);
-        for(int i = 0; i < edges; i++) {
+            = new EdgeWeightedGraph(vertices);
+        for (int i = 0; i < edges; i++) {
             String[] tokens = scan.nextLine().split(" ");
             edgeObj = new Edge(Integer.parseInt(tokens[0]),
-            Integer.parseInt(tokens[1]),
-             Double.parseDouble(tokens[2]));
+                               Integer.parseInt(tokens[1]),
+                               Double.parseDouble(tokens[2]));
             graph.addEdge(edgeObj);
         }
         MinST mstObj = new MinST(graph);
