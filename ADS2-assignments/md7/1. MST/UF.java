@@ -34,7 +34,7 @@ public class UF {
     /**
      * Returns the component identifier for the
      * component containing site {@code p}.
-     * @param  p the integer representing one site
+     * @param  par the integer representing one site
      * @return the component identifier for the
      * component containing site {@code p}
      */

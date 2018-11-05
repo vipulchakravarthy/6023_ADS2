@@ -9,7 +9,4 @@ Audit done.
 Starting audit...
 Audit done.
 Starting audit...
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md7\1. MST\UF.java:37:8: Unused @param tag for 'p'. [JavadocMethod]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md7\1. MST\UF.java:41:31: Expected @param tag for 'par'. [JavadocMethod]
 Audit done.
-Checkstyle ends with 2 errors.
