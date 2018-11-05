@@ -185,9 +185,8 @@ Starting audit...
 [ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md7\1. MST\Solution.java:120:19: '{' is not preceded with whitespace. [WhitespaceAround]
 [ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md7\1. MST\Solution.java:134:20: 'for' is not followed by whitespace. [WhitespaceAfter]
 [ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md7\1. MST\Solution.java:137: Line is longer than 80 characters (found 84). [LineLength]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md7\1. MST\Solution.java:141:42: ',' is not followed by whitespace. [WhitespaceAfter]
 Audit done.
-Checkstyle ends with 33 errors.
+Checkstyle ends with 32 errors.
 Starting audit...
 [ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md7\1. MST\Stack.java:13: Line has trailing spaces. [RegexpSingleline]
 [ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md7\1. MST\Stack.java:14: Line has trailing spaces. [RegexpSingleline]
