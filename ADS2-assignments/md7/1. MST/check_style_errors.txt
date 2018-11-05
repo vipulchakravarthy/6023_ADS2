@@ -124,40 +124,20 @@ Starting audit...
 Audit done.
 Checkstyle ends with 33 errors.
 Starting audit...
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md7\1. MST\Solution.java:6:1: File contains tab characters (this is the first instance). [FileTabCharacter]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md7\1. MST\Solution.java:16:9: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md7\1. MST\Solution.java:17:9: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md7\1. MST\Solution.java:23:9: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md7\1. MST\Solution.java:26:9: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md7\1. MST\Solution.java:29:9: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md7\1. MST\Solution.java:30:19: 'if' is not followed by whitespace. [WhitespaceAfter]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md7\1. MST\Solution.java:36:9: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md7\1. MST\Solution.java:36:30: Parameter that should be final. [FinalParameters]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md7\1. MST\Solution.java:39:26: 'if' is not followed by whitespace. [WhitespaceAfter]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md7\1. MST\Solution.java:46: Missing a Javadoc comment. [JavadocType]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md7\1. MST\Solution.java:47:9: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md7\1. MST\Solution.java:48:9: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md7\1. MST\Solution.java:49:9: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md7\1. MST\Solution.java:56:9: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md7\1. MST\Solution.java:59:9: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md7\1. MST\Solution.java:65:9: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md7\1. MST\Solution.java:68:9: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md7\1. MST\Solution.java:80: Missing a Javadoc comment. [JavadocType]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md7\1. MST\Solution.java:81:9: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md7\1. MST\Solution.java:82:9: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md7\1. MST\Solution.java:83:9: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md7\1. MST\Solution.java:83:15: Parameter g should be final. [FinalParameters]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md7\1. MST\Solution.java:91:22: 'while' is not followed by whitespace. [WhitespaceAfter]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md7\1. MST\Solution.java:101:9: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md7\1. MST\Solution.java:105:9: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md7\1. MST\Solution.java:107:20: 'for' is not followed by whitespace. [WhitespaceAfter]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md7\1. MST\Solution.java:116:1: Utility classes should not have a public or default constructor. [HideUtilityClassConstructor]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md7\1. MST\Solution.java:116:15: '{' is not preceded with whitespace. [WhitespaceAround]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md7\1. MST\Solution.java:120:19: '{' is not preceded with whitespace. [WhitespaceAround]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md7\1. MST\Solution.java:134:20: 'for' is not followed by whitespace. [WhitespaceAfter]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md7\1. MST\Solution.java:137: Line is longer than 80 characters (found 84). [LineLength]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md7\1. MST\Solution.java:50: First sentence should end with a period. [JavadocStyle]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md7\1. MST\Solution.java:58:11: 'if' is not followed by whitespace. [WhitespaceAfter]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md7\1. MST\Solution.java:74:26: Parameter that should be final. [FinalParameters]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md7\1. MST\Solution.java:77:18: 'if' is not followed by whitespace. [WhitespaceAfter]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md7\1. MST\Solution.java:166: First sentence should end with a period. [JavadocStyle]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md7\1. MST\Solution.java:171:11: Parameter g should be final. [FinalParameters]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md7\1. MST\Solution.java:179:14: 'while' is not followed by whitespace. [WhitespaceAfter]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md7\1. MST\Solution.java:206:12: 'for' is not followed by whitespace. [WhitespaceAfter]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md7\1. MST\Solution.java:215:1: Utility classes should not have a public or default constructor. [HideUtilityClassConstructor]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md7\1. MST\Solution.java:215:15: '{' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md7\1. MST\Solution.java:219:15: '{' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md7\1. MST\Solution.java:234:12: 'for' is not followed by whitespace. [WhitespaceAfter]
 Audit done.
-Checkstyle ends with 32 errors.
+Checkstyle ends with 12 errors.
 Starting audit...
 Audit done.
 Starting audit...
