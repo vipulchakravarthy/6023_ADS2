@@ -138,6 +138,6 @@ class Solution{
 			graph.addEdge(edgeObj);
 		}
 		MinST mstObj = new MinST(graph);
-		System.out.println(mstObj.total());
+		System.out.format(".5%f",mstObj.total());
 	}
 }
