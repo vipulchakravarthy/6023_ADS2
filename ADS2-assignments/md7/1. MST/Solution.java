@@ -48,7 +48,7 @@ class Edge implements Comparable<Edge> {
         return vertexOne;
     }
     /**
-     *returns the other end of vertex
+     *returns the other end of vertex.
      *
      * @param      v already connected vertex
      *
@@ -164,7 +164,7 @@ class MinST {
      */
     private Queue<Edge> mst;
     /**
-     *intializes  the values
+     *intializes  the values.
      *
      * @param      g  graph object.
      */
