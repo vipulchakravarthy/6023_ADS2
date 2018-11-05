@@ -88,41 +88,7 @@ Starting audit...
 Audit done.
 Checkstyle ends with 84 errors.
 Starting audit...
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md7\1. MST\Queue.java:5: Line has trailing spaces. [RegexpSingleline]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md7\1. MST\Queue.java:9: Line has trailing spaces. [RegexpSingleline]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md7\1. MST\Queue.java:29: Line is longer than 80 characters (found 95). [LineLength]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md7\1. MST\Queue.java:32: Line is longer than 80 characters (found 105). [LineLength]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md7\1. MST\Queue.java:41:5: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md7\1. MST\Queue.java:42:5: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md7\1. MST\Queue.java:43:5: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md7\1. MST\Queue.java:46: Missing a Javadoc comment. [JavadocType]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md7\1. MST\Queue.java:47:9: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md7\1. MST\Queue.java:48:9: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md7\1. MST\Queue.java:85: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md7\1. MST\Queue.java:94:25: Parameter item should be final. [FinalParameters]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md7\1. MST\Queue.java:99: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md7\1. MST\Queue.java:100: 'else' construct must use '{}'s. [NeedBraces]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md7\1. MST\Queue.java:111: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md7\1. MST\Queue.java:115: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md7\1. MST\Queue.java:131: Line has trailing spaces. [RegexpSingleline]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md7\1. MST\Queue.java:134: Line is longer than 80 characters (found 84). [LineLength]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md7\1. MST\Queue.java:136: Line is longer than 80 characters (found 83). [LineLength]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md7\1. MST\Queue.java:139: Line has trailing spaces. [RegexpSingleline]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md7\1. MST\Queue.java:143: Missing a Javadoc comment. [JavadocType]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md7\1. MST\Queue.java:144:9: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md7\1. MST\Queue.java:146:9: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md7\1. MST\Queue.java:146:9: Redundant 'public' modifier. [RedundantModifier]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md7\1. MST\Queue.java:146:29: Parameter first should be final. [FinalParameters]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md7\1. MST\Queue.java:146:40: 'first' hides a field. [HiddenField]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md7\1. MST\Queue.java:150: Line is longer than 80 characters (found 81). [LineLength]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md7\1. MST\Queue.java:150:35: '{' at column 35 should have line break after. [LeftCurly]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md7\1. MST\Queue.java:151: Line is longer than 80 characters (found 81). [LineLength]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md7\1. MST\Queue.java:151:35: '{' at column 35 should have line break after. [LeftCurly]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md7\1. MST\Queue.java:153:9: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md7\1. MST\Queue.java:154: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md7\1. MST\Queue.java:156: Line has trailing spaces. [RegexpSingleline]
 Audit done.
-Checkstyle ends with 33 errors.
 Starting audit...
 Audit done.
 Starting audit...
