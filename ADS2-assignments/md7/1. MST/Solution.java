@@ -129,7 +129,7 @@ class EdgeWeightedGraph {
      *returns the iterator to return the bag at that.
      *vertex.
      * @param      vertex  The vertex
-     *
+     *time complexity is O(V)
      * @return iterator at that vertex.
      */
     public Iterable<Edge> adj(final int vertex) {
@@ -137,7 +137,7 @@ class EdgeWeightedGraph {
     }
     /**
      *returns all the edges in graph.
-     *
+     *time complexity is O(E)
      * @return bag of all the edges.
      */
     public Iterable<Edge> edges() {
@@ -165,7 +165,8 @@ class MinST {
     private Queue<Edge> mst;
     /**
      *intializes  the values.
-     *
+     *time complexity is O(ElogE).
+     *where e is the edges.
      * @param      g  graph object.
      */
     MinST(final EdgeWeightedGraph g) {
@@ -199,6 +200,7 @@ class MinST {
     /**
      *this method returns the total weight.
      *of mst.
+     *time complexity is O(E)
      * @return weight of mst.
      */
     public double total() {
@@ -220,7 +222,8 @@ final class Solution {
     }
     /**
      *the main method to read the input.
-     *
+     *time complexity is O(E)
+     *E is the edges.
      * @param      args  The arguments
      */
     public static void main(final String[] args) {
