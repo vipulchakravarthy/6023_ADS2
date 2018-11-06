@@ -106,21 +106,11 @@ Starting audit...
 Audit done.
 Checkstyle ends with 102 errors.
 Starting audit...
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md8\1. Shortest Paths\Solution.java:7:1: File contains tab characters (this is the first instance). [FileTabCharacter]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md8\1. Shortest Paths\Solution.java:66: Missing a Javadoc comment. [JavadocType]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md8\1. Shortest Paths\Solution.java:152: 'for' construct must use '{}'s. [NeedBraces]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md8\1. Shortest Paths\Solution.java:170:28: Parameter edge should be final. [FinalParameters]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md8\1. Shortest Paths\Solution.java:170:39: Parameter vertex should be final. [FinalParameters]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md8\1. Shortest Paths\Solution.java:190:30: Parameter v should be final. [FinalParameters]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md8\1. Shortest Paths\Solution.java:200:34: Parameter v should be final. [FinalParameters]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md8\1. Shortest Paths\Solution.java:210:38: Parameter v should be final. [FinalParameters]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md8\1. Shortest Paths\Solution.java:211: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md8\1. Shortest Paths\Solution.java:227:32: Parameter vertex should be final. [FinalParameters]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md8\1. Shortest Paths\Solution.java:238:1: Utility classes should not have a public or default constructor. [HideUtilityClassConstructor]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md8\1. Shortest Paths\Solution.java:276: Line is longer than 80 characters (found 83). [LineLength]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md8\1. Shortest Paths\Solution.java:276:49: 'typecast' is not followed by whitespace. [WhitespaceAfter]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md8\1. Shortest Paths\Solution.java:216: 'if' construct must use '{}'s. [NeedBraces]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md8\1. Shortest Paths\Solution.java:244:1: Utility classes should not have a public or default constructor. [HideUtilityClassConstructor]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md8\1. Shortest Paths\Solution.java:282:37: 'typecast' is not followed by whitespace. [WhitespaceAfter]
 Audit done.
-Checkstyle ends with 13 errors.
+Checkstyle ends with 3 errors.
 Starting audit...
 [ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md8\1. Shortest Paths\Stack.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 [ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md8\1. Shortest Paths\Stack.java:29: Line is longer than 80 characters (found 89). [LineLength]
