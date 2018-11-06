@@ -27,7 +27,7 @@ class Edge {
 	 * @param      cost  weight of edge
 	 */
 	Edge(final int v, final int w,
-	             final double cost) {
+	     final double cost) {
 		this.vertexOne = v;
 		this.vertexTwo = w;
 		this.weight = cost;
@@ -75,7 +75,7 @@ class EdgeWeightedGraph {
 	private Bag<Edge>[] adj;
 	/**
 	 *the constructor to initialize.
-	 *
+	 *time complexity is O(V).
 	 * @param      v vertices count
 	 */
 	EdgeWeightedGraph(final int v) {
@@ -145,7 +145,7 @@ class DijkstrasSP {
 	 * @param      source  The source
 	 */
 	DijkstrasSP(final EdgeWeightedGraph g,
-	final int source) {
+	            final int source) {
 		graph = g;
 		distTo = new Double[graph.vertices()];
 		edgeTo = new Edge[graph.vertices()];
@@ -161,7 +161,12 @@ class DijkstrasSP {
 			}
 		}
 	}
-
+	/**
+	 *this method is to relax the edges.
+	 *time complexity is O(logE)
+	 * @param      edge    The edge
+	 * @param      vertex  The vertex
+	 */
 	private void relax(Edge edge, int vertex) {
 		int vertexTwo = edge.other(vertex);
 		if (distTo[vertexTwo] > distTo[vertex] + edge.weight()) {
@@ -174,12 +179,34 @@ class DijkstrasSP {
 			}
 		}
 	}
+	/**
+	 *the method returns the distance.
+	 *from the source to given vertex.
+	 *
+	 * @param      v  vertex
+	 *
+	 * @return distance between two vertices.
+	 */
 	public double distTo(int v) {
 		return distTo[v];
 	}
+	/**
+	 *whether the path is there or not.
+	 *
+	 * @param      v another vertex.
+	 *
+	 * @return     True if has path to, False otherwise.
+	 */
 	public boolean hasPathTo(int v) {
 		return distTo[v] < Double.POSITIVE_INFINITY;
 	}
+	/**
+	 *shortest path to given vertex.
+	 *
+	 * @param      v  vertex.
+	 *time complexity is O(ElogV)
+	 * @return shortest path is returned from the source.
+	 */
 	public Iterable<Edge> pathTo(int v) {
 		if (!hasPathTo(v)) return null;
 		Stack<Edge> path = new Stack<Edge>();
@@ -190,6 +217,13 @@ class DijkstrasSP {
 		}
 		return path;
 	}
+	/**
+	 *returns the shortest distance between.
+	 *two vertices.
+	 * @param      vertex  The vertex
+	 *
+	 * @return shortest distance between two vertices.
+	 */
 	public double distance(int vertex) {
 		double sum = 0;
 		for (Edge each : pathTo(vertex)) {
@@ -198,17 +232,25 @@ class DijkstrasSP {
 		return sum;
 	}
 }
+/**
+ *class for solution.
+ */
 class Solution {
+	/**
+	 *an empty constructor.
+	 */
 	Solution() {
 	}
 	/**
-	 *
-	 *
+	 *the main method is to read the user.
+	 * input.
+	 *time complexity is O(E + V)
 	 * @param      args  The arguments
 	 */
 	public static void main(final String[] args) {
 		Scanner scan = new Scanner(System.in);
-		HashMap<String, Integer> map = new HashMap<String, Integer>();
+		HashMap<String, Integer> map
+		= new HashMap<String, Integer>();
 		String[] tokens = scan.nextLine().split(" ");
 		int edges = Integer.parseInt(tokens[1]);
 		String[] vertices = scan.nextLine().split(" ");
@@ -216,12 +258,13 @@ class Solution {
 			map.put(vertices[i], i);
 		}
 		Edge edgeObj;
-		EdgeWeightedGraph digraph = new EdgeWeightedGraph(vertices.length);
+		EdgeWeightedGraph digraph
+		= new EdgeWeightedGraph(vertices.length);
 		for (int i = 0; i < edges; i++) {
 			String[] directPath = scan.nextLine().split(" ");
 			edgeObj = new Edge(map.get(directPath[0]),
-			                           map.get(directPath[1]),
-			                           Double.parseDouble(directPath[2]));
+			                   map.get(directPath[1]),
+			                   Double.parseDouble(directPath[2]));
 			digraph.addEdge(edgeObj);
 		}
 		int queries = Integer.parseInt(scan.nextLine());
@@ -230,7 +273,7 @@ class Solution {
 			String[] check = scan.nextLine().split(" ");
 			int source = map.get(check[0]);
 			spObj = new DijkstrasSP(digraph, source);
-			System.out.println((int) spObj.distance(map.get(check[1])));
+			System.out.println((int)spObj.distance(map.get(check[1])));
 		}
 	}
 }
