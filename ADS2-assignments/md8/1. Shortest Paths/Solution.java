@@ -213,7 +213,9 @@ class DijkstrasSP {
      * @return shortest path is returned from the source.
      */
     public Iterable<Edge> pathTo(final int v) {
-        if (!hasPathTo(v)) return null;
+        if (!hasPathTo(v)) {
+            return null;
+        }
         Stack<Edge> path = new Stack<Edge>();
         int x = v;
         for (Edge e = edgeTo[v]; e != null; e = edgeTo[x]) {
@@ -241,11 +243,11 @@ class DijkstrasSP {
 /**
  *class for solution.
  */
-class Solution {
+final class Solution {
     /**
      *an empty constructor.
      */
-    Solution() {
+    private Solution() {
     }
     /**
      *the main method is to read the user.
@@ -279,7 +281,7 @@ class Solution {
             String[] check = scan.nextLine().split(" ");
             int source = map.get(check[0]);
             spObj = new DijkstrasSP(digraph, source);
-            System.out.println((int)spObj.distance(map.get(check[1])));
+            System.out.println((int) spObj.distance(map.get(check[1])));
         }
     }
 }

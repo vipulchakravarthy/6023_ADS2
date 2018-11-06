@@ -106,11 +106,7 @@ Starting audit...
 Audit done.
 Checkstyle ends with 102 errors.
 Starting audit...
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md8\1. Shortest Paths\Solution.java:216: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md8\1. Shortest Paths\Solution.java:244:1: Utility classes should not have a public or default constructor. [HideUtilityClassConstructor]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md8\1. Shortest Paths\Solution.java:282:37: 'typecast' is not followed by whitespace. [WhitespaceAfter]
 Audit done.
-Checkstyle ends with 3 errors.
 Starting audit...
 [ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md8\1. Shortest Paths\Stack.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 [ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md8\1. Shortest Paths\Stack.java:29: Line is longer than 80 characters (found 89). [LineLength]
