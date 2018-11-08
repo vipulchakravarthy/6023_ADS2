@@ -68,7 +68,7 @@ public class SeamCarver {
 		}
         double minDist = Double.MAX_VALUE;
         int minCol = 0;
-        for (int col = 0; col < width; col++) {
+        for (int col = 1; col < width; col++) {
             if (minDist > distTo[height - 1][col]) {
                 minDist = distTo[height - 1][col];
                 minCol = col;
@@ -78,10 +78,6 @@ public class SeamCarver {
         for (int row = height -1, col = minCol; row >= 0; row--) {
             indices[row] = col;
             col -= edgeTo[row][col];
-        }
-        int temp = indices[0];
-        if(temp > 0) {
-        	indices[0] = temp + 1;
         }
         return indices;
     }
