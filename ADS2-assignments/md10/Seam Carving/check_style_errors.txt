@@ -246,7 +246,6 @@ Starting audit...
 [ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md10\Seam Carving\SeamCarver.java:52:9: Missing a Javadoc comment. [JavadocMethod]
 [ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md10\Seam Carving\SeamCarver.java:57:9: Class 'SeamCarver' looks like designed for extension (can be subclassed), but the method 'findVerticalSeam' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'SeamCarver' final or making the method 'findVerticalSeam' static/final/abstract/empty, or adding allowed annotation for the method. [DesignForExtension]
 [ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md10\Seam Carving\SeamCarver.java:57:9: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md10\Seam Carving\SeamCarver.java:62:11: 'if' is not followed by whitespace. [WhitespaceAfter]
 [ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md10\Seam Carving\SeamCarver.java:65:20: 'for' is not followed by whitespace. [WhitespaceAfter]
 [ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md10\Seam Carving\SeamCarver.java:66:40: '1000.0' is a magic number. [MagicNumber]
 [ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md10\Seam Carving\SeamCarver.java:69:28: 'for' is not followed by whitespace. [WhitespaceAfter]
@@ -268,7 +267,7 @@ Starting audit...
 [ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md10\Seam Carving\SeamCarver.java:115:9: Missing a Javadoc comment. [JavadocMethod]
 [ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md10\Seam Carving\SeamCarver.java:115:40: Parameter seam should be final. [FinalParameters]
 Audit done.
-Checkstyle ends with 55 errors.
+Checkstyle ends with 54 errors.
 Starting audit...
 [ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md10\Seam Carving\ShowEnergy.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 [ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md10\Seam Carving\ShowEnergy.java:5: Line has trailing spaces. [RegexpSingleline]
