@@ -55,7 +55,7 @@ import javax.swing.KeyStroke;
  *  or set the color of the specified pixel.
  *  The {@code getRGB()} and {@code setRGB()} methods use a 32-bit {@code int}
  *  to encode the color, thereby avoiding the need to create temporary
- *  {@code Color} objects. The red (R), green (G), and blue (B) components 
+ *  {@code Color} objects. The red (R), green (G), and blue (B) components
  *  are encoded using the least significant 24 bits.
  *  Given a 32-bit {@code int} encoding the color, the following code extracts
  *  the RGB components:
@@ -63,12 +63,12 @@ import javax.swing.KeyStroke;
  *  int r = (rgb >> 16) & 0xFF;
  *  int g = (rgb >>  8) & 0xFF;
  *  int b = (rgb >>  0) & 0xFF;
- *  </pre></blockquote> 
+ *  </pre></blockquote>
  *  Given the RGB components (8-bits each) of a color,
  *  the following statement packs it into a 32-bit {@code int}:
  * <blockquote><pre>
  *  int rgb = (r << 16) + (g << 8) + (b << 0);
- * </pre></blockquote> 
+ * </pre></blockquote>
  *  <p>
  *  A <em>W</em>-by-<en>H</em> picture uses ~ 4 <em>W H</em> bytes of memory,
  *  since the color of each pixel is encoded as a 32-bit <code>int</code>.
@@ -229,7 +229,7 @@ public final class Picture implements ActionListener {
             menuBar.add(menu);
             JMenuItem menuItem1 = new JMenuItem(" Save...   ");
             menuItem1.addActionListener(this);
-            // use getMenuShortcutKeyMaskEx() in Java 10 (getMenuShortcutKeyMask() deprecated)           
+            // use getMenuShortcutKeyMaskEx() in Java 10 (getMenuShortcutKeyMask() deprecated)
             menuItem1.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_S,
                                      Toolkit.getDefaultToolkit().getMenuShortcutKeyMask()));
             menu.add(menuItem1);
