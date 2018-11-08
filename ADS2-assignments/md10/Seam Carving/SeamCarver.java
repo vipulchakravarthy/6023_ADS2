@@ -31,17 +31,17 @@ public class SeamCarver {
 		Color object = picture.get(x,y);
 		Color leftObj = picture.get(x, y - 1);
 		Color rightObj = picture.get(x, y + 1);
-		double xRed = (leftObj.getRed() - rightObj.getRed()) ^ 2;
-		double xGreen = (leftObj.getGreen() - rightObj.getGreen()) ^ 2;
-		double xBlue = (leftObj.getBlue() - rightObj.getBlue()) ^ 2;
-		xCoordinate = xRed + xBlue + xGreen;
+		double xRed = Math.abs((leftObj.getRed() - rightObj.getRed()));
+		double xGreen = Math.abs((leftObj.getGreen() - rightObj.getGreen()));
+		double xBlue = Math.abs((leftObj.getBlue() - rightObj.getBlue()));
+		xCoordinate = Math.pow(xRed, 2) + Math.pow(xBlue, 2) + Math.pow(xGreen, 2);
 		Color topObj = picture.get(x - 1, y);
 		Color bottomObj = picture.get(x + 1, y);
-		double yRed = (topObj.getRed() - bottomObj.getRed()) ^ 2;
-		double yGreen = (topObj.getGreen() - bottomObj.getGreen()) ^ 2;
-		double yBlue = (topObj.getBlue() - bottomObj.getBlue()) ^ 2;
-		yCoordinate = yRed + yBlue + yGreen;
-		double sum = Math.sqrt((xCoordinate * xCoordinate) + (yCoordinate * yCoordinate));
+		double yRed = Math.abs((topObj.getRed() - bottomObj.getRed()));
+		double yGreen = Math.abs((topObj.getGreen() - bottomObj.getGreen()));
+		double yBlue = Math.abs((topObj.getBlue() - bottomObj.getBlue()));
+		yCoordinate = Math.pow(yRed, 2) + Math.pow(yBlue, 2) + Math.pow(yGreen, 2);
+		double sum = Math.sqrt((xCoordinate + yCoordinate));
 		return sum;
 	}
 
