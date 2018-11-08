@@ -3,13 +3,16 @@ import java.lang.Math;
 public class SeamCarver {
 	// create a seam carver object based on the given picture
 	private Picture picture;
+	private int width;
+	private int height;
 	public SeamCarver(Picture pic) {
 		this.picture = pic;
-
+		width = picture.width();
+		height = picture.height();
 	}
 	// current picture
 	public Picture picture() {
-		return null;
+		return picture;
 	}
 	// width of current picture
 	public int width() {
@@ -52,9 +55,56 @@ public class SeamCarver {
 
 	// sequence of indices for vertical seam
 	public int[] findVerticalSeam() {
-		return new int[0];
+		int[][] edgeTo = new int[height][width];
+		double[][] distTo = new double[height][width];
+		reset(distTo);
+		for(int i = 0; i < width; i++) {
+			distTo[0][i] = 1000.0;
+		}
+		for (int i = 0; i < height - 1; i++) {
+			for(int j = 0; j < width; j++) {
+				relaxV(i, j, edgeTo, distTo);
+			}
+		}
+        double minDist = Double.MAX_VALUE;
+        int minCol = 0;
+        for (int col = 0; col < width; col++) {
+            if (minDist > distTo[height - 1][col]) {
+                minDist = distTo[height - 1][col];
+                minCol = col;
+            }
+        }
+        int[] indices = new int[height];
+        for (int row = height -1, col = minCol; row >= 0; row--) {
+            indices[row] = col;
+            col -= edgeTo[row][col];
+        }
+        int temp = indices[0];
+        if(temp > 0) {
+        	indices[0] = temp + 1;
+        }
+        return indices;
+    }
+	private void reset(double[][] distTo) {
+		for(int i = 0; i < height; i++) {
+			for(int j = 0; j < width; j++) {
+				distTo[i][j] = Double.MAX_VALUE;
+			}
+		}
 	}
-
+	private void relaxV(int row, int col, int[][] edgeTo, double[][] distTo) {
+		int nextRow = row + 1;
+        for (int i = -1; i <= 1; i++) {
+            int nextCol = col + i;
+            if (nextCol < 0 || nextCol >= width) {
+            	continue;
+            }
+            if (distTo[nextRow][nextCol] > distTo[row][col] + energy(nextCol, nextRow)) {
+                distTo[nextRow][nextCol] = distTo[row][col] + energy(nextCol, nextRow);
+                edgeTo[nextRow][nextCol] = i;
+            }
+    	}
+	}
 	// remove horizontal seam from current picture
 	public void removeHorizontalSeam(int[] seam) {
 
