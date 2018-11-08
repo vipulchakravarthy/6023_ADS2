@@ -58,6 +58,10 @@ public class SeamCarver {
 		int[][] edgeTo = new int[height][width];
 		double[][] distTo = new double[height][width];
 		reset(distTo);
+		int[] indices = new int[height];
+        if(width == 1) {
+        	return indices;
+        }
 		for(int i = 0; i < width; i++) {
 			distTo[0][i] = 1000.0;
 		}
@@ -68,22 +72,23 @@ public class SeamCarver {
 		}
         double minDist = Double.MAX_VALUE;
         int minCol = 0;
-        for (int col = 1; col < width; col++) {
+        for (int col = 0; col < width; col++) {
             if (minDist > distTo[height - 1][col]) {
                 minDist = distTo[height - 1][col];
                 minCol = col;
             }
         }
-        int[] indices = new int[height];
         for (int row = height -1, col = minCol; row >= 0; row--) {
             indices[row] = col;
             col -= edgeTo[row][col];
         }
+        int temp = indices[0];
+        indices[0] = temp + 1;
         return indices;
     }
 	private void reset(double[][] distTo) {
-		for(int i = 0; i < height; i++) {
-			for(int j = 0; j < width; j++) {
+		for(int i = 0; i < distTo.length; i++) {
+			for(int j = 0; j < distTo[i].length; j++) {
 				distTo[i][j] = Double.MAX_VALUE;
 			}
 		}
