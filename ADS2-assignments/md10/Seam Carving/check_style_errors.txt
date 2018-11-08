@@ -296,11 +296,12 @@ Starting audit...
 [ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md10\Seam Carving\Solution.java:29:36: Expression can be simplified. [SimplifyBooleanExpression]
 [ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md10\Seam Carving\Solution.java:43:5: Missing a Javadoc comment. [JavadocMethod]
 [ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md10\Seam Carving\Solution.java:43:29: Parameter args should be final. [FinalParameters]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md10\Seam Carving\Solution.java:76: Line is longer than 80 characters (found 87). [LineLength]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md10\Seam Carving\Solution.java:84: Line is longer than 80 characters (found 89). [LineLength]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md10\Seam Carving\Solution.java:102: Line is longer than 80 characters (found 85). [LineLength]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md10\Seam Carving\Solution.java:47:11: 'if' is not followed by whitespace. [WhitespaceAfter]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md10\Seam Carving\Solution.java:80: Line is longer than 80 characters (found 87). [LineLength]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md10\Seam Carving\Solution.java:88: Line is longer than 80 characters (found 89). [LineLength]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md10\Seam Carving\Solution.java:106: Line is longer than 80 characters (found 85). [LineLength]
 Audit done.
-Checkstyle ends with 20 errors.
+Checkstyle ends with 21 errors.
 Starting audit...
 [ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md10\Seam Carving\StdOut.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 [ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md10\Seam Carving\StdOut.java:16: Line is longer than 80 characters (found 84). [LineLength]

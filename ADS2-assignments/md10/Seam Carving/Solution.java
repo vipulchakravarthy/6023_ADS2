@@ -44,6 +44,10 @@ public class Solution {
         Scanner scan = new Scanner(System.in);
         String cases = scan.nextLine();
         SeamCarver seamCarver = null;
+        if(cases.length() == 0) {
+            System.out.println("picture is null");
+            return;
+        }
         try {
             switch (cases) {
             case "width":
