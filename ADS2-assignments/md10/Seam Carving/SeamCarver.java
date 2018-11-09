@@ -59,6 +59,9 @@ public class SeamCarver {
 		double[][] distTo = new double[height][width];
 		reset(distTo);
 		int[] indices = new int[height];
+		if(width == 1 || height == 1) {
+			return indices;
+		}
 		for(int i = 0; i < width; i++) {
 			distTo[0][i] = 1000.0;
 		}
