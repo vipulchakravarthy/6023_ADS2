@@ -69,7 +69,7 @@ public class SeamCarver {
 	 */
 	public int[] findVerticalSeam() {
 		double[][] energy = new double[height][width];
-		for(int i = 0; i < height; i++) {
+		for(int i = 0; i < height - 1; i++) {
 			for(int j = 0; j < width; j++) {
 				energy[i][j] = energy(i,j);
 			}
