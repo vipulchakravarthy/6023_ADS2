@@ -66,12 +66,9 @@ public class SeamCarver {
 		Color object = picture.get(x,y);
 		Color leftObj = picture.get(x, y - 1);
 		Color rightObj = picture.get(x, y + 1);
-		double xRed = Math.abs((leftObj.getRed()
-			- rightObj.getRed()));
-		double xGreen = Math.abs((leftObj.getGreen()
-			- rightObj.getGreen()));
-		double xBlue = Math.abs((leftObj.getBlue()
-			- rightObj.getBlue()));
+		double xRed = Math.abs((leftObj.getRed() - rightObj.getRed()));
+		double xGreen = Math.abs((leftObj.getGreen() - rightObj.getGreen()));
+		double xBlue = Math.abs((leftObj.getBlue() - rightObj.getBlue()));
 		xCoordinate = Math.pow(xRed, 2) + Math.pow(xBlue, 2) + Math.pow(xGreen, 2);
 		Color topObj = picture.get(x - 1, y);
 		Color bottomObj = picture.get(x + 1, y);
@@ -175,6 +172,9 @@ public class SeamCarver {
         return indices;
     }
 	private void reset(double[][] distTo) {
+		/**
+		 *reset all the values to maxvalue.
+		 */
 		for(int i = 0; i < distTo.length; i++) {
 			for(int j = 0; j < distTo[i].length; j++) {
 				distTo[i][j] = Double.MAX_VALUE;
@@ -188,6 +188,7 @@ public class SeamCarver {
             if (nextCol < 0 || nextCol >= width) {
             	continue;
             }
+            //spl case for bottom element.
             if(i == 0) {
             	if(distTo[nextRow][nextCol] >= distTo[row][col] + energy(nextCol, nextRow)) {
             	distTo[nextRow][nextCol] = distTo[row][col] + energy(nextCol, nextRow);
