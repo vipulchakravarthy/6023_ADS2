@@ -55,12 +55,18 @@ public class SeamCarver {
 
 	// sequence of indices for vertical seam
 	public int[] findVerticalSeam() {
+		double[][] energy = new double[height][width];
 		int[][] edgeTo = new int[height][width];
 		double[][] distTo = new double[height][width];
 		reset(distTo);
 		int[] indices = new int[height];
 		if(width == 1 || height == 1) {
 			return indices;
+		}
+		for(int i = 0; i < width; i++) {
+			for(int j = 0; j < height; j++) {
+				energy[i][j] = energy(i,j);
+			}
 		}
 		for(int i = 0; i < width; i++) {
 			distTo[0][i] = 1000.0;
