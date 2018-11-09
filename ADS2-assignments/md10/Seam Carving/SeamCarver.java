@@ -109,9 +109,10 @@ public class SeamCarver {
             }
         }
         int[] indices = new int[width];
+        //to find the horizontal seam.
         for (int col = width - 1, row = minRow; col >= 0; col--) {
             indices[col] = row;
-            row = edgeTo[row - 1][col];
+            row -= edgeTo[row][col];
         }
         return indices;
     }
