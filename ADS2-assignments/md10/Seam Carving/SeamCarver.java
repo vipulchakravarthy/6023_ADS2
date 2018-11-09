@@ -92,14 +92,19 @@ public class SeamCarver {
 	private void relaxV(int row, int col, int[][] edgeTo, double[][] distTo) {
 		int nextRow = row + 1;
         for (int i = -1; i <= 1; i++) {
-            int nextCol = col + i;
-            if (nextCol < 0 || nextCol >= width) {
-            	continue;
-            }
-            if (distTo[nextRow][nextCol] > distTo[row][col] + energy(nextCol, nextRow)) {
+        	int nextCol = col + i;
+        	if(i == 0) {
+        		if (distTo[nextRow][nextCol] >= distTo[row][col] + energy(nextCol, nextRow)) {
+                	distTo[nextRow][nextCol] = distTo[row][col] + energy(nextCol, nextRow);
+                	edgeTo[nextRow][nextCol] = i;
+            	}
+        	}
+        	else {
+            	if (distTo[nextRow][nextCol] > distTo[row][col] + energy(nextCol, nextRow)) {
                 distTo[nextRow][nextCol] = distTo[row][col] + energy(nextCol, nextRow);
                 edgeTo[nextRow][nextCol] = i;
-            }
+            	}
+        	}
     	}
 	}
 	// remove horizontal seam from current picture
