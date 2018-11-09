@@ -6,28 +6,22 @@ public class SeamCarver {
 	private int width;
 	private int height;
     private int[][] colors;
-    private double[][] energy;
 	public SeamCarver(Picture pic) {
 		this.picture = pic;
 		width = picture.width();
 		height = picture.height();
 		colors = new int[height][width];
-        for (int row = 0; row < height; row++) {
-        	for (int col = 0; col < width; col++) {
-            colors[row][col] = picture.get(col, row).getRGB();
-        	}
-    	}
-        for (int row = 0; row < height; row++) {
-        	for (int col = 0; col < width; col++) {
-            energy[row][col] = energy(col, row);
-        	}
-    	}
+	    for (int col = 0; col < width; col++) {
+            for (int row = 0; row < height; row++) {
+                colors[row][col] = picture.get(col, row).getRGB();
+            }
+	    }
 	}
     public Picture picture() {
-        //current picture
+        // current picture
         Picture picture = new Picture(width, height);
-        for (int row = 0; row < height; row++) {
-        	for (int col = 0; col < width; col++) {
+        for (int col = 0; col < width; col++) {
+            for (int row = 0; row < height; row++) {
                 picture.set(col, row, new Color(colors[row][col]));
             }
         }
@@ -187,54 +181,20 @@ public class SeamCarver {
 	}
 	// remove horizontal seam from current picture
 	public void removeHorizontalSeam(int[] seam) {
-		for(int col = 0; col < width; col++) {
-			for(int row = seam[col]; row < height - 1; row++) {
-				colors[row][col] = colors[row + 1][col];
-			}
+	for(int col = 0; col < width; col++) {
+		for(int row = seam[col]; row < height - 1; row++) {
+			colors[row][col] = colors[row + 1][col];
 		}
-		height--;
+	}
+	height--;
 	}
 	// remove vertical seam from current picture
 	public void removeVerticalSeam(int[] seam) {
-	// for(int row = 0; row < height; row++) {
-	// 	for(int col = seam[row]; col < width - 1; col++) {
-	// 		colors[row][col] = colors[row][col + 1];
-	// 	}
-	// }
-        int[][] newColor = new int[height()][width() - 1];
-        double[][] newEnergy = new double[height()][width() - 1];
-
-        // Populate replacement arrays, skipping pixels in the seam
-        for (int i = 0; i < height(); i++) {
-            int s = seam[i];
-            for (int j = 0; j < s; j++) {
-                newColor[i][j] = colors[i][j];
-                newEnergy[i][j] = energy[i][j];
-            }
-            for (int j = s + 1; j < width(); j++) {
-                newColor[i][j - 1] = colors[i][j];
-                newEnergy[i][j - 1] = energy[i][j];
-            }
-        }
-        colors = newColor;
-        energy = newEnergy;
-        width--;
-        // Recalculate the energy along the seam
-        for (int i = 0; i < height(); i++) {
-            int s = seam[i];
-            // Left edge removed
-            if (s == 0) {
-                energy[i][s] = energy(s, i);
-            }
-            // Right edge removed
-            else if (s == width()) {
-                energy[i][s - 1] = energy(s - 1, i);
-            }
-            // Middle pixel removed
-            else {
-                energy[i][s] = energy(s, i);
-                energy[i][s - 1] = energy(s - 1, i);
-            }
-        }
+	for(int row = 0; row < height; row++) {
+		for(int col = seam[row]; col < width - 1; col++) {
+			colors[row][col] = colors[row][col + 1];
+		}
+	}
+	width--;
 	}
 }
