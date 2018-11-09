@@ -3,7 +3,7 @@ import java.util.Arrays;
 /**
 * class for solution.
  */
-public class Solution {
+final class Solution {
     /**
      *an empty constructor.
      */
