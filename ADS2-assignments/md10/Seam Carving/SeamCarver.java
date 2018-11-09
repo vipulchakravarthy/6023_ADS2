@@ -5,10 +5,17 @@ public class SeamCarver {
 	private Picture picture;
 	private int width;
 	private int height;
+    private int[][] colors;
 	public SeamCarver(Picture pic) {
 		this.picture = pic;
 		width = picture.width();
 		height = picture.height();
+		colors = new int[height][width];
+	    for (int col = 0; col < width; col++) {
+            for (int row = 0; row < height; row++) {
+                colors[row][col] = picture.get(col, row).getRGB();
+            }
+	    }
 	}
 	// current picture
 	public Picture picture() {
@@ -164,27 +171,20 @@ public class SeamCarver {
 	}
 	// remove horizontal seam from current picture
 	public void removeHorizontalSeam(int[] seam) {
-		Picture tmp = new Picture(width() , height() - 1);
-
+	for(int col = 0; col < width; col++) {
+		for(int row = seam[col]; row < height; row++) {
+			colors[row][col] = colors[row + 1][col];
+		}
 	}
-
+	height--;
+	}
 	// remove vertical seam from current picture
 	public void removeVerticalSeam(int[] seam) {
-	// 	Picture tmp = new Picture(width() -1 , height() );
-	// 	for(int i = 0 ; i < width() ; i++){
-	// 		for (int j = 0;j < height() ;j++ ) {
-	// 				if(seam[j] == i )  continue;
-	// 				else if(seam[i] < i )  tmp.set(i-1,j,this.picture.get(i,j));
-	// 				else  tmp.set(i,j,this.picture.get(i,j));
-	// 		}
-	// 	}
-	// 	this.picture = tmp;
-	// }
 	for(int row = 0; row < height; row++) {
 		for(int col = seam[row]; col < width - 1; col++) {
-
+			colors[row][col] = colors[row][col + 1];
 		}
 	}
 	width--;
-}
+	}
 }
