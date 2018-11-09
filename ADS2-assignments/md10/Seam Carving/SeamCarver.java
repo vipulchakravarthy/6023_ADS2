@@ -50,15 +50,43 @@ public class SeamCarver {
 
 	// sequence of indices for horizontal seam
 	public int[] findHorizontalSeam() {
-		double[][] energy = new double[width][height];
-		double[][] tans = new double[height][width];
-		for(int i = 0; i < width; i++) {
-			for(int j = 0; j < height; j++) {
-				tans[j][i] = energy[i][j];
-			}
-		}
- 		return new int[0];
-	}
+        int[][] edgeTo = new int[height][width];
+        double[][] distTo = new double[height][width];
+        reset(distTo);
+        for (int row = 0; row < height; row++) {
+            distTo[row][0] = 1000;
+        }
+        for (int col = 0; col < width - 1; col++) {
+            for (int row = 0; row < height; row++) {
+                relaxH(row, col, edgeTo, distTo);
+            }
+        }
+        double minDist = Double.MAX_VALUE;
+        int minRow = 0;
+        for (int row = 0; row < height; row++) {
+            if (minDist > distTo[row][width - 1]) {
+                minDist = distTo[row][width - 1];
+                minRow = row;
+            }
+        }
+        int[] indices = new int[width];
+        for (int col = width - 1, row = minRow; col >= 0; col--) {
+            indices[col] = row;
+            row -= edgeTo[row][col];
+        }
+        return indices;
+    }
+    private void relaxH(int row, int col, int[][] edgeTo, double[][] distTo) {
+        int nextCol = col + 1;
+        for (int i = -1; i <= 1; i++) {
+            int nextRow = row + i;
+            if (nextRow < 0 || nextRow >= height) continue;
+            if (distTo[nextRow][nextCol] > distTo[row][col]  + energy(nextCol, nextRow)) {
+                distTo[nextRow][nextCol] = distTo[row][col]  + energy(nextCol, nextRow);
+                edgeTo[nextRow][nextCol] = i;
+            }
+        }
+    }
 	/**
 	 *this method is to find the vertical seam.
 	 *first of all find the shortest path from top to.
