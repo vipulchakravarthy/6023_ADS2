@@ -1,6 +1,8 @@
 import java.awt.Color;
 import java.lang.Math;
-
+/**
+ * Class for seam carver.
+ */
 public class SeamCarver {
 	/**
 	 *the picture object.
@@ -81,7 +83,8 @@ public class SeamCarver {
 	}
 	/**sequence of indices for horizontal seam
 	 *
-	 *
+	 *time complexity is O(w*h)
+	 *w is the width and h is the height
 	 * @return  sequence of indices of horizontal seam
 	 */
 	public int[] findHorizontalSeam() {
@@ -91,6 +94,7 @@ public class SeamCarver {
         for (int row = 0; row < height; row++) {
             distTo[row][0] = 1000;
         }
+		// this is for relaxation.
         for (int col = 0; col < width - 1; col++) {
             for (int row = 0; row < height; row++) {
                 relaxH(row, col, edgeTo, distTo);
@@ -107,7 +111,7 @@ public class SeamCarver {
         int[] indices = new int[width];
         for (int col = width - 1, row = minRow; col >= 0; col--) {
             indices[col] = row;
-            row -= edgeTo[row][col];
+            row = edgeTo[row - 1][col];
         }
         return indices;
     }
@@ -132,8 +136,8 @@ public class SeamCarver {
 	 *this method is to find the vertical seam.
 	 *first of all find the shortest path from top to.
 	 *bottom.
-	 * .
-	 *
+	 *time complexity is O(w*h)
+	 *w is the width and h is the height
 	 * @return sequence of indices for vertical seam.
 	 */
 	public int[] findVerticalSeam() {
@@ -154,7 +158,8 @@ public class SeamCarver {
 				relaxV(i, j, edgeTo, distTo);
 			}
 		}
-		// calculating from last row's coloumn
+		// calculating from last row
+		// column wise
         double minDist = Double.MAX_VALUE;
         int minCol = 0;
         for (int col = 0; col < width; col++) {
@@ -171,6 +176,12 @@ public class SeamCarver {
         indices[0] = indices[1];
         return indices;
     }
+    /**
+     *time complexity is O(W * H)
+     *W is the width of image
+     *H is the height of image
+     * @param      distTo  The distance to
+     */
 	private void reset(double[][] distTo) {
 		/**
 		 *reset all the values to maxvalue.
@@ -202,6 +213,7 @@ public class SeamCarver {
     	}
 	}
 	// remove horizontal seam from current picture
+	//time complexity is O(width * height)
 	public void removeHorizontalSeam(int[] seam) {
 		//handle exceptions
 	for(int col = 0; col < width; col++) {
@@ -212,6 +224,7 @@ public class SeamCarver {
 	height--;
 	}
 	// remove vertical seam from current picture
+	//time complexity is O(width * height)
 	public void removeVerticalSeam(int[] seam) {
 	for(int row = 0; row < height; row++) {
 		for(int col = seam[row]; col < width - 1; col++) {
