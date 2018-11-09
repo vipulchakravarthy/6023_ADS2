@@ -50,12 +50,30 @@ public class SeamCarver {
 
 	// sequence of indices for horizontal seam
 	public int[] findHorizontalSeam() {
-		return new int[0];
+		double[][] energy = new double[width][height];
+		double[][] tans = new double[height][width];
+		for(int i = 0; i < width; i++) {
+			for(int j = 0; j < height; j++) {
+				tans[j][i] = energy[i][j];
+			}
+		}
+ 		return new int[0];
 	}
-
-	// sequence of indices for vertical seam
+	/**
+	 *this method is to find the vertical seam.
+	 *first of all find the shortest path from top to.
+	 *bottom.
+	 * .
+	 *
+	 * @return sequence of indices for vertical seam.
+	 */
 	public int[] findVerticalSeam() {
 		double[][] energy = new double[height][width];
+		for(int i = 0; i < height; i++) {
+			for(int j = 0; j < width; j++) {
+				energy[i][j] = energy(i,j);
+			}
+		}
 		int[][] edgeTo = new int[height][width];
 		double[][] distTo = new double[height][width];
 		reset(distTo);
@@ -66,11 +84,13 @@ public class SeamCarver {
 		for(int i = 0; i < width; i++) {
 			distTo[0][i] = 1000.0;
 		}
+		// this is for relaxation.
 		for (int i = 0; i < height - 1; i++) {
 			for(int j = 0; j < width; j++) {
 				relaxV(i, j, edgeTo, distTo);
 			}
 		}
+		// calculating from last row's coloumn
         double minDist = Double.MAX_VALUE;
         int minCol = 0;
         for (int col = 0; col < width; col++) {
@@ -79,6 +99,7 @@ public class SeamCarver {
                 minCol = col;
             }
         }
+        //indices values of shortest path.
         for (int row = height -1, col = minCol; row >= 0; row--) {
             indices[row] = col;
             col -= edgeTo[row][col];
