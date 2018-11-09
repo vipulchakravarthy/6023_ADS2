@@ -55,6 +55,7 @@ public class SeamCarver {
 
 	// sequence of indices for vertical seam
 	public int[] findVerticalSeam() {
+		double[][] energy = new double[height][width];
 		int[][] edgeTo = new int[height][width];
 		double[][] distTo = new double[height][width];
 		reset(distTo);
@@ -62,9 +63,17 @@ public class SeamCarver {
 		if(width == 1 || height == 1) {
 			return indices;
 		}
+		//update the energy matrix
+		//make the distTo to max value and first row as 1000.
 		for(int i = 0; i < width; i++) {
-			distTo[0][i] = 1000.0;
+			for(int j = 0; j < height; j++) {
+				energy[i][j] = energy(i,j);
+				if(i == 0) {
+					distTo[0][i] = 1000.0;
+				}
+			}
 		}
+		// the loop for relaxing the pixel
 		for (int i = 0; i < height - 1; i++) {
 			for(int j = 0; j < width; j++) {
 				relaxV(i, j, edgeTo, distTo);
@@ -94,11 +103,9 @@ public class SeamCarver {
 	}
 	private void relaxV(int row, int col, int[][] edgeTo, double[][] distTo) {
 		int nextRow = row + 1;
+		// for every element check below three elements.
         for (int i = -1; i <= 1; i++) {
             int nextCol = col + i;
-            if (nextCol < 0 || nextCol >= width) {
-            	continue;
-            }
             if(i == 0) {
             	if(distTo[nextRow][nextCol] >= distTo[row][col] + energy(nextCol, nextRow)) {
             	distTo[nextRow][nextCol] = distTo[row][col] + energy(nextCol, nextRow);
