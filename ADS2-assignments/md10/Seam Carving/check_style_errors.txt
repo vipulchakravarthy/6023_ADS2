@@ -260,18 +260,14 @@ Starting audit...
 [ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md10\Seam Carving\SeamCarver.java:92:38: Parameter col should be final. [FinalParameters]
 [ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md10\Seam Carving\SeamCarver.java:92:47: Parameter edgeTo should be final. [FinalParameters]
 [ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md10\Seam Carving\SeamCarver.java:92:63: Parameter distTo should be final. [FinalParameters]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md10\Seam Carving\SeamCarver.java:96:19: 'if' is not followed by whitespace. [WhitespaceAfter]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md10\Seam Carving\SeamCarver.java:97: Line is longer than 80 characters (found 102). [LineLength]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md10\Seam Carving\SeamCarver.java:98: Line is longer than 80 characters (found 95). [LineLength]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md10\Seam Carving\SeamCarver.java:101:17: '}' at column 10 should be on the same line as the next part of a multi-block statement (one that directly contains multiple blocks: if/else-if/else, do/while or try/catch/finally). [RightCurly]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md10\Seam Carving\SeamCarver.java:103: Line is longer than 80 characters (found 93). [LineLength]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md10\Seam Carving\SeamCarver.java:104: Line is longer than 80 characters (found 87). [LineLength]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md10\Seam Carving\SeamCarver.java:99: Line is longer than 80 characters (found 90). [LineLength]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md10\Seam Carving\SeamCarver.java:100: Line is longer than 80 characters (found 87). [LineLength]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md10\Seam Carving\SeamCarver.java:106:9: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md10\Seam Carving\SeamCarver.java:106:42: Parameter seam should be final. [FinalParameters]
 [ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md10\Seam Carving\SeamCarver.java:111:9: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md10\Seam Carving\SeamCarver.java:111:42: Parameter seam should be final. [FinalParameters]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md10\Seam Carving\SeamCarver.java:116:9: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md10\Seam Carving\SeamCarver.java:116:40: Parameter seam should be final. [FinalParameters]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md10\Seam Carving\SeamCarver.java:111:40: Parameter seam should be final. [FinalParameters]
 Audit done.
-Checkstyle ends with 58 errors.
+Checkstyle ends with 54 errors.
 Starting audit...
 [ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md10\Seam Carving\ShowEnergy.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 [ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md10\Seam Carving\ShowEnergy.java:5: Line has trailing spaces. [RegexpSingleline]
