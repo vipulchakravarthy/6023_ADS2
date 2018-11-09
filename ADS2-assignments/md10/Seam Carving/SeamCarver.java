@@ -1,36 +1,63 @@
 import java.awt.Color;
 import java.lang.Math;
+
 public class SeamCarver {
-	// create a seam carver object based on the given picture
+	/**
+	 *the picture object.
+	 */
 	private Picture picture;
+	/**
+	 *the width of image.
+	 */
 	private int width;
+	/**
+	 *the height of pixel.
+	 */
 	private int height;
-	public SeamCarver(Picture pic) {
+	/**
+	 *the constructor to initialize.
+	 *
+	 * @param      pic   The picture
+	 */
+	public SeamCarver(final Picture pic) {
 		this.picture = pic;
 		width = picture.width();
 		height = picture.height();
 	}
+	/**
+	 *the method will return the picture.
+	 *object.
+	 * @return picture object.
+	 */
     public Picture picture() {
-        // current picture
-        // Picture picture = new Picture(width, height);
-        // for (int col = 0; col < width; col++) {
-        //     for (int row = 0; row < height; row++) {
-        //         picture.set(col, row, new Color(colors[row][col]));
-        //     }
-        // }
         return picture;
     }
+    /**
+     *this method will return the width.
+     *of image.
+     * @return width of pixel
+     */
 	public int width() {
 		return width;
 	}
-
-	// height of current picture
+	/**
+	 *height of current picture
+	 *
+	 * @return height of image.
+	 */
 	public int height() {
 		return height;
 	}
-
-	// energy of pixel at column x and row y
+	/**
+	 *energy of pixel at column x and row y
+	 *
+	 * @param      x  x coordinate
+	 * @param      y   y coordinate
+	 *
+	 * @return energy of pixel.
+	 */
 	public double energy(int x, int y) {
+		//handle exceptions
 		if(x == 0 || y == 0 || y == (height - 1) || x == (width - 1)) {
 			return 1000.0;
 		}
@@ -39,9 +66,12 @@ public class SeamCarver {
 		Color object = picture.get(x,y);
 		Color leftObj = picture.get(x, y - 1);
 		Color rightObj = picture.get(x, y + 1);
-		double xRed = Math.abs((leftObj.getRed() - rightObj.getRed()));
-		double xGreen = Math.abs((leftObj.getGreen() - rightObj.getGreen()));
-		double xBlue = Math.abs((leftObj.getBlue() - rightObj.getBlue()));
+		double xRed = Math.abs((leftObj.getRed()
+			- rightObj.getRed()));
+		double xGreen = Math.abs((leftObj.getGreen()
+			- rightObj.getGreen()));
+		double xBlue = Math.abs((leftObj.getBlue()
+			- rightObj.getBlue()));
 		xCoordinate = Math.pow(xRed, 2) + Math.pow(xBlue, 2) + Math.pow(xGreen, 2);
 		Color topObj = picture.get(x - 1, y);
 		Color bottomObj = picture.get(x + 1, y);
@@ -52,8 +82,11 @@ public class SeamCarver {
 		double sum = Math.sqrt((xCoordinate + yCoordinate));
 		return sum;
 	}
-
-	// sequence of indices for horizontal seam
+	/**sequence of indices for horizontal seam
+	 *
+	 *
+	 * @return  sequence of indices of horizontal seam
+	 */
 	public int[] findHorizontalSeam() {
         int[][] edgeTo = new int[height][width];
         double[][] distTo = new double[height][width];
@@ -169,6 +202,7 @@ public class SeamCarver {
 	}
 	// remove horizontal seam from current picture
 	public void removeHorizontalSeam(int[] seam) {
+		//handle exceptions
 	for(int col = 0; col < width; col++) {
 		for(int row = seam[col]; row < height - 1; row++) {
 			this.picture.set(col, row, this.picture.get(col, row + 1));
