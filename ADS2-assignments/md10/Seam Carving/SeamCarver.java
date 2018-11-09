@@ -96,7 +96,13 @@ public class SeamCarver {
             if (nextCol < 0 || nextCol >= width) {
             	continue;
             }
-            if (distTo[nextRow][nextCol] >= distTo[row][col] + energy(nextCol, nextRow)) {
+            if(i == 0) {
+            	if(distTo[nextRow][nextCol] >= distTo[row][col] + energy(nextCol, nextRow)) {
+            	distTo[nextRow][nextCol] = distTo[row][col] + energy(nextCol, nextRow);
+                edgeTo[nextRow][nextCol] = i;
+            	}
+            }
+            if (distTo[nextRow][nextCol] > distTo[row][col] + energy(nextCol, nextRow)) {
                 distTo[nextRow][nextCol] = distTo[row][col] + energy(nextCol, nextRow);
                 edgeTo[nextRow][nextCol] = i;
             }
