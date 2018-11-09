@@ -5,33 +5,21 @@ public class SeamCarver {
 	private Picture picture;
 	private int width;
 	private int height;
-    private int[][] colors;
 	public SeamCarver(Picture pic) {
 		this.picture = pic;
 		width = picture.width();
 		height = picture.height();
-		colors = new int[height][width];
-	    for (int col = 0; col < width; col++) {
-            for (int row = 0; row < height; row++) {
-                colors[row][col] = picture.get(col, row).getRGB();
-            }
-	    }
 	}
     public Picture picture() {
         // current picture
-        Picture picture = new Picture(width, height);
-        for (int col = 0; col < width; col++) {
-            for (int row = 0; row < height; row++) {
-                picture.set(col, row, new Color(colors[row][col]));
-            }
-        }
+        // Picture picture = new Picture(width, height);
+        // for (int col = 0; col < width; col++) {
+        //     for (int row = 0; row < height; row++) {
+        //         picture.set(col, row, new Color(colors[row][col]));
+        //     }
+        // }
         return picture;
     }
-	// current picture
-	// public Picture picture() {
-	// 	return picture;
-	// }
-	// width of current picture
 	public int width() {
 		return width;
 	}
