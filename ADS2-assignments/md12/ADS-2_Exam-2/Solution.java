@@ -283,6 +283,23 @@ class DijkstrasSP {
         }
         return sum;
     }
+    public boolean viaPath(final int vertex, final int via) {
+    	int flag = 0;
+    	for(Edge each: pathTo(vertex)) {
+    			if(each.either() == via || each.other(each.either()) == via) {
+    				flag = 1;
+    			}
+    	}
+    	if(flag == 1) {
+    		return true;
+    	}
+    	return false;
+    }
+    public void printPath(final int vertex) {
+    	for(Edge each: pathTo(vertex)) {
+    		System.out.print(each.either() + " ");
+    	}
+    }
 }
 final class Solution {
 	private Solution() {
@@ -295,6 +312,7 @@ final class Solution {
 		Edge edgeObj;
 		EdgeWeightedGraph graph
 		= new EdgeWeightedGraph(vertices, edges);
+		DijkstrasSP disp;
 		for(int i = 0; i < edges; i++) {
 			String[] tokens = scan.nextLine().split(" ");
             edgeObj = new Edge(Integer.parseInt(tokens[0]),
@@ -310,8 +328,7 @@ final class Solution {
 
 		case "DirectedPaths":
 			String[] check = scan.nextLine().split(" ");
-			DijkstrasSP disp
-			= new DijkstrasSP(graph, Integer.parseInt(check[0]));
+			disp = new DijkstrasSP(graph, Integer.parseInt(check[0]));
 			if(disp.hasPathTo(Integer.parseInt(check[1]))) {
 				System.out.println(disp.distance(Integer.parseInt(check[1])));
 			} else {
@@ -319,13 +336,17 @@ final class Solution {
 			}
 			break;
 		case "ViaPaths":
-			// Handle the case of ViaPaths, where three integers are given.
-			// First is the source and second is the via is the one where path should pass throuh.
-			// third is the destination.
-			// If the path exists print the distance between them.
-			// Other wise print "No Path Found."
+			String[] stops = scan.nextLine().split(" ");
+			disp = new DijkstrasSP(graph, Integer.parseInt(stops[0]));
+			if(disp.hasPathTo(Integer.parseInt(stops[2]))) {
+				if(disp.viaPath(Integer.parseInt(stops[2]), Integer.parseInt(stops[1]))) {
+					System.out.println(disp.distance(Integer.parseInt(stops[2])));
+					disp.printPath(Integer.parseInt(stops[2]));
+				}
+		  	} else {
+					System.out.println("No Path Found.");
+			}
 			break;
-
 		default:
 			break;
 		}
