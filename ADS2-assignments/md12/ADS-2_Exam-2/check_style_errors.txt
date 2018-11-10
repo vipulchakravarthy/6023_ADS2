@@ -4,30 +4,10 @@ Starting audit...
 Audit done.
 Starting audit...
 [ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md12\ADS-2_Exam-2\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md12\ADS-2_Exam-2\Solution.java:84:5: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md12\ADS-2_Exam-2\Solution.java:111:46: Expected @param tag for 'e'. [JavadocMethod]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md12\ADS-2_Exam-2\Solution.java:288:8: File contains tab characters (this is the first instance). [FileTabCharacter]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md12\ADS-2_Exam-2\Solution.java:290: Line is longer than 80 characters (found 86). [LineLength]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md12\ADS-2_Exam-2\Solution.java:300: Missing a Javadoc comment. [JavadocType]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md12\ADS-2_Exam-2\Solution.java:301:9: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md12\ADS-2_Exam-2\Solution.java:304:9: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md12\ADS-2_Exam-2\Solution.java:312:20: 'for' is not followed by whitespace. [WhitespaceAfter]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md12\ADS-2_Exam-2\Solution.java:327: Line is longer than 80 characters (found 82). [LineLength]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md12\ADS-2_Exam-2\Solution.java:328:27: 'if' is not followed by whitespace. [WhitespaceAfter]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md12\ADS-2_Exam-2\Solution.java:329: Line is longer than 80 characters (found 94). [LineLength]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md12\ADS-2_Exam-2\Solution.java:336: Line is longer than 80 characters (found 82). [LineLength]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md12\ADS-2_Exam-2\Solution.java:339:27: 'if' is not followed by whitespace. [WhitespaceAfter]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md12\ADS-2_Exam-2\Solution.java:339:43: '(' is followed by whitespace. [ParenPad]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md12\ADS-2_Exam-2\Solution.java:340: Line is longer than 80 characters (found 105). [LineLength]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md12\ADS-2_Exam-2\Solution.java:341: Line is longer than 80 characters (found 90). [LineLength]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md12\ADS-2_Exam-2\Solution.java:341:36: 'for' is not followed by whitespace. [WhitespaceAfter]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md12\ADS-2_Exam-2\Solution.java:346: Line is longer than 80 characters (found 98). [LineLength]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md12\ADS-2_Exam-2\Solution.java:346:44: 'for' is not followed by whitespace. [WhitespaceAfter]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md12\ADS-2_Exam-2\Solution.java:350:51: 'if' is not followed by whitespace. [WhitespaceAfter]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md12\ADS-2_Exam-2\Solution.java:352: Line is longer than 80 characters (found 84). [LineLength]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md12\ADS-2_Exam-2\Solution.java:352:58: 'if' is not followed by whitespace. [WhitespaceAfter]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md12\ADS-2_Exam-2\Solution.java:358:36: 'for' is not followed by whitespace. [WhitespaceAfter]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md12\ADS-2_Exam-2\Solution.java:84: First sentence should end with a period. [JavadocStyle]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md12\ADS-2_Exam-2\Solution.java:117:46: Expected @param tag for 'e'. [JavadocMethod]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md12\ADS-2_Exam-2\Solution.java:346:32: '(' is followed by whitespace. [ParenPad]
 Audit done.
-Checkstyle ends with 24 errors.
+Checkstyle ends with 4 errors.
 Starting audit...
 Audit done.

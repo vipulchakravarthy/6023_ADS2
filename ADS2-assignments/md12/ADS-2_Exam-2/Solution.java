@@ -81,9 +81,14 @@ class Edge implements Comparable<Edge> {
             return 0;
         }
     }
+    /**
+     *the method is to print the edge
+     *
+     * @return String representation of the object.
+     */
     public String toString() {
         return String.format("%d-%d %.5f",
-         vertexOne, vertexTwo, weight);
+                             vertexOne, vertexTwo, weight);
     }
 }
 /**
@@ -105,7 +110,8 @@ class EdgeWeightedGraph {
     private Bag<Edge>[] adj;
     /**
      *the constructor to initialize.
-     *
+     *time complexity is O(V)
+     *v is vertices.
      * @param      v vertices count
      */
     EdgeWeightedGraph(final int v, final int e) {
@@ -146,13 +152,15 @@ class EdgeWeightedGraph {
         return adj[vertex];
     }
     /**
-     *returns all the edges in graph.
-     *time complexity is O(E)
+     *print the elements in order.
+     *time complexity is O(E * V)
+     *E is the edges and V is the vertices
      * @return bag of all the edges.
      */
     public String toString() {
         StringBuilder s = new StringBuilder();
-        s.append(vertices + " vertices " + edges + " edges" + "\n");
+        s.append(vertices + " vertices "
+                 + edges + " edges" + "\n");
         for (int v = 0; v < vertices; v++) {
             s.append(v + ": ");
             for (Edge e : adj[v]) {
@@ -162,11 +170,11 @@ class EdgeWeightedGraph {
         }
         return s.toString();
     }
- }
- /**
- *the class for dijkstra's algorithm.
- *to find the shortest path.
- */
+}
+/**
+*the class for dijkstra's algorithm.
+*to find the shortest path.
+*/
 class DijkstrasSP {
     /**
      *the distTo array to store.
@@ -217,7 +225,7 @@ class DijkstrasSP {
      * @param      vertex  The vertex
      */
     private void relax(final Edge edge,
-    final int vertex) {
+                       final int vertex) {
         int vertexTwo = edge.other(vertex);
         if (distTo[vertexTwo] > distTo[vertex] + edge.weight()) {
             distTo[vertexTwo] = distTo[vertex] + edge.weight();
@@ -284,87 +292,88 @@ class DijkstrasSP {
         }
         return sum;
     }
-    // public boolean viaPath(final int vertex, final int via) {
-    // 	int flag = 0;
-    // 	for(Edge each: pathTo(vertex)) {
-    // 			if(each.either() == via || each.other(each.either()) == via) {
-    // 				flag = 1;
-    // 			}
-    // 	}
-    // 	if(flag == 1) {
-    // 		return true;
-    // 	}
-    // 	return false;
-    // }
 }
+/**
+ *the class for main method.
+ */
 final class Solution {
-	private Solution() {
-
-	}
-	public static void main(final String[] args) {
-		Scanner scan = new Scanner(System.in);
-		int vertices = Integer.parseInt(scan.nextLine());
-		int edges = Integer.parseInt(scan.nextLine());
-		Edge edgeObj;
-		EdgeWeightedGraph graph
-		= new EdgeWeightedGraph(vertices, edges);
-		DijkstrasSP disp;
-		for(int i = 0; i < edges; i++) {
-			String[] tokens = scan.nextLine().split(" ");
+    /**
+     *an empty constructor.
+     */
+    private Solution() {
+    }
+    /**
+     *the main method to take input.
+     *time complexity is O(E * E)
+     *E is the edges.
+     * @param      args  The arguments
+     */
+    public static void main(final String[] args) {
+        Scanner scan = new Scanner(System.in);
+        int vertices = Integer.parseInt(scan.nextLine());
+        int edges = Integer.parseInt(scan.nextLine());
+        Edge edgeObj;
+        EdgeWeightedGraph graph
+            = new EdgeWeightedGraph(vertices, edges);
+        DijkstrasSP disp;
+        for (int i = 0; i < edges; i++) {
+            String[] tokens = scan.nextLine().split(" ");
             edgeObj = new Edge(Integer.parseInt(tokens[0]),
                                Integer.parseInt(tokens[1]),
                                Double.parseDouble(tokens[2]));
             graph.addEdge(edgeObj);
-		}
-		String caseToGo = scan.nextLine();
-		switch (caseToGo) {
-		case "Graph":
-			System.out.println(graph);
-			break;
+        }
+        String caseToGo = scan.nextLine();
+        switch (caseToGo) {
+        case "Graph":
+            System.out.println(graph);
+            break;
 
-		case "DirectedPaths":
-			String[] check = scan.nextLine().split(" ");
-			disp = new DijkstrasSP(graph, Integer.parseInt(check[0]));
-			if(disp.hasPathTo(Integer.parseInt(check[1]))) {
-				System.out.println(disp.distance(Integer.parseInt(check[1])));
-			} else {
-				System.out.println("No Path Found.");
-			}
-			break;
-		case "ViaPaths":
-			String[] stops = scan.nextLine().split(" ");
-			disp = new DijkstrasSP(graph, Integer.parseInt(stops[0]));
-			double total = 0.0;
-			ArrayList<Integer> list = new ArrayList<Integer>();
-			if(disp.hasPathTo( Integer.parseInt(stops[2]))) {
-				DijkstrasSP dispVia = new DijkstrasSP(graph, Integer.parseInt(stops[1]));
-				for(Edge each : disp.pathTo(Integer.parseInt(stops[1]))) {
-					total += each.weight();
-					int vertex = each.either();
-					list.add(each.other(vertex));
-					list.add(vertex);
-					for(Edge e : dispVia.pathTo(Integer.parseInt(stops[2]))) {
-						total += e.weight();
-						int tempOne = e.either();
-						int tempTwo = e.other(tempOne);
-						if(!list.contains(tempOne)) {
-							list.add(tempOne);
-						} else if(!list.contains(tempTwo)) {
-							list.add(tempTwo);
-						}
-					}
-				}
-				System.out.println(total);
-				for(Integer i: list) {
-					System.out.print(i + " ");
-				}
-			} else {
-					System.out.println("No Path Found.");
-			}
-			break;
-		default:
-			break;
-		}
+        case "DirectedPaths":
+            String[] check = scan.nextLine().split(" ");
+            disp = new DijkstrasSP(graph, Integer.parseInt(check[0]));
+            if (disp.hasPathTo(Integer.parseInt(check[1]))) {
+                System.out.println(disp.distance(Integer.parseInt(check[1])));
+            } else {
+                System.out.println("No Path Found.");
+            }
+            break;
+        case "ViaPaths":
+            String[] stops = scan.nextLine().split(" ");
+            disp = new DijkstrasSP(graph, Integer.parseInt(stops[0]));
+            double total = 0.0;
+            ArrayList<Integer> list = new ArrayList<Integer>();
+            if (disp.hasPathTo( Integer.parseInt(stops[2]))) {
+                DijkstrasSP dispVia = new DijkstrasSP(
+                    graph, Integer.parseInt(stops[1]));
+                for (Edge each : disp.pathTo(Integer.parseInt(stops[1]))) {
+                    total += each.weight();
+                    int vertex = each.either();
+                    list.add(each.other(vertex));
+                    list.add(vertex);
+                    for (Edge e : dispVia.pathTo(
+                        Integer.parseInt(stops[2]))) {
+                        total += e.weight();
+                        int tempOne = e.either();
+                        int tempTwo = e.other(tempOne);
+                        if (!list.contains(tempOne)) {
+                            list.add(tempOne);
+                        } else if (!list.contains(tempTwo)) {
+                            list.add(tempTwo);
+                        }
+                    }
+                }
+                System.out.println(total);
+                for (Integer i : list) {
+                    System.out.print(i + " ");
+                }
+            } else {
+                System.out.println("No Path Found.");
+            }
+            break;
+        default:
+            break;
+        }
 
-	}
+    }
 }
