@@ -4,10 +4,7 @@ Starting audit...
 Audit done.
 Starting audit...
 [ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md12\ADS-2_Exam-2\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md12\ADS-2_Exam-2\Solution.java:84: First sentence should end with a period. [JavadocStyle]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md12\ADS-2_Exam-2\Solution.java:117:46: Expected @param tag for 'e'. [JavadocMethod]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md12\ADS-2_Exam-2\Solution.java:346:32: '(' is followed by whitespace. [ParenPad]
 Audit done.
-Checkstyle ends with 4 errors.
+Checkstyle ends with 1 errors.
 Starting audit...
 Audit done.

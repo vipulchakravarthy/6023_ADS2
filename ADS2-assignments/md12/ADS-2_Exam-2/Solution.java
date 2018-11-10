@@ -82,7 +82,7 @@ class Edge implements Comparable<Edge> {
         }
     }
     /**
-     *the method is to print the edge
+     *the method is to print the edge.
      *
      * @return String representation of the object.
      */
@@ -113,6 +113,7 @@ class EdgeWeightedGraph {
      *time complexity is O(V)
      *v is vertices.
      * @param      v vertices count
+     * @param e edge count
      */
     EdgeWeightedGraph(final int v, final int e) {
         this.vertices = v;
@@ -343,7 +344,7 @@ final class Solution {
             disp = new DijkstrasSP(graph, Integer.parseInt(stops[0]));
             double total = 0.0;
             ArrayList<Integer> list = new ArrayList<Integer>();
-            if (disp.hasPathTo( Integer.parseInt(stops[2]))) {
+            if (disp.hasPathTo(Integer.parseInt(stops[2]))) {
                 DijkstrasSP dispVia = new DijkstrasSP(
                     graph, Integer.parseInt(stops[1]));
                 for (Edge each : disp.pathTo(Integer.parseInt(stops[1]))) {
