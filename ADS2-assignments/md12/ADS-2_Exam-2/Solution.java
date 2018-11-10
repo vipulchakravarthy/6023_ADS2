@@ -336,34 +336,31 @@ final class Solution {
 			disp = new DijkstrasSP(graph, Integer.parseInt(stops[0]));
 			double total = 0.0;
 			ArrayList<Integer> list = new ArrayList<Integer>();
-			// disp.printPath(Integer.parseInt(stops[2]));
-			// if(disp.viaPath(Integer.parseInt(stops[2]), Integer.parseInt(stops[1]))) {
-			System.out.println(disp.distance(Integer.parseInt(stops[2])));
-			DijkstrasSP dispVia = new DijkstrasSP(graph, Integer.parseInt(stops[1]));
-			for(Edge each : disp.pathTo(Integer.parseInt(stops[1]))) {
-				total += each.weight();
-				int vertex = each.either();
-				list.add(each.other(vertex));
-				list.add(vertex);
-				for(Edge e : dispVia.pathTo(Integer.parseInt(stops[2]))) {
-					total += e.weight();
-					int tempOne = e.either();
-					int tempTwo = e.other(tempOne);
-					if(!list.contains(tempOne)) {
-						list.add(tempOne);
-					} else if(!list.contains(tempTwo)) {
-						list.add(tempTwo);
+			if(disp.hasPathTo( Integer.parseInt(stops[2]))) {
+				DijkstrasSP dispVia = new DijkstrasSP(graph, Integer.parseInt(stops[1]));
+				for(Edge each : disp.pathTo(Integer.parseInt(stops[1]))) {
+					total += each.weight();
+					int vertex = each.either();
+					list.add(each.other(vertex));
+					list.add(vertex);
+					for(Edge e : dispVia.pathTo(Integer.parseInt(stops[2]))) {
+						total += e.weight();
+						int tempOne = e.either();
+						int tempTwo = e.other(tempOne);
+						if(!list.contains(tempOne)) {
+							list.add(tempOne);
+						} else if(!list.contains(tempTwo)) {
+							list.add(tempTwo);
+						}
 					}
 				}
+				System.out.println(total);
+				for(Integer i: list) {
+					System.out.print(i + " ");
+				}
+			} else {
+					System.out.println("No Path Found.");
 			}
-			System.out.println(total);
-			for(Integer i: list) {
-				System.out.print(i + " ");
-			}
-					// disp.printPath(Integer.parseInt(stops[2]));
-		 //  	} else {
-			// 		System.out.println("No Path Found.");
-			// }
 			break;
 		default:
 			break;
