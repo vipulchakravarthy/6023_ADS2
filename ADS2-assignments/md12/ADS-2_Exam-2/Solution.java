@@ -162,6 +162,128 @@ class EdgeWeightedGraph {
         return s.toString();
     }
  }
+ /**
+ *the class for dijkstra's algorithm.
+ *to find the shortest path.
+ */
+class DijkstrasSP {
+    /**
+     *the distTo array to store.
+     *distance from one vertex to another.
+     */
+    private Double[] distTo;
+    /**
+     *edge to is to store the edge connected.
+     */
+    private Edge[] edgeTo;
+    /**
+     *indexed minpq to store the key value.
+     *pair.
+     */
+    private IndexMinPQ<Double> pq;
+    /**
+     *the graph object.
+     */
+    private EdgeWeightedGraph graph;
+    /**
+     *the constructor to initialize the objects.
+     *the time complexity is O(E + V).
+     * @param      g  graph object.
+     * @param      source  The source
+     */
+    DijkstrasSP(final EdgeWeightedGraph g,
+                final int source) {
+        graph = g;
+        distTo = new Double[graph.vertices()];
+        edgeTo = new Edge[graph.vertices()];
+        for (int i = 0; i < graph.vertices(); i++) {
+            distTo[i] = Double.POSITIVE_INFINITY;
+        }
+        distTo[source] = 0.0;
+        pq = new IndexMinPQ<Double>(graph.vertices());
+        pq.insert(source, distTo[source]);
+        while (!pq.isEmpty()) {
+            int vertex = pq.delMin();
+            for (Edge edge : graph.adj(vertex)) {
+                relax(edge, vertex);
+            }
+        }
+    }
+    /**
+     *this method is to relax the edges.
+     *time complexity is O(logE)
+     * @param      edge    The edge
+     * @param      vertex  The vertex
+     */
+    private void relax(final Edge edge,
+    final int vertex) {
+        int vertexTwo = edge.other(vertex);
+        if (distTo[vertexTwo] > distTo[vertex] + edge.weight()) {
+            distTo[vertexTwo] = distTo[vertex] + edge.weight();
+            edgeTo[vertexTwo] = edge;
+            if (pq.contains(vertexTwo)) {
+                pq.decreaseKey(vertexTwo, distTo[vertexTwo]);
+            } else {
+                pq.insert(vertexTwo, distTo[vertexTwo]);
+            }
+        }
+    }
+    /**
+     *the method returns the distance.
+     *from the source to given vertex.
+     *
+     * @param      v  vertex
+     *
+     * @return distance between two vertices.
+     */
+    public double distTo(final int v) {
+        return distTo[v];
+    }
+    /**
+     *whether the path is there or not.
+     *
+     * @param      v another vertex.
+     *
+     * @return     True if has path to, False otherwise.
+     */
+    public boolean hasPathTo(final int v) {
+        return distTo[v] < Double.POSITIVE_INFINITY;
+    }
+    /**
+     *shortest path to given vertex.
+     *
+     * @param      v  vertex.
+     *time complexity is O(ElogV)
+     * @return shortest path is returned from the source.
+     */
+    public Iterable<Edge> pathTo(final int v) {
+        if (!hasPathTo(v)) {
+            return null;
+        }
+        Stack<Edge> path = new Stack<Edge>();
+        int x = v;
+        for (Edge e = edgeTo[v]; e != null; e = edgeTo[x]) {
+            path.push(e);
+            x = e.other(x);
+        }
+        return path;
+    }
+    /**
+     *returns the shortest distance between.
+     *two vertices.
+     *time complexity O(E)
+     * @param      vertex  The vertex
+     *
+     * @return shortest distance between two vertices.
+     */
+    public double distance(final int vertex) {
+        double sum = 0;
+        for (Edge each : pathTo(vertex)) {
+            sum += each.weight();
+        }
+        return sum;
+    }
+}
 final class Solution {
 	private Solution() {
 
@@ -187,12 +309,15 @@ final class Solution {
 			break;
 
 		case "DirectedPaths":
-			// Handle the case of DirectedPaths, where two integers are given.
-			// First is the source and second is the destination.
-			// If the path exists print the distance between them.
-			// Other wise print "No Path Found."
+			String[] check = scan.nextLine().split(" ");
+			DijkstrasSP disp
+			= new DijkstrasSP(graph, Integer.parseInt(check[0]));
+			if(disp.hasPathTo(Integer.parseInt(check[1]))) {
+				System.out.println(disp.distance(Integer.parseInt(check[1])));
+			} else {
+				System.out.println("No Path Found.");
+			}
 			break;
-
 		case "ViaPaths":
 			// Handle the case of ViaPaths, where three integers are given.
 			// First is the source and second is the via is the one where path should pass throuh.
