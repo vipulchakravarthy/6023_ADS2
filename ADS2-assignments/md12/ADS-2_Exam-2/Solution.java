@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.ArrayList;
 /**
  *class for edge.
  */
@@ -283,23 +284,18 @@ class DijkstrasSP {
         }
         return sum;
     }
-    public boolean viaPath(final int vertex, final int via) {
-    	int flag = 0;
-    	for(Edge each: pathTo(vertex)) {
-    			if(each.either() == via || each.other(each.either()) == via) {
-    				flag = 1;
-    			}
-    	}
-    	if(flag == 1) {
-    		return true;
-    	}
-    	return false;
-    }
-    public void printPath(final int vertex) {
-    	for(Edge each: pathTo(vertex)) {
-    		System.out.print(each.either() + " ");
-    	}
-    }
+    // public boolean viaPath(final int vertex, final int via) {
+    // 	int flag = 0;
+    // 	for(Edge each: pathTo(vertex)) {
+    // 			if(each.either() == via || each.other(each.either()) == via) {
+    // 				flag = 1;
+    // 			}
+    // 	}
+    // 	if(flag == 1) {
+    // 		return true;
+    // 	}
+    // 	return false;
+    // }
 }
 final class Solution {
 	private Solution() {
@@ -338,14 +334,36 @@ final class Solution {
 		case "ViaPaths":
 			String[] stops = scan.nextLine().split(" ");
 			disp = new DijkstrasSP(graph, Integer.parseInt(stops[0]));
-			if(disp.hasPathTo(Integer.parseInt(stops[2]))) {
-				if(disp.viaPath(Integer.parseInt(stops[2]), Integer.parseInt(stops[1]))) {
-					System.out.println(disp.distance(Integer.parseInt(stops[2])));
-					disp.printPath(Integer.parseInt(stops[2]));
+			double total = 0.0;
+			ArrayList<Integer> list = new ArrayList<Integer>();
+			// disp.printPath(Integer.parseInt(stops[2]));
+			// if(disp.viaPath(Integer.parseInt(stops[2]), Integer.parseInt(stops[1]))) {
+			System.out.println(disp.distance(Integer.parseInt(stops[2])));
+			DijkstrasSP dispVia = new DijkstrasSP(graph, Integer.parseInt(stops[1]));
+			for(Edge each : disp.pathTo(Integer.parseInt(stops[1]))) {
+				total += each.weight();
+				int vertex = each.either();
+				list.add(each.other(vertex));
+				list.add(vertex);
+				for(Edge e : dispVia.pathTo(Integer.parseInt(stops[2]))) {
+					total += e.weight();
+					int tempOne = e.either();
+					int tempTwo = e.other(tempOne);
+					if(!list.contains(tempOne)) {
+						list.add(tempOne);
+					} else if(!list.contains(tempTwo)) {
+						list.add(tempTwo);
+					}
 				}
-		  	} else {
-					System.out.println("No Path Found.");
 			}
+			System.out.println(total);
+			for(Integer i: list) {
+				System.out.print(i + " ");
+			}
+					// disp.printPath(Integer.parseInt(stops[2]));
+		 //  	} else {
+			// 		System.out.println("No Path Found.");
+			// }
 			break;
 		default:
 			break;

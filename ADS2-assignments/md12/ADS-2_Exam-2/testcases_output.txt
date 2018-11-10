@@ -62,12 +62,14 @@ Your Output:
 370.0
 ----------------------------------------
 
-########## Testcase 4: Passed ##########
+########## Testcase 4: Failed ##########
 Expected Output: 
 No Path Found.
 
 Your Output: 
-No Path Found.
+Exception in thread "main" java.lang.NullPointerException
+	at DijkstrasSP.distance(Solution.java:282)
+	at Solution.main(Solution.java:341)
 ----------------------------------------
 
 ########## Testcase 5: Failed ##########
@@ -76,6 +78,8 @@ Expected Output:
 5 2 4 0 7 1
 
 Your Output: 
-
+649.0
+692.0
+5 2 4 0 7 1
 ----------------------------------------
 
