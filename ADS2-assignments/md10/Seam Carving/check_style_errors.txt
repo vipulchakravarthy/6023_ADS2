@@ -212,7 +212,6 @@ Starting audit...
 Audit done.
 Checkstyle ends with 43 errors.
 Starting audit...
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md10\Seam Carving\SeamCarver.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 [ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md10\Seam Carving\SeamCarver.java:2:1: Redundant import from the java.lang package - java.lang.Math. [RedundantImport]
 [ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md10\Seam Carving\SeamCarver.java:2:8: Unused import - java.lang.Math. [UnusedImports]
 [ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md10\Seam Carving\SeamCarver.java:7:1: File contains tab characters (this is the first instance). [FileTabCharacter]
@@ -276,7 +275,7 @@ Starting audit...
 [ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md10\Seam Carving\SeamCarver.java:230:12: 'for' is not followed by whitespace. [WhitespaceAfter]
 [ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md10\Seam Carving\SeamCarver.java:231:20: 'for' is not followed by whitespace. [WhitespaceAfter]
 Audit done.
-Checkstyle ends with 63 errors.
+Checkstyle ends with 62 errors.
 Starting audit...
 [ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md10\Seam Carving\ShowEnergy.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 [ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md10\Seam Carving\ShowEnergy.java:5: Line has trailing spaces. [RegexpSingleline]
