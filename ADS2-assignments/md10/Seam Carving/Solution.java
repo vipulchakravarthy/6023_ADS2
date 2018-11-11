@@ -13,6 +13,8 @@ final class Solution {
     /**
      *the method to print the energies in.
      * grid format.
+     * time complexity is O(W * H)
+     * W is width and H is height
      * @param      fileName  The file name
      */
     public static void printEnergies(final String fileName) {
@@ -30,7 +32,8 @@ final class Solution {
     }
     /**
      *the method is to print the seamline.
-     *
+     * time complexity is O(W * H)
+     * W is width and H is height
      * @param      carver     The carver
      * @param      seam       The seam
      * @param      direction  The direction
