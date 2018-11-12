@@ -13,6 +13,9 @@ class LSDSort {
     /**
      *this method is to perform the.
      *lsd sorting technique.
+     *time complexity is O(W *N)
+     *W is the fixed length
+     *N is the array length
      * @param      array        The array
      * @param      fixedLength  The fixed length
      *
@@ -53,7 +56,6 @@ final class Solution {
     }
     /**
      *the main method for user input.
-     *
      * @param      args  The arguments
      */
     public static void main(final String[] args) {
