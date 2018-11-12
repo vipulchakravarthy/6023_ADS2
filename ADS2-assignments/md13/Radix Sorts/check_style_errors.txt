@@ -1,11 +1,2 @@
 Starting audit...
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md13\Radix Sorts\Solution.java:24:13: Name 'R' must match pattern '^[a-z][a-zA-Z0-9]*$'. [LocalVariableName]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md13\Radix Sorts\Solution.java:24:17: '256' is a magic number. [MagicNumber]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md13\Radix Sorts\Solution.java:26:12: 'for' is not followed by whitespace. [WhitespaceAfter]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md13\Radix Sorts\Solution.java:28:16: 'for' is not followed by whitespace. [WhitespaceAfter]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md13\Radix Sorts\Solution.java:31:16: 'for' is not followed by whitespace. [WhitespaceAfter]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md13\Radix Sorts\Solution.java:34:16: 'for' is not followed by whitespace. [WhitespaceAfter]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md13\Radix Sorts\Solution.java:37:16: 'for' is not followed by whitespace. [WhitespaceAfter]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md13\Radix Sorts\Solution.java:63:12: 'for' is not followed by whitespace. [WhitespaceAfter]
 Audit done.
-Checkstyle ends with 8 errors.
