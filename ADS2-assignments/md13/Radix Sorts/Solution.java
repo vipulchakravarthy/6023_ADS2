@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Arrays;
 class LSDSort {
 	 LSDSort() {
 
@@ -39,8 +40,6 @@ final class Solution {
 		}
 		LSDSort lsdObj = new LSDSort();
 		rollNumbers = lsdObj.sort(rollNumbers, rollNumbers[0].length());
-		for(int i = 0; i < inputs; i++) {
-			System.out.println(rollNumbers[i]);
-		}
+		System.out.println(Arrays.toString(rollNumbers));
 	}
 }
