@@ -3,6 +3,4 @@ Audit done.
 Starting audit...
 Audit done.
 Starting audit...
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md14\Assignment-1\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 Audit done.
-Checkstyle ends with 1 errors.
