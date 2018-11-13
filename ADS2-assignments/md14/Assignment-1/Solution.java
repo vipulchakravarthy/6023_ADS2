@@ -2,7 +2,7 @@ import java.util.Scanner;
 /**
  *class for ternary search trie.
  *
- * @param      <Value>  The value
+ * @param    <Value>  The value
  */
 class TST<Value> {
     /**
@@ -36,7 +36,7 @@ class TST<Value> {
     /**
      *an empty constructor.
      */
-    public TST() {
+    TST() {
     }
     /**
      *returns the size of trie.
@@ -85,7 +85,7 @@ class TST<Value> {
      */
     private Node<Value> get(final Node<Value> x,
                             final String key, final int d) {
-        if (x == null ) {
+        if (x == null) {
             return null;
         }
         char c = key.charAt(d);
@@ -110,7 +110,9 @@ class TST<Value> {
      */
     public void put(final String key,
                     final Value val) {
-        if (!contains(key)) size++;
+        if (!contains(key)) {
+            size++;
+        }
         root = put(root, key, val, 0);
     }
     /**
@@ -118,7 +120,7 @@ class TST<Value> {
      *time complexity is O(L + logN)
      *L is the length of string and.
      *N is the size of trie.
-     * @param      x   node
+     * @param      temp   node
      * @param      key   The key
      * @param      val   The value
      * @param      d index of the string
@@ -157,8 +159,12 @@ class TST<Value> {
     public Iterable<String> keysWithPrefix(final String prefix) {
         Queue<String> queue = new Queue<String>();
         Node<Value> x = get(root, prefix, 0);
-        if (x == null) return queue;
-        if (x.val != null) queue.enqueue(prefix);
+        if (x == null) {
+            return queue;
+        }
+        if (x.val != null) {
+            queue.enqueue(prefix);
+        }
         collect(x.mid, new StringBuilder(prefix), queue);
         return queue;
     }
@@ -173,15 +179,19 @@ class TST<Value> {
      * @param      queue   The queue
      */
     private void collect(final Node<Value> x,
-                         final StringBuilder prefix, final Queue<String> queue) {
-        if (x == null) return;
+                         final StringBuilder prefix,
+                          final Queue<String> queue) {
+        if (x == null) {
+            return;
+        }
         collect(x.left,  prefix, queue);
-        if (x.val != null) queue.enqueue(prefix.toString() + x.c);
+        if (x.val != null) {
+            queue.enqueue(prefix.toString() + x.c);
+        }
         collect(x.mid,   prefix.append(x.c), queue);
         prefix.deleteCharAt(prefix.length() - 1);
         collect(x.right, prefix, queue);
     }
-
 }
 /**
  *class for solution.

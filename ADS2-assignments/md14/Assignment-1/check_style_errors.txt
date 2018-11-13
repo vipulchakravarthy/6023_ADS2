@@ -176,15 +176,5 @@ Audit done.
 Checkstyle ends with 29 errors.
 Starting audit...
 [ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md14\Assignment-1\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md14\Assignment-1\Solution.java:39:5: Redundant 'public' modifier. [RedundantModifier]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md14\Assignment-1\Solution.java:88:22: ')' is preceded with whitespace. [ParenPad]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md14\Assignment-1\Solution.java:113: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md14\Assignment-1\Solution.java:121:8: Unused @param tag for 'x'. [JavadocMethod]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md14\Assignment-1\Solution.java:128:47: Expected @param tag for 'temp'. [JavadocMethod]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md14\Assignment-1\Solution.java:160: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md14\Assignment-1\Solution.java:161: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md14\Assignment-1\Solution.java:176: Line is longer than 80 characters (found 81). [LineLength]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md14\Assignment-1\Solution.java:177: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md14\Assignment-1\Solution.java:179: 'if' construct must use '{}'s. [NeedBraces]
 Audit done.
-Checkstyle ends with 11 errors.
+Checkstyle ends with 1 errors.
