@@ -58,7 +58,6 @@ public class BoggleSolver {
 	}
 		visited[row][col] = true;
 		if(trie.contains(word) && (!list.contains(word))) {
-			System.out.println(word);
 			list.add(word);
 		}
 		if(index(row+1, col + 1) && !visited[row+1][col + 1] && isValid(word)) {
