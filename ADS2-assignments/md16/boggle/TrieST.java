@@ -80,7 +80,12 @@ public class TrieST<Value> {
         if (x == null) return null;
         return (Value) x.val;
     }
-
+    public Node getNode(String key) {
+        if (key == null) throw new IllegalArgumentException("argument to get() is null");
+        Node x = get(root, key, 0);
+        if (x == null) return null;
+        return x;
+    }
     /**
      * Does this symbol table contain the given key?
      * @param key the key
@@ -151,7 +156,12 @@ public class TrieST<Value> {
     public Iterable<String> keys() {
         return keysWithPrefix("");
     }
-
+    public boolean hasPrefix(String word) {
+        if(getNode(word) != null) {
+            return true;
+        }
+        return false;
+    }
     /**
      * Returns all of the keys in the set that start with {@code prefix}.
      * @param prefix the prefix

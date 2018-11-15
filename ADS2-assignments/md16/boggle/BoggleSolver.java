@@ -22,8 +22,8 @@ public class BoggleSolver {
 	}
 
 	public boolean isValid(String word) {
-		Queue<String> queue = trie.keysWithPrefix(word);
-		if(queue.size() == 0) {
+		// Queue<String> queue = trie.keysWithPrefix(word);
+		if(!trie.hasPrefix(word)) {
 			return false;
 		}
 		return true;
