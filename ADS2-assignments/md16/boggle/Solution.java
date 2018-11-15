@@ -39,6 +39,10 @@ public class Solution {
 				in = new In("/Files/" + dictionaryName);
 				dictionary = in.readAllStrings();
 				board = null;
+				if(board == null) {
+					System.out.println("board is null");
+					return;
+				}
 				solver = new BoggleSolver(dictionary, board);
 				score = 0;
 				for (String word : solver.getAllValidWords(board)) {

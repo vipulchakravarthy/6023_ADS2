@@ -878,9 +878,10 @@ Starting audit...
 [ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md16\boggle\Solution.java:7:1: File contains tab characters (this is the first instance). [FileTabCharacter]
 [ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md16\boggle\Solution.java:27: Line is longer than 80 characters (found 83). [LineLength]
 [ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md16\boggle\Solution.java:28: Line is longer than 80 characters (found 82). [LineLength]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md16\boggle\Solution.java:44: Line is longer than 80 characters (found 84). [LineLength]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md16\boggle\Solution.java:42:35: 'if' is not followed by whitespace. [WhitespaceAfter]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md16\boggle\Solution.java:48: Line is longer than 80 characters (found 84). [LineLength]
 Audit done.
-Checkstyle ends with 7 errors.
+Checkstyle ends with 8 errors.
 Starting audit...
 [ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md16\boggle\StdIn.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 [ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md16\boggle\StdIn.java:27: Line is longer than 80 characters (found 84). [LineLength]
