@@ -2,18 +2,18 @@ import java.util.ArrayList;
 public class BoggleSolver {
 	// Initializes the data structure using the given array of strings as the dictionary.
 	// (You can assume each word in the dictionary contains only the uppercase letters A through Z.)
-	TST<Integer> trie;
+	TrieST<Integer> trie;
 	ArrayList<String> list;
 	private int rows;
 	private int cols;
 	public BoggleSolver(String[] dictionary, BoggleBoard board) {
-		trie = new TST<Integer>();
-		int[] scores = {0,0,0,1,1,2,3,5};
+		trie = new TrieST<Integer>();
+		int[] scores = {0,0,0,1,1,2,3,5,11};
 		rows = board.rows();
 		cols = board.cols();
 		list = new ArrayList<String>();
 		for(int i = 0; i < dictionary.length; i++) {
-			if(dictionary[i].length() >= 8){
+			if(dictionary[i].length() > 8){
 				trie.put(dictionary[i], 11);
 			} else {
 				trie.put(dictionary[i], scores[dictionary[i].length()]);
@@ -58,6 +58,7 @@ public class BoggleSolver {
 	}
 		visited[row][col] = true;
 		if(trie.contains(word) && (!list.contains(word))) {
+			System.out.println(word);
 			list.add(word);
 		}
 		if(index(row+1, col + 1) && !visited[row+1][col + 1] && isValid(word)) {
