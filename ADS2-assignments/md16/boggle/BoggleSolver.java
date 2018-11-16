@@ -4,6 +4,11 @@ public class BoggleSolver {
 	// (You can assume each word in the dictionary contains only the uppercase letters A through Z.)
 	private TrieST<Integer> trie;
 	private ArrayList<String> list;
+	/**
+	 *time complexity is O(dictionary length)
+	 *
+	 * @param      dictionary  The dictionary
+	 */
 	public BoggleSolver(String[] dictionary) {
 		trie = new TrieST<Integer>();
 		int[] scores = {0, 0, 0, 1, 1, 2, 3, 5, 11};
@@ -16,9 +21,14 @@ public class BoggleSolver {
 			}
 		}
 	}
-
+	/**
+	 *time complexity is O(L)
+	 *L is the length of string
+	 * @param      word  The word
+	 *
+	 * @return     True if valid, False otherwise.
+	 */
 	private boolean isValid(String word) {
-		// Queue<String> queue = trie.keysWithPrefix(word);
 		if (!trie.hasPrefix(word)) {
 			return false;
 		}
@@ -31,6 +41,7 @@ public class BoggleSolver {
 		return ch + "";
 	}
 	// Returns the set of all valid words in the given Boggle board, as an Iterable.
+	//time complexity is O(rows*cols)
 	public Iterable<String> getAllValidWords(BoggleBoard board) {
 		boolean[][] visited;
 		for (int i = 0; i < board.rows(); i++) {
@@ -47,6 +58,15 @@ public class BoggleSolver {
 		}
 		return true;
 	}
+	/**
+	 *time complexity is O(vertices + edges)
+	 *
+	 * @param      board    The board
+	 * @param      row      The row
+	 * @param      col      The col
+	 * @param      word     The word
+	 * @param      visited  The visited
+	 */
 	private void dfs(BoggleBoard board, int row, int col, String word, boolean[][] visited) {
 		int rows = board.rows();
 		int cols = board.cols();
@@ -54,45 +74,61 @@ public class BoggleSolver {
 			return;
 		}
 		visited[row][col] = true;
-		if (trie.contains(word) && (!list.contains(word))) {
+		if (trie.contains(word) && (!list.contains(word)) && word.length() > 2 && word != null) {
 			list.add(word);
 		}
 		if (index(row + 1, col + 1, rows, cols) && !visited[row + 1][col + 1] && isValid(word)) {
-			dfs(board, row + 1, col + 1, word + check(board.getLetter(row + 1, col + 1)), visited);
+			String s = word + check(board.getLetter(row + 1, col + 1));
+			dfs(board, row + 1, col + 1, s, visited);
 			visited[row + 1][col + 1] = false;
 		}
 		if (index(row - 1, col - 1, rows, cols) && !visited[row - 1][col - 1] && isValid(word)) {
-			dfs(board, row - 1, col - 1, word + check(board.getLetter(row - 1, col - 1)), visited);
+			String s = word + check(board.getLetter(row - 1, col - 1));
+			dfs(board, row - 1, col - 1, s , visited);
 			visited[row - 1][col - 1] = false;
 		}
 		if (index(row - 1, col + 1, rows, cols) && !visited[row - 1][col + 1] && isValid(word)) {
-			dfs(board, row - 1, col + 1, word + check(board.getLetter(row - 1, col + 1)), visited);
+			String s = word + check(board.getLetter(row - 1, col + 1));
+			dfs(board, row - 1, col + 1, s, visited);
 			visited[row - 1][col + 1] = false;
 		}
 		if (index(row + 1, col - 1, rows, cols) && !visited[row + 1][col - 1] && isValid(word)) {
-			dfs(board, row + 1, col - 1, word + check(board.getLetter(row + 1, col - 1)), visited);
+			String s = word + check(board.getLetter(row + 1, col - 1));
+			dfs(board, row + 1, col - 1, s, visited);
 			visited[row + 1][col - 1] = false;
 		}
 		if (index(row - 1, col, rows, cols) && !visited[row - 1][col] && isValid(word)) {
-			dfs(board, row - 1, col, word + check(board.getLetter(row - 1, col)), visited);
+			String s = word + check(board.getLetter(row - 1, col));
+			dfs(board, row - 1, col, s, visited);
 			visited[row - 1][col] = false;
 		}
 		if (index(row + 1, col, rows, cols) && !visited[row + 1][col] && isValid(word)) {
-			dfs(board, row + 1, col, word + check(board.getLetter(row + 1, col)), visited);
+			String s = word + check(board.getLetter(row + 1, col));
+			dfs(board, row + 1, col, s, visited);
 			visited[row + 1][col] = false;
 		}
 		if (index(row, col + 1, rows, cols) && !visited[row][col + 1] && isValid(word)) {
-			dfs(board, row, col + 1, word + check(board.getLetter(row, col + 1)), visited);
+			String s = word + check(board.getLetter(row, col + 1));
+			dfs(board, row, col + 1, s, visited);
 			visited[row][col + 1] = false;
 		}
 		if (index(row, col - 1, rows, cols) && !visited[row][col - 1] && isValid(word)) {
-			dfs(board, row, col - 1, word + check(board.getLetter(row, col - 1)), visited);
+			String s = word + check(board.getLetter(row, col - 1));
+			dfs(board, row, col - 1, s, visited);
 			visited[row][col - 1] = false;
 		}
 	}
 	// Returns the score of the given word if it is in the dictionary, zero otherwise.
 	// (You can assume the word contains only the uppercase letters A through Z.)
+	// time complexity is O(L)
 	public int scoreOf(String word) {
-		return trie.get(word);
+		if (word == null) {
+			return 0;
+		}
+		Integer val = trie.get(word);
+		if (val == null) {
+			return 0;
+		}
+		return val;
 	}
 }

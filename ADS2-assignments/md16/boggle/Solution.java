@@ -20,10 +20,10 @@ public final class Solution {
             String dictionaryName = StdIn.readLine();
             In in = new In("/Files/" + dictionaryName);
             String[] dictionary = in.readAllStrings();
+            BoggleSolver solver = new BoggleSolver(dictionary);
             String boardName = StdIn.readLine();
             BoggleBoard board = new BoggleBoard(
                 "/Files/" + boardName);
-            BoggleSolver solver = new BoggleSolver(dictionary);
             int score = 0;
             for (String word : solver.getAllValidWords(board)) {
                 score += solver.scoreOf(word);
