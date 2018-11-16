@@ -62,9 +62,6 @@ public class Bag<Item> implements Iterable<Item> {
         first.next = oldfirst;
         N++;
     }
-
-    public boolean
-
    /**
      * Return an iterator that iterates over the items in the bag.
      */

@@ -1,5 +1,29 @@
 Starting audit...
-Checkstyle ends with 1 errors.
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md16\boggle\Bag.java:0: File does not end with a newline. [NewlineAtEndOfFile]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md16\boggle\Bag.java:18: Line is longer than 80 characters (found 81). [LineLength]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md16\boggle\Bag.java:20: Line is longer than 80 characters (found 105). [LineLength]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md16\boggle\Bag.java:23: Type Javadoc comment is missing @param <Item> tag. [JavadocType]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md16\boggle\Bag.java:24:5: Missing a Javadoc comment. [JavadocVariable]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md16\boggle\Bag.java:24:17: Name 'N' must match pattern '^[a-z][a-zA-Z0-9]*$'. [MemberName]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md16\boggle\Bag.java:25:5: Missing a Javadoc comment. [JavadocVariable]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md16\boggle\Bag.java:28: Missing a Javadoc comment. [JavadocType]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md16\boggle\Bag.java:29:9: Missing a Javadoc comment. [JavadocVariable]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md16\boggle\Bag.java:30:9: Missing a Javadoc comment. [JavadocVariable]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md16\boggle\Bag.java:44: Expected @return tag. [JavadocMethod]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md16\boggle\Bag.java:51: Expected @return tag. [JavadocMethod]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md16\boggle\Bag.java:58:21: Parameter item should be final. [FinalParameters]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md16\boggle\Bag.java:58:26: Expected @param tag for 'item'. [JavadocMethod]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md16\boggle\Bag.java:68: Expected @return tag. [JavadocMethod]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md16\boggle\Bag.java:73: Missing a Javadoc comment. [JavadocType]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md16\boggle\Bag.java:74:9: Missing a Javadoc comment. [JavadocVariable]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md16\boggle\Bag.java:76: Line is longer than 80 characters (found 81). [LineLength]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md16\boggle\Bag.java:76:35: '{' at column 35 should have line break after. [LeftCurly]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md16\boggle\Bag.java:77: Line is longer than 80 characters (found 81). [LineLength]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md16\boggle\Bag.java:77:35: '{' at column 35 should have line break after. [LeftCurly]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md16\boggle\Bag.java:79:9: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md16\boggle\Bag.java:80: 'if' construct must use '{}'s. [NeedBraces]
+Audit done.
+Checkstyle ends with 23 errors.
 Starting audit...
 [ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md16\boggle\BoggleBoard.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 [ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md16\boggle\BoggleBoard.java:12:5: Missing a Javadoc comment. [JavadocVariable]
