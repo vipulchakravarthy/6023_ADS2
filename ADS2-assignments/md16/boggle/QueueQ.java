@@ -2,11 +2,11 @@
  *  Compilation:  javac Queue.java
  *  Execution:    java Queue < input.txt
  *  Dependencies: StdIn.java StdOut.java
- *  Data files:   http://algs4.cs.princeton.edu/13stacks/tobe.txt  
+ *  Data files:   http://algs4.cs.princeton.edu/13stacks/tobe.txt
  *
  *  A generic queue, implemented using a linked list.
  *
- *  % java Queue < tobe.txt 
+ *  % java Queue < tobe.txt
  *  to be or not to be (2 left on queue)
  *
  ******************************************************************************/
@@ -37,7 +37,7 @@ import java.util.NoSuchElementException;
  *
  *  @param <Item> the generic type of an item in this queue
  */
-public class Queue<Item> implements Iterable<Item> {
+public class QueueQ<Item> implements Iterable<Item> {
     private Node<Item> first;    // beginning of queue
     private Node<Item> last;     // end of queue
     private int n;               // number of elements on queue
@@ -51,7 +51,7 @@ public class Queue<Item> implements Iterable<Item> {
     /**
      * Initializes an empty queue.
      */
-    public Queue() {
+    public QueueQ() {
         first = null;
         last  = null;
         n = 0;
@@ -128,7 +128,7 @@ public class Queue<Item> implements Iterable<Item> {
             s.append(' ');
         }
         return s.toString();
-    } 
+    }
 
     /**
      * Returns an iterator that iterates over the items in this queue in FIFO order.
@@ -136,7 +136,7 @@ public class Queue<Item> implements Iterable<Item> {
      * @return an iterator that iterates over the items in this queue in FIFO order
      */
     public Iterator<Item> iterator()  {
-        return new ListIterator<Item>(first);  
+        return new ListIterator<Item>(first);
     }
 
     // an iterator, doesn't implement remove() since it's optional
@@ -153,7 +153,7 @@ public class Queue<Item> implements Iterable<Item> {
         public Item next() {
             if (!hasNext()) throw new NoSuchElementException();
             Item item = current.item;
-            current = current.next; 
+            current = current.next;
             return item;
         }
     }

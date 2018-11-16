@@ -38,11 +38,10 @@ public class BoggleSolver {
 				visited = new boolean[board.rows()][board.cols()];
 				dfs(board, i, j, check(board.getLetter(i, j)), visited);
 			}
-			visited = new boolean[board.rows()][board.cols()];
 		}
 		return list;
 	}
-	private boolean index(int i , int j, int rows, int cols) {
+	private boolean index(int i, int j, int rows, int cols) {
 		if (i < 0 || i >= rows || j < 0 || j >= cols) {
 			return false;
 		}
@@ -66,11 +65,11 @@ public class BoggleSolver {
 			dfs(board, row - 1, col - 1, word + check(board.getLetter(row - 1, col - 1)), visited);
 			visited[row - 1][col - 1] = false;
 		}
-		if ( index(row - 1, col + 1, rows, cols) && !visited[row - 1][col + 1] && isValid(word)) {
+		if (index(row - 1, col + 1, rows, cols) && !visited[row - 1][col + 1] && isValid(word)) {
 			dfs(board, row - 1, col + 1, word + check(board.getLetter(row - 1, col + 1)), visited);
 			visited[row - 1][col + 1] = false;
 		}
-		if ( index(row + 1, col - 1, rows, cols) && !visited[row + 1][col - 1] && isValid(word)) {
+		if (index(row + 1, col - 1, rows, cols) && !visited[row + 1][col - 1] && isValid(word)) {
 			dfs(board, row + 1, col - 1, word + check(board.getLetter(row + 1, col - 1)), visited);
 			visited[row + 1][col - 1] = false;
 		}

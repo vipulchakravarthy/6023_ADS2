@@ -157,7 +157,7 @@ public class TrieST<Value> {
         return keysWithPrefix("");
     }
     public boolean hasPrefix(String word) {
-        if(getNode(word) != null) {
+        if (getNode(word) != null) {
             return true;
         }
         return false;
@@ -168,14 +168,14 @@ public class TrieST<Value> {
      * @return all of the keys in the set that start with {@code prefix},
      *     as an iterable
      */
-    public Queue<String> keysWithPrefix(String prefix) {
-        Queue<String> results = new Queue<String>();
+    public QueueQ<String> keysWithPrefix(String prefix) {
+        QueueQ<String> results = new QueueQ<String>();
         Node x = get(root, prefix, 0);
         collect(x, new StringBuilder(prefix), results);
         return results;
     }
 
-    private void collect(Node x, StringBuilder prefix, Queue<String> results) {
+    private void collect(Node x, StringBuilder prefix, QueueQ<String> results) {
         if (x == null) return;
         if (x.val != null) results.enqueue(prefix.toString());
         for (char c = 0; c < R; c++) {
@@ -193,12 +193,12 @@ public class TrieST<Value> {
      *     as an iterable, where . is treated as a wildcard character.
      */
     public Iterable<String> keysThatMatch(String pattern) {
-        Queue<String> results = new Queue<String>();
+        QueueQ<String> results = new QueueQ<String>();
         collect(root, new StringBuilder(), pattern, results);
         return results;
     }
 
-    private void collect(Node x, StringBuilder prefix, String pattern, Queue<String> results) {
+    private void collect(Node x, StringBuilder prefix, String pattern, QueueQ<String> results) {
         if (x == null) return;
         int d = prefix.length();
         if (d == pattern.length() && x.val != null)
