@@ -1,8 +1,7 @@
-import java.util.Arrays;
 /**
  * Class for solution.
  */
-public class Solution {
+public final class Solution {
     /**
      * Constructs the object.
      */
@@ -37,7 +36,7 @@ public class Solution {
                 in = new In("/Files/" + dictionaryName);
                 dictionary = in.readAllStrings();
                 board = null;
-                if(board == null) {
+                if (board == null) {
                     System.out.println("board is null");
                     return;
                 }
