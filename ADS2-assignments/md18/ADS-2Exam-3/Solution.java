@@ -1,6 +1,7 @@
 import java.util.Scanner;
 import java.util.ArrayList;
-
+import java.util.HashMap;
+import java.util.Collections;
 public class Solution {
 
 	// Don't modify this method.
@@ -122,15 +123,22 @@ class T9 {
 	// return all possibilities(words), find top k with highest frequency.
 	public Iterable<String> getSuggestions(Iterable<String> words, int k) {
 		int max = 0;
-		ArrayList<String> list = new ArrayList<String>();
+		ArrayList<Integer> list = new ArrayList<Integer>();
+		ArrayList<String> slist = new ArrayList<String>();
+		HashMap<Integer, String> map = new HashMap<Integer,String>();
 		for(String each: words) {
-				int temp = tstObj.get(each);
-				if(temp > max) {
-					max = temp;
-					list.add(each);
-				}
+			map.put(tstObj.get(each), each);
 		}
-		return list;
+		for(String each: words) {
+			for(String str: tstObj.keysWithPrefix(each)) {
+				list.add(tstObj.get(str));
+			}
+		}
+		Collections.sort(list, Collections.reverseOrder());
+		for(int i = 0; i < k; i++) {
+			slist.add(map.get(list.get(i)));
+		}
+		return slist;
 	}
 
 	// final output
