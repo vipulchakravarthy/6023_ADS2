@@ -57,7 +57,6 @@ public class Solution {
 			for (String each : t9.getSuggestions(bag, k)) {
 				System.out.println(each);
 			}
-
 			break;
 
 		case "t9Signature":
@@ -128,7 +127,6 @@ class T9 {
 			for(String str: tstObj.keysWithPrefix(each)) {
 				int temp = str.length();
 				if(tstObj.get(str) > k) {
-					System.out.println("hai");
 					list.add(str);
 				}
 			}
