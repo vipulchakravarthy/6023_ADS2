@@ -138,6 +138,7 @@ class T9 {
 		for(int i = 0; i < k; i++) {
 			slist.add(map.get(list.get(i)));
 		}
+		Collections.sort(slist);
 		return slist;
 	}
 

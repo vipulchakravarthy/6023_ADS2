@@ -133,8 +133,6 @@ Starting audit...
 Audit done.
 Checkstyle ends with 103 errors.
 Starting audit...
-Checkstyle ends with 1 errors.
-Starting audit...
 [ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md18\ADS-2Exam-3\In.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 [ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md18\ADS-2Exam-3\In.java:56:1: File contains tab characters (this is the first instance). [FileTabCharacter]
 [ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md18\ADS-2Exam-3\In.java:59:9: Missing a Javadoc comment. [JavadocVariable]
@@ -411,9 +409,9 @@ Starting audit...
 [ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md18\ADS-2Exam-3\Solution.java:132:20: 'for' is not followed by whitespace. [WhitespaceAfter]
 [ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md18\ADS-2Exam-3\Solution.java:133:28: 'for' is not followed by whitespace. [WhitespaceAfter]
 [ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md18\ADS-2Exam-3\Solution.java:138:20: 'for' is not followed by whitespace. [WhitespaceAfter]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md18\ADS-2Exam-3\Solution.java:146:9: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md18\ADS-2Exam-3\Solution.java:146:36: Parameter t9Signature should be final. [FinalParameters]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md18\ADS-2Exam-3\Solution.java:146:56: Parameter k should be final. [FinalParameters]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md18\ADS-2Exam-3\Solution.java:147:9: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md18\ADS-2Exam-3\Solution.java:147:36: Parameter t9Signature should be final. [FinalParameters]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md18\ADS-2Exam-3\Solution.java:147:56: Parameter k should be final. [FinalParameters]
 Audit done.
 Checkstyle ends with 37 errors.
 Starting audit...
