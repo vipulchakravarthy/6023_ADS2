@@ -170,12 +170,6 @@ words
 
 Your Output: 
 is
-ish
-isnt
-within
-words
-right
-hello
 ----------------------------------------
 
 ########## Testcase 4: Failed ##########
@@ -229,7 +223,7 @@ keep
 Your Output: 
 Exception in thread "main" java.lang.NullPointerException
 	at T9.getSuggestions(Solution.java:126)
-	at T9.t9(Solution.java:140)
+	at T9.t9(Solution.java:139)
 	at Solution.main(Solution.java:69)
 ----------------------------------------
 

@@ -124,12 +124,11 @@ class T9 {
 		int max = 0;
 		ArrayList<String> list = new ArrayList<String>();
 		for(String each: words) {
-			for(String str: tstObj.keysWithPrefix(each)) {
-				int temp = str.length();
-				if(tstObj.get(str) >= k) {
-					list.add(str);
+				int temp = tstObj.get(each);
+				if(temp > max) {
+					max = temp;
+					list.add(each);
 				}
-			}
 		}
 		return list;
 	}
