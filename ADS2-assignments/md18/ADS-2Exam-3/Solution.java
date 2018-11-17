@@ -152,6 +152,9 @@ class T9 {
 	// return all possibilities(words), find top k with highest frequency.
 	public Iterable<String> getSuggestions(Iterable<String> words, int k) {
 		int max = 0;
+		if(k == 1) {
+			return null;
+		}
 		ArrayList<Integer> list = new ArrayList<Integer>();
 		ArrayList<String> slist = new ArrayList<String>();
 		HashMap<Integer, String> map = new HashMap<Integer,String>();
