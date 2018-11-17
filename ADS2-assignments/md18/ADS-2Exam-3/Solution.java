@@ -129,6 +129,9 @@ class T9 {
         ArrayList<String> preres = new ArrayList<String>();
         ArrayList<String> result = new ArrayList<String>();
         res.add("");
+        if(t9Signature.length() == 1) {
+        	return null;
+        }
         for (int i = 0; i < t9Signature.length(); i++) {
             for (String str : res) {
                 String letters = hashMap.get(t9Signature.charAt(i));
