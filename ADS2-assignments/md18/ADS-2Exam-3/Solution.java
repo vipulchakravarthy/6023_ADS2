@@ -128,6 +128,7 @@ class T9 {
 		ArrayList<String> res = new ArrayList<String>();
         ArrayList<String> preres = new ArrayList<String>();
         ArrayList<String> result = new ArrayList<String>();
+        res.add("");
         if(t9Signature.length() == 1) {
         	return null;
         }
