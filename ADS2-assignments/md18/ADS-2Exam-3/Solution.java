@@ -116,8 +116,34 @@ class T9 {
 	}
 
 	public Iterable<String> potentialWords(String t9Signature) {
-		// your code goes here
-		return null;
+		HashMap<Character, String> hashMap = new HashMap<Character, String>();
+	 	hashMap.put('2', "abc");
+        hashMap.put('3', "def");
+        hashMap.put('4', "ghi");
+        hashMap.put('5', "jkl");
+        hashMap.put('6', "mno");
+        hashMap.put('7', "pqrs");
+        hashMap.put('8', "tuv");
+        hashMap.put('9', "wxyz");
+		ArrayList<String> res = new ArrayList<String>();
+        ArrayList<String> preres = new ArrayList<String>();
+        ArrayList<String> result = new ArrayList<String>();
+        res.add("");
+        for (int i = 0; i < t9Signature.length(); i++) {
+            for (String str : res) {
+                String letters = hashMap.get(t9Signature.charAt(i));
+                for (int j = 0; j < letters.length(); j++)
+                    preres.add(str + letters.charAt(j));
+            }
+            res = preres;
+            preres = new ArrayList<String>();
+        }
+        for(int i = 0; i < res.size(); i++) {
+        	if(tstObj.contains(res.get(i))) {
+        		result.add(res.get(i));
+        	}
+        }
+		return result;
 	}
 
 	// return all possibilities(words), find top k with highest frequency.
