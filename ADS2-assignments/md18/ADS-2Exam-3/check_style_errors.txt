@@ -409,17 +409,16 @@ Starting audit...
 [ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md18\ADS-2Exam-3\Solution.java:153:9: Missing a Javadoc comment. [JavadocMethod]
 [ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md18\ADS-2Exam-3\Solution.java:153:48: Parameter words should be final. [FinalParameters]
 [ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md18\ADS-2Exam-3\Solution.java:153:72: Parameter k should be final. [FinalParameters]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md18\ADS-2Exam-3\Solution.java:155:19: 'if' is not followed by whitespace. [WhitespaceAfter]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md18\ADS-2Exam-3\Solution.java:160:68: ',' is not followed by whitespace. [WhitespaceAfter]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md18\ADS-2Exam-3\Solution.java:157:68: ',' is not followed by whitespace. [WhitespaceAfter]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md18\ADS-2Exam-3\Solution.java:158:20: 'for' is not followed by whitespace. [WhitespaceAfter]
 [ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md18\ADS-2Exam-3\Solution.java:161:20: 'for' is not followed by whitespace. [WhitespaceAfter]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md18\ADS-2Exam-3\Solution.java:164:20: 'for' is not followed by whitespace. [WhitespaceAfter]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md18\ADS-2Exam-3\Solution.java:165:28: 'for' is not followed by whitespace. [WhitespaceAfter]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md18\ADS-2Exam-3\Solution.java:170:20: 'for' is not followed by whitespace. [WhitespaceAfter]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md18\ADS-2Exam-3\Solution.java:179:9: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md18\ADS-2Exam-3\Solution.java:179:36: Parameter t9Signature should be final. [FinalParameters]
-[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md18\ADS-2Exam-3\Solution.java:179:56: Parameter k should be final. [FinalParameters]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md18\ADS-2Exam-3\Solution.java:162:28: 'for' is not followed by whitespace. [WhitespaceAfter]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md18\ADS-2Exam-3\Solution.java:167:20: 'for' is not followed by whitespace. [WhitespaceAfter]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md18\ADS-2Exam-3\Solution.java:176:9: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md18\ADS-2Exam-3\Solution.java:176:36: Parameter t9Signature should be final. [FinalParameters]
+[ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md18\ADS-2Exam-3\Solution.java:176:56: Parameter k should be final. [FinalParameters]
 Audit done.
-Checkstyle ends with 43 errors.
+Checkstyle ends with 42 errors.
 Starting audit...
 [ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md18\ADS-2Exam-3\TST.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 [ERROR] F:\ADS2\6023_ADS2\ADS2-assignments\md18\ADS-2Exam-3\TST.java:46: Line is longer than 80 characters (found 84). [LineLength]
