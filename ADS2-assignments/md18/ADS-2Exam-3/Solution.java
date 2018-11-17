@@ -126,7 +126,7 @@ class T9 {
 		for(String each: words) {
 			for(String str: tstObj.keysWithPrefix(each)) {
 				int temp = str.length();
-				if(tstObj.get(str) > k) {
+				if(tstObj.get(str) >= k) {
 					list.add(str);
 				}
 			}
