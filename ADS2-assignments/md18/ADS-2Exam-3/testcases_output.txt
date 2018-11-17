@@ -92,7 +92,7 @@ messagesome
 going
 ----------------------------------------
 
-########## Testcase 2: Passed ##########
+########## Testcase 2: Failed ##########
 Expected Output: 
 hello
 pizza
@@ -157,67 +157,7 @@ fine
 seeking
 
 Your Output: 
-hello
-pizza
-what
-sunday
-ball
-call
-involve
-finish
-gone
-good
-home
-battery
-friends
-watches
-morning
-tonight
-shop
-phne
-any
-bmw
-box
-boy
-coz
-jay
-jaz
-kay
-law
-lay
-ammo
-das
-ear
-far
-send
-pocked
-pest
-rest
-woo
-paying
-saying
-james
-lands
-hates
-casting
-packing
-peeps
-bam
-bao
-cam
-can
-abt
-act
-bat
-cat
-mines
-liver
-lives
-dime
-dine
-find
-fine
-seeking
+No valid words found.
 ----------------------------------------
 
 ########## Testcase 3: Passed ##########
@@ -283,14 +223,14 @@ paper
 keep
 
 Your Output: 
-Exception in thread "main" java.lang.IndexOutOfBoundsException: Index 1 out-of-bounds for length 1
+Exception in thread "main" java.lang.IndexOutOfBoundsException: Index 0 out-of-bounds for length 0
 	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:64)
 	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:70)
 	at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:248)
 	at java.base/java.util.Objects.checkIndex(Objects.java:372)
 	at java.base/java.util.ArrayList.get(ArrayList.java:440)
-	at T9.getSuggestions(Solution.java:169)
-	at T9.t9(Solution.java:179)
+	at T9.getSuggestions(Solution.java:167)
+	at T9.t9(Solution.java:175)
 	at Solution.main(Solution.java:70)
 ----------------------------------------
 

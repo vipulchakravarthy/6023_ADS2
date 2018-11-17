@@ -128,7 +128,6 @@ class T9 {
 		ArrayList<String> res = new ArrayList<String>();
         ArrayList<String> preres = new ArrayList<String>();
         ArrayList<String> result = new ArrayList<String>();
-        res.add("");
         if(t9Signature.length() == 1) {
         	return null;
         }
@@ -152,7 +151,6 @@ class T9 {
 	// return all possibilities(words), find top k with highest frequency.
 	public Iterable<String> getSuggestions(Iterable<String> words, int k) {
 		int max = 0;
-		if(k != 1) {
 		ArrayList<Integer> list = new ArrayList<Integer>();
 		ArrayList<String> slist = new ArrayList<String>();
 		HashMap<Integer, String> map = new HashMap<Integer,String>();
@@ -170,8 +168,6 @@ class T9 {
 		}
 		Collections.sort(slist);
 		return slist;
-	}
-	return null;
 	}
 	// final output
 	// Don't modify this method.
