@@ -1,0 +1,4 @@
+.* - it determines the occurance of any character can be n number of times. ex- AAA
+A.*A | A - the string should start with A any character in second position, which can be repeated n number of times. the or shows whether to print the first operand or last operand.
+.*ABBABBA.* - first letter can be any character which can be repeated n number of times, the fixed characters are ABBABBA an it should be followed by any character repeated n number of times.
+.* A.*A.*A.*A.* - any character repeated n number of times followed by A, this sequence should be happen for 4 times and at last character can be repeated n number of times.
