@@ -1,8 +1,8 @@
 import java.util.HashMap;
 import java.util.Arrays;
-// import edu.princeton.cs.algs4.Queue;
-// import edu.princeton.cs.algs4.BinaryStdIn;
-// import edu.princeton.cs.algs4.BinaryStdOut;
+import edu.princeton.cs.algs4.Queue;
+import edu.princeton.cs.algs4.BinaryStdIn;
+import edu.princeton.cs.algs4.BinaryStdOut;
 public class BurrowsWheeler {
 	private static final int lgR  = 8;
     public static void transform() {
